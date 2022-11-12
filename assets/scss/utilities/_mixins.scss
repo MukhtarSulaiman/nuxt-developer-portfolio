@@ -5,8 +5,8 @@
 @mixin gradient($direction: to right, $opacity: 1) {
 	background-image: linear-gradient(
 		$direction,
-		rgb($primary, $opacity),
-		rgb($secondary, $opacity)
+		rgb($color-brand-primary, $opacity),
+		rgb($color-brand-secondary, $opacity)
 	);
 }
 
@@ -25,7 +25,7 @@
 @mixin border-gradient($width: 2px) {
 	border-width: $width;
 	border-style: solid;
-	border-image: linear-gradient(to left, $primary, $secondary);
+	border-image: linear-gradient(to left, $color-brand-primary, $color-brand-secondary);
 	border-image-slice: 1;
 }
 
@@ -51,8 +51,8 @@
 @mixin arrow-indicator($border-side: bottom, $deg:-45deg) {
 	width: 17px;
 	height: 17px;
-     border-left: 2px solid $primary;
-     border-#{$border-side}: 2px solid $primary;
+     border-left: 2px solid $color-brand-primary;
+     border-#{$border-side}: 2px solid $color-brand-primary;
 	transform: rotate($deg);
 	animation-iteration-count: infinite;
 }
