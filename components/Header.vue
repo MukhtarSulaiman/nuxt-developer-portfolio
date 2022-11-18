@@ -1,6 +1,6 @@
 <!-- @format -->
 
-<script setup>
+<script setup lang="ts">
 
      const navOpen = ref(false);
 
@@ -41,14 +41,14 @@
           </button>
           <nav  :class="{ active: navOpen }" id="navbarNav">
                <ul>
-                    <li><NuxtLink to="#intro">Accueil</NuxtLink></li>
-                    <li><NuxtLink to="#skills">Compétences</NuxtLink></li>
-                    <li><NuxtLink to="#portfolio">Portfolio</NuxtLink></li>
-                    <li><NuxtLink to="#education">Formations</NuxtLink></li>
-                    <li><NuxtLink to="#contact">Contact</NuxtLink></li>
+                    <li class="nav-item nav-item-border active"><NuxtLink to="#intro">Accueil</NuxtLink></li>
+                    <li class="nav-item nav-item-border"><NuxtLink to="#skills">Compétences</NuxtLink></li>
+                    <li class="nav-item nav-item-border"><NuxtLink to="#portfolio">Portfolio</NuxtLink></li>
+                    <li class="nav-item nav-item-border"><NuxtLink to="#education">Formations</NuxtLink></li>
+                    <li class="nav-item nav-item-border"><NuxtLink to="#contact">Contact</NuxtLink></li>
                     <li class="nav-item nav-item-mode-switch me-4">
                          <span class="dark-mode-toggle fs-3" role="button">
-                              <!-- <Icon name="ic:outline-wb-sunny" /> -->
+                              <!-- <Icon name="ic:outline-wb-sunny" id="sun"/> -->
                               <Icon name="ic:baseline-bedtime" id="moon" />
                          </span>
                     </li>
@@ -74,7 +74,8 @@
           z-index: 10;
           color: $color-text-primary;
           background-color: $color-brand-tertiary;
-     
+          box-shadow: 0 0.5rem 1rem rgb($color-text-inverted, .15);
+          // overflow: hidden;
           nav {
                position: absolute;
                top: 60px;
@@ -96,12 +97,49 @@
                     
                     li {
                          margin: 0.6rem;
-                         // opacity: 0;
+                         position: relative;
+                         &:hover {
+                              &::after {
+                                   transform: scaleX(1);
+                              }
+                         }
+                         &::after {
+                              @include line($left: 0, $bottom: 0);
+                              @include gradient;
+                              transform-origin: 0% 50%;
+                              transform: scaleX(0);
+                              transition: transform 350ms linear;
+                         }
+                         // Review this line of code!
+                         // .active {
+                         //      &::after {
+                         //           transform: scaleX(1);
+                         //      }
+                         // }
                          .router-link-active {
                               color: rgb($color-text-primary, 0.7) !important;
                               font-size: 1.3rem;
                          }
-                    }            
+                    }
+
+                    .nav-item-mode-switch {
+                         position: relative;
+                         margin-left: 2rem;
+
+                         span {
+                              color: $color-text-primary !important;
+                         }
+                         #moon,
+                         #sun {
+                              position: absolute;
+                              left: -27px;
+                              top: -13px;
+                         }
+                    }
+
+                    #sun {
+                         display: none;
+                    }
                }
           }
                
@@ -182,6 +220,9 @@
                }
                 .navbar-toggler {
                     display: none !important;
+               }
+               .nav-item-mode-switch {
+                    margin-left: 4rem !important;
                }
           }
      }
