@@ -219,35 +219,62 @@
                     }
                }
 
-               &__lang-switcher {
-                    top: 90vh;
-                    right: 118px;
-               }
-
                &__color-switcher {
                     top: 80vh;
                     right: 127px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 1px solid $color-brand-secondary;
+                    cursor: pointer;
+                    @include flexbox;
 
                     span {
                          color: $color-text-primary !important;
                     }
 
-                     #sun {
+                     #moon {
                          display: none;
+                    }
+               }
+
+               &__lang-switcher {
+                    top: 90vh;
+                    right: 118px;
+
+                    select {
+                         width: 42px;
+                         height: 25px;
+                         font-size: 1rem;
+                         color: $color-text-primary;
+                         font-weight: 700;
+                         border: none;
+                         outline: none;
+                         border-radius: 5px;
+                         cursor: pointer;
+                         @include gradient;
+                         @include animation(400ms) {
+                              0% {
+                                   opacity: 0;
+                              }
+                              100% {
+                                   opacity: 1;
+                              }
+                         }
                     }
                }
           }
 
           @media only screen and (min-width: 640px) {
                padding: 0.6rem 4rem !important;
-                .navbar {
+               .navbar {
                     &__lang-switcher {
                          right: 160px !important;
                     }
                     &__color-switcher {
                          right: 168px !important;
                     }
-                }
+               }
           }
 
           @media screen and (min-width: 1024px) {
@@ -265,7 +292,8 @@
                     }
 
                     &__color-switcher {
-                         margin-left: 4rem !important;
+                         margin-left: 3rem !important;
+                         margin-right: 1rem !important;
                     }
                }
           }
