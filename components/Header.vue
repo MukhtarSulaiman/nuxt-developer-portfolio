@@ -3,6 +3,14 @@
 <script setup lang="ts">
 
      const navOpen = ref(false);
+     const links: [string, string][] = [
+          ['Accueil', '#intro'],
+          ['Compétences', '#skills'],
+          ['Portfolio', '#portfolio'],
+          ['Formations', '#education'],
+          ['Contact', '#contact'],
+     ];
+
 
      onMounted(() => {
           window.addEventListener('resize', toggleNavbar);
@@ -39,21 +47,19 @@
                <span class="navbar-toggler__bar navbar-toggler__bar--middle"></span>
                <span class="navbar-toggler__bar navbar-toggler__bar--bottom"></span>
           </button>
-          <nav  :class="{ active: navOpen }" id="navbarNav">
+          <nav  :class="['navbar ', { active: navOpen }]">
                <ul>
-                    <li class="nav-item nav-item-border active"><NuxtLink to="#intro">Accueil</NuxtLink></li>
-                    <li class="nav-item nav-item-border"><NuxtLink to="#skills">Compétences</NuxtLink></li>
-                    <li class="nav-item nav-item-border"><NuxtLink to="#portfolio">Portfolio</NuxtLink></li>
-                    <li class="nav-item nav-item-border"><NuxtLink to="#education">Formations</NuxtLink></li>
-                    <li class="nav-item nav-item-border"><NuxtLink to="#contact">Contact</NuxtLink></li>
-                    <li class="nav-item nav-item-mode-switch me-4">
-                         <span class="dark-mode-toggle fs-3" role="button">
-                              <!-- <Icon name="ic:outline-wb-sunny" id="sun"/> -->
+                    <li v-for="link, index in links" :key="index">
+                         <NuxtLink :to="link[1]">{{ link[0] }}</NuxtLink>
+                    </li>
+                    <li class="navbar__color-switcher">
+                         <span role="button">
+                              <Icon name="ic:outline-wb-sunny" id="sun"/>
                               <Icon name="ic:baseline-bedtime" id="moon" />
                          </span>
                     </li>
-                    <li class="nav-item nav-item-lang">
-                         <select id="site-language" name="language">
+                    <li class="navbar__lang-switcher">
+                         <select id="languages" name="language">
                               <option value="French">FR</option>
                               <option value="English">EN</option>
                               <option value="Arabic">AR</option>
@@ -76,73 +82,7 @@
           background-color: $color-brand-tertiary;
           box-shadow: 0 0.5rem 1rem rgb($color-text-inverted, .15);
           // overflow: hidden;
-          nav {
-               position: absolute;
-               top: 60px;
-               right: 0;
-               width: 100%;
-               height: 92vh;
-               background-color: $color-brand-tertiary;
-               transition: all .7s;
-               transform: translateX(100%);
 
-                &.active {
-                    display: block;
-                    transform: translateX(0%);
-               }
-               
-               ul {
-                    height: inherit;
-                    @include flexbox($justify-content: space-around,$flex-direction: column);
-                    
-                    li {
-                         margin: 0.6rem;
-                         position: relative;
-                         &:hover {
-                              &::after {
-                                   transform: scaleX(1);
-                              }
-                         }
-                         &::after {
-                              @include line($left: 0, $bottom: 0);
-                              @include gradient;
-                              transform-origin: 0% 50%;
-                              transform: scaleX(0);
-                              transition: transform 350ms linear;
-                         }
-                         // Review this line of code!
-                         // .active {
-                         //      &::after {
-                         //           transform: scaleX(1);
-                         //      }
-                         // }
-                         .router-link-active {
-                              color: rgb($color-text-primary, 0.7) !important;
-                              font-size: 1.3rem;
-                         }
-                    }
-
-                    .nav-item-mode-switch {
-                         position: relative;
-                         margin-left: 2rem;
-
-                         span {
-                              color: $color-text-primary !important;
-                         }
-                         #moon,
-                         #sun {
-                              position: absolute;
-                              left: -27px;
-                              top: -13px;
-                         }
-                    }
-
-                    #sun {
-                         display: none;
-                    }
-               }
-          }
-               
           .navbar-toggler {
                display: block;
                @include flexbox($justify-content: space-around,$flex-direction: column);
@@ -199,30 +139,134 @@
                     }
                }
           }
+          
+          .navbar {
+               right: 0;
+               width: 0;
+               height: 0;
+               margin: 0;
+               padding: 0;
+               visibility: hidden;
+               position: absolute;
+               top: 60px;
+
+               &.active {
+                    width: 100%;
+                    height: 92vh;
+                    display: block;
+                    visibility: visible !important;
+                    background-color: $color-brand-tertiary;
+                    @include animation(.7s) {
+                         0% {opacity: 0; transform: translateX(100%);}
+                         100% {opacity: 1; transform: translateX(0%);}
+                    };
+
+                    ul {
+                         height: inherit;
+                         @include flexbox($justify-content: space-around,$flex-direction: column);
+
+                         li {
+                              margin: 0.6rem;
+                              position: relative;
+                              opacity: 0;
+
+                              .router-link-active:hover {
+                                   &::after {
+                                        transform: scaleX(1);
+                                   }
+                              }
+                              .router-link-active::after {
+                                   @include line($left: 0, $bottom: 0);
+                                   @include gradient;
+                                   transform-origin: 0% 50%;
+                                   transform: scaleX(0);
+                                   transition: transform 350ms linear;
+                              }
+                              // Review this line of code!
+                              // .active {
+                              //      &::after {
+                              //           transform: scaleX(1);
+                              //      }
+                              // }
+                              .router-link-active {
+                                   color: rgb($color-text-primary, 0.7) !important;
+                                   font-size: 1.3rem;
+                              }
+
+                              @for $i from 1 to 8 {
+                                   &:nth-child(#{$i}) {
+                                        @include animation(.8s, $i * 0.15s) {
+                                             0% { opacity: 0; transform: translateX(300%);}
+                                             100% { opacity: 1; transform: translateX(0%);}
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    .navbar__color-switcher,
+                     .navbar__lang-switcher {
+                         position: static !important;
+                    }
+               }
+
+               &__color-switcher,
+               &__lang-switcher {
+                    position: fixed;
+                    z-index: 5;
+                    @include animation(3s) {
+                         0% {opacity: 0; visibility: hidden;}
+                         100% {opacity: 1;  visibility: visible;}
+                    }
+               }
+
+               &__lang-switcher {
+                    top: 90vh;
+                    right: 118px;
+               }
+
+               &__color-switcher {
+                    top: 80vh;
+                    right: 127px;
+
+                    span {
+                         color: $color-text-primary !important;
+                    }
+
+                     #sun {
+                         display: none;
+                    }
+               }
+          }
 
           @media only screen and (min-width: 640px) {
                padding: 0.6rem 4rem !important;
+                .navbar {
+                    &__lang-switcher {
+                         right: 160px !important;
+                    }
+                    &__color-switcher {
+                         right: 168px !important;
+                    }
+                }
           }
 
-          @media only screen and (min-width: 768px) { }
-
-          @media only screen and (min-width: 992px) {}
-
           @media screen and (min-width: 1024px) {
-               nav {
+               .navbar-toggler {
+                    display: none !important;
+               }
+               .navbar {
                     position:static !important;
                     width: auto !important;
                     height: initial !important;
                     transform: translateX(0%) !important;
-               }
-               ul {
-                    @include flexbox($justify-content: space-between, $flex-direction: row !important);
-               }
-                .navbar-toggler {
-                    display: none !important;
-               }
-               .nav-item-mode-switch {
-                    margin-left: 4rem !important;
+
+                    ul {
+                         @include flexbox($justify-content: space-between,$flex-direction: row !important);
+                    }
+
+                    &__color-switcher {
+                         margin-left: 4rem !important;
+                    }
                }
           }
      }
