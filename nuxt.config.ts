@@ -40,5 +40,22 @@ export default defineNuxtConfig({
                },
           },
      },
-     modules: ['nuxt-icon'],
+     modules: ['nuxt-icon', '@nuxtjs/color-mode', '@nuxtjs/i18n'],
+     colorMode: {
+          preference: 'dark', // default value of $colorMode.preference
+          fallback: 'light', // fallback value if not system preference found
+          classPrefix: '',
+     },
+     i18n: {
+          // add `vueI18n` option to `@nuxtjs/i18n` module options
+          vueI18n: {
+               legacy: false,
+               locale: 'fr',
+               messages: {
+                    en: {},
+                    fr: {},
+                    ar: {},
+               },
+          },
+     },
 });

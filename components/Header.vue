@@ -3,6 +3,8 @@
 <script setup lang="ts">
 
      const navOpen = ref(false);
+     const colorMode = useColorMode();
+     
      const links: [string, string][] = [
           ['Accueil', '#intro'],
           ['Compétences', '#skills'],
@@ -10,6 +12,10 @@
           ['Formations', '#education'],
           ['Contact', '#contact'],
      ];
+
+     function toggleMode(mode: string) {
+          colorMode.preference = mode;
+     }
 
 
      onMounted(() => {
@@ -53,16 +59,18 @@
                          <NuxtLink :to="link[1]">{{ link[0] }}</NuxtLink>
                     </li>
                     <li class="navbar__color-switcher">
-                         <span role="button">
+                         <span v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">
                               <Icon name="ic:outline-wb-sunny" id="sun"/>
-                              <Icon name="ic:baseline-bedtime" id="moon" />
+                         </span>
+                         <span v-if="$colorMode.preference === 'light'" @click="toggleMode('dark')">
+                              <Icon name="ic:baseline-bedtime" id="moon"/>
                          </span>
                     </li>
                     <li class="navbar__lang-switcher">
                          <select id="languages" name="language">
-                              <option value="French">FR</option>
-                              <option value="English">EN</option>
-                              <option value="Arabic">AR</option>
+                              <option value="fr">FR</option>
+                              <option value="en">EN</option>
+                              <option value="ar">Ar</option>
                          </select>
                     </li>
                </ul>
@@ -231,10 +239,6 @@
 
                     span {
                          color: $color-text-primary !important;
-                    }
-
-                     #moon {
-                         display: none;
                     }
                }
 

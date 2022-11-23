@@ -5,9 +5,30 @@
 </template>
 
 <style lang="scss">
+
+     :root {
+	--color-page-background: #{$color-brand-tertiary};
+	--color-text-icon: #{$color-text-primary};
+     }
+
+     html {
+          transition: all .7s;
+     }
      
      body {
           font-family: 'Raleway', sans-serif;
+          // color: var(--color-text-icon);
+          // background-color: var(--color-page-background);
+     }
+
+     .dark-mode {
+          color: var(--color-text-icon);
+          background-color: var(--color-page-background);
+     }
+
+     .light-mode {
+          color: var(--color-page-background);
+          background-color: var(--color-text-icon);
      }
 
      * {
