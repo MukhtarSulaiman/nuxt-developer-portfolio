@@ -13,10 +13,6 @@
           ['Contact', '#contact'],
      ];
 
-     function toggleMode(mode: string) {
-          colorMode.preference = mode;
-     }
-
 
      onMounted(() => {
           window.addEventListener('resize', toggleNavbar);
@@ -29,6 +25,10 @@
 
      function toggleNavbar() {
           window.innerWidth >= 1024 ? navOpen.value = true : navOpen.value = false;
+     }
+
+     function toggleMode(mode: string) {
+          colorMode.preference = mode;
      }
 
 
@@ -190,7 +190,7 @@
                                    transform: scaleX(0);
                                    transition: transform 350ms linear;
                               }
-                              // Review this line of code!
+                              // Review these lines of code!
                               // .active {
                               //      &::after {
                               //           transform: scaleX(1);
@@ -214,6 +214,9 @@
                     .navbar__color-switcher,
                      .navbar__lang-switcher {
                          position: static !important;
+                          #moon {
+                              color: var(--color-text-icon) !important;
+                         }
                     }
                }
 
@@ -237,8 +240,8 @@
                     cursor: pointer;
                     @include flexbox;
 
-                    span {
-                         color: $color-text-primary !important;
+                    #moon {
+                         color: $color-text-inverted !important;
                     }
                }
 

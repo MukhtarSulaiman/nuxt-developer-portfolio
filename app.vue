@@ -38,7 +38,6 @@
      }
 
      a {
-          color: $color-text-primary;
           text-decoration: none;
      }
 
