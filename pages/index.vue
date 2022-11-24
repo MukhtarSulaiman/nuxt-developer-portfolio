@@ -1,11 +1,10 @@
 <!-- @format -->
 
 <template>
-     <div>
-        
-     </div>
+     <main>
+         <Hero />
+     </main>
 </template>
 
 <style lang="scss" scoped>
-	
 </style>
