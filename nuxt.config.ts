@@ -1,4 +1,7 @@
 /** @format */
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'url';
+import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 
@@ -10,7 +13,10 @@ export default defineNuxtConfig({
                viewport: 'width=device-width, initial-scale=1',
                meta: [{ name: 'description', content: 'My amazing site.' }],
                link: [
-                    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+                    {
+                         rel: 'preconnect',
+                         href: 'https://fonts.googleapis.com',
+                    },
                     {
                          rel: 'preconnect',
                          href: 'https://fonts.gstatic.com',
@@ -39,23 +45,21 @@ export default defineNuxtConfig({
                     },
                },
           },
+          plugins: [
+               VueI18nVitePlugin({
+                    include: [
+                         resolve(
+                              dirname(fileURLToPath(import.meta.url)),
+                              './locales/*.json'
+                         ),
+                    ],
+               }),
+          ],
      },
-     modules: ['nuxt-icon', '@nuxtjs/color-mode', '@nuxtjs/i18n'],
+     modules: ['nuxt-icon', '@nuxtjs/color-mode'],
      colorMode: {
           preference: 'dark', // default value of $colorMode.preference
           fallback: 'light', // fallback value if not system preference found
           classPrefix: '',
-     },
-     i18n: {
-          // add `vueI18n` option to `@nuxtjs/i18n` module options
-          vueI18n: {
-               legacy: false,
-               locale: 'fr',
-               messages: {
-                    en: {},
-                    fr: {},
-                    ar: {},
-               },
-          },
      },
 });

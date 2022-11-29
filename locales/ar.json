@@ -1,0 +1,12 @@
+{
+    "home_title": "الصفحة الرئيسية",
+    "home_path": "/",
+    "skills_title": "المهارات",
+    "skills_path": "#skills",
+    "portfolio_title": "الأعمال",
+    "portfolio_path": "#portfolio",
+    "education_title": "التعليم",
+    "education_path": "#education",
+    "contact_title": "تواصل معنا",
+    "contact_path": "#contact"
+}

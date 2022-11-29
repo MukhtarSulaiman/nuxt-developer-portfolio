@@ -1,18 +1,9 @@
 <!-- @format -->
 
 <script setup lang="ts">
-
+    
      const navOpen = ref(false);
-     const colorMode = useColorMode();
-     
-     const links: [string, string][] = [
-          ['Accueil', '#intro'],
-          ['Compétences', '#skills'],
-          ['Portfolio', '#portfolio'],
-          ['Formations', '#education'],
-          ['Contact', '#contact'],
-     ];
-
+const colorMode = useColorMode();
 
      onMounted(() => {
           window.addEventListener('resize', toggleNavbar);
@@ -55,9 +46,11 @@
           </button>
           <nav  :class="['navbar ', { active: navOpen }]">
                <ul>
-                    <li v-for="link, index in links" :key="index">
-                         <NuxtLink :to="link[1]">{{ link[0] }}</NuxtLink>
-                    </li>
+                    <li><NuxtLink :to="$t('home_path')">{{ $t('home_title') }}</NuxtLink></li>
+                    <li><NuxtLink :to="$t('skills_path')">{{ $t('skills_title') }}</NuxtLink></li>
+                    <li><NuxtLink :to="$t('portfolio_path')">{{ $t('portfolio_title') }}</NuxtLink></li>
+                    <li><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li>
+                    <li><NuxtLink :to="$t('contact_path')">{{ $t('contact_title') }}</NuxtLink></li>
                     <li class="navbar__color-switcher">
                          <span v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">
                               <Icon name="ic:outline-wb-sunny" id="sun"/>
@@ -67,7 +60,7 @@
                          </span>
                     </li>
                     <li class="navbar__lang-switcher">
-                         <select id="languages" name="language">
+                         <select v-model="$i18n.locale" id="languages" name="language">
                               <option value="fr">FR</option>
                               <option value="en">EN</option>
                               <option value="ar">Ar</option>

@@ -1,0 +1,12 @@
+{    
+    "home_title": "Home",
+    "home_path": "/",
+    "skills_title": "Skills",
+    "skills_path": "#skills",
+    "portfolio_title": "Portfolio",
+    "portfolio_path": "#portfolio",
+    "education_title": "Education",
+    "education_path": "#education",
+    "contact_title": "Contact",
+    "contact_path": "#contact"
+}
