@@ -8,10 +8,8 @@ import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite';
 export default defineNuxtConfig({
      app: {
           head: {
-               title: 'Zool Developer | Mukhtar Sulaiman | Portfolio - Développeur Web',
                charset: 'utf-8',
                viewport: 'width=device-width, initial-scale=1',
-               meta: [{ name: 'description', content: 'My amazing site.' }],
                link: [
                     {
                          rel: 'preconnect',
