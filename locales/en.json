@@ -1,4 +1,6 @@
 {    
+    "main_title": "Zool Developer {pipe} Mukhtar Sulaiman {pipe} Web Developer Portfolio",
+    "main_description": "Front-end and Fullstack web developer. Specialized in JavaScript {pipe} Vue.js {pipe} React.js {pipe} Node.js. Based in Nantes, France and alumnus of OpenClassrooms",
     "home_title": "Home",
     "home_path": "/",
     "skills_title": "Skills",
@@ -8,5 +10,6 @@
     "education_title": "Education",
     "education_path": "#education",
     "contact_title": "Contact",
-    "contact_path": "#contact"
+    "contact_path": "#contact",
+    "network_aria_label": "link to Mukhtar's {iconName} account"
 }

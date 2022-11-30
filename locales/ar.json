@@ -1,4 +1,6 @@
 {
+    "main_title": "زول مطور {pipe} مختار سليمان {pipe} موقع مطور ويب ",
+    "main_description": "مطور ويب للواجهة الأمامية و Fullstack. متخصص في JavaScript {pipe} Vue.js {pipe} React.js {pipe} Node.js. اقيم في مدينة نانت ، فرنسا وخريج معهد OpenClassrooms",
     "home_title": "الصفحة الرئيسية",
     "home_path": "/",
     "skills_title": "المهارات",
@@ -8,5 +10,6 @@
     "education_title": "التعليم",
     "education_path": "#education",
     "contact_title": "تواصل معنا",
-    "contact_path": "#contact"
+    "contact_path": "#contact",
+    "network_aria_label": "{iconName} رابط الي حساب مختار في"
 }

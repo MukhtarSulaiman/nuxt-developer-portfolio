@@ -3,16 +3,16 @@ import en from '../locales/en.json';
 import fr from '../locales/fr.json';
 import ar from '../locales/ar.json';
 
-
 export default defineNuxtPlugin(({ vueApp }) => {
     const i18n = createI18n({
         legacy: false,
         globalInjection: true,
-        locale: 'fr',
+        locale: 'en',
+        fallbackLocale: 'fr',
         messages: {
             en,
             fr,
-            ar
+            ar,
         },
     });
 

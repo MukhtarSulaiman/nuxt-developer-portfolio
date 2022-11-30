@@ -1,13 +1,18 @@
 <!-- @format -->
 
 <script setup lang="ts">
+     import { useI18n } from 'vue-i18n';
+     
+     const useLocal = useI18n();
+     let lang = ref();
     
      const navOpen = ref(false);
-const colorMode = useColorMode();
+     const colorMode = useColorMode();
 
      onMounted(() => {
           window.addEventListener('resize', toggleNavbar);
           toggleNavbar();
+          handleLanguage();
      });
 
      onUnmounted(() => {
@@ -21,6 +26,23 @@ const colorMode = useColorMode();
      function toggleMode(mode: string) {
           colorMode.preference = mode;
      }
+
+     function handleLanguage() {
+          lang.value = localStorage.getItem('lang');
+          if (lang.value) {
+               useLocal.locale.value = lang.value;
+          } else {
+               lang.value = localStorage.setItem('lang', useLocal.locale.value);
+          }
+          document.documentElement.lang = useLocal.locale.value;
+     }
+
+     function updateLangue(e: any) {
+          lang.value = localStorage.setItem('lang', e.target.value);
+          document.documentElement.lang = useLocal.locale.value;
+     }
+
+    
 
 
 </script>
@@ -60,7 +82,7 @@ const colorMode = useColorMode();
                          </span>
                     </li>
                     <li class="navbar__lang-switcher">
-                         <select v-model="$i18n.locale" id="languages" name="language">
+                         <select @change="updateLangue($event)" v-model="$i18n.locale" id="languages" name="language">
                               <option value="fr">FR</option>
                               <option value="en">EN</option>
                               <option value="ar">Ar</option>
