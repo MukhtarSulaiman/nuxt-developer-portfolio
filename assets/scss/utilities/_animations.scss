@@ -14,7 +14,7 @@
 @mixin animation-on-scroll(
 	$opacity: 0,
 	$transform-value: translateY(100px),
-    	$transition-duration: 2s
+    $transition-duration: 2s
 
 ) {
 	opacity: $opacity;

@@ -11,24 +11,26 @@
 	--color-text-icon: #{$color-text-primary};
      }
 
+     .dark-mode,
+     .dark-mode :is(i) {
+          @include color-mode(
+               var(--color-text-icon), var(--color-page-background)
+          );
+     }
+
+     .light-mode,
+     .light-mode :is(i) {
+         @include color-mode(
+               var(--color-page-background), var(--color-text-icon)
+          );
+     }
+
      html {
           transition: all .7s;
      }
      
      body {
           font-family: 'Raleway', sans-serif;
-          // color: var(--color-text-icon);
-          // background-color: var(--color-page-background);
-     }
-
-     .dark-mode {
-          color: var(--color-text-icon);
-          background-color: var(--color-page-background);
-     }
-
-     .light-mode {
-          color: var(--color-page-background);
-          background-color: var(--color-text-icon);
      }
 
      * {

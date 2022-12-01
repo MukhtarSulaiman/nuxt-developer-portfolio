@@ -51,8 +51,14 @@
 @mixin arrow-indicator($border-side: bottom, $deg:-45deg) {
 	width: 17px;
 	height: 17px;
-     border-left: 2px solid $color-brand-primary;
-     border-#{$border-side}: 2px solid $color-brand-primary;
+    border-left: 2px solid $color-brand-primary;
+    border-#{$border-side}: 2px solid $color-brand-primary;
 	transform: rotate($deg);
 	animation-iteration-count: infinite;
+}
+
+@mixin color-mode($color, $backgorund-color) {
+	color: $color;
+    background-color: $backgorund-color;
+	transition: all .7s;
 }
