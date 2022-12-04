@@ -56,6 +56,9 @@
 
 		&__hero-img {
 			order: 1;
+			transform: scale(1);
+			@include top-level-animation($translate: 60px);
+	
 			img {
 				width: 85%;
 				max-width: 600px;
@@ -66,6 +69,7 @@
 			margin-top: 1.5rem;
 			margin-bottom: 3rem;
 			font-weight: 500;
+			@include top-level-animation($translate: -150px);
 
 			span {
 				display: block;
@@ -130,7 +134,7 @@
 			font-weight: 400;
 			word-spacing: 2px;
 			opacity: 0.8;
-
+			@include top-level-animation($translate: 150px);
 		}
 
 		&__additional-description {
@@ -162,7 +166,9 @@
 			margin-top: 1.5rem;
 			transform: translateY(0px);
 			transition: transform .6s;
-			
+			opacity: 0;
+			@include top-level-animation($dely: 2s,  $axe: translateY(150px));
+
 			i {
 				color: var(--color-text-icon);
 				background-color: transparent;

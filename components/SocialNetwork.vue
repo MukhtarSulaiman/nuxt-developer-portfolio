@@ -47,21 +47,8 @@
             @include contact-and-network-icon(7px);
             height: inherit;
             position: relative;
-            // opacity: 0;
-            // @include animation(2s, 1.7s) {
-            // 	0% {
-            // 		opacity: 0;
-            // 		transform: translateX(-118px);
-            // 	}
-            // 	20% {
-            // 		opacity: 0.5;
-            // 	}
-            // 	100% {
-            // 		opacity: 1;
-            // 		transform: translateX(0px);
-            // 	}
-            // }
-            // display: initial;
+            opacity: 0;
+            @include top-level-animation($dely: 1.7s, $translate: -118px);
 
             &::before,
             &::after {
