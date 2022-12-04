@@ -1,49 +1,41 @@
-<!-- @format -->
+@format
 
 <script setup lang="ts">
      import { useI18n } from 'vue-i18n';
      
-     const useLocal = useI18n();
-     let lang = ref();
-    
+     const { locale } = useI18n();
      const navOpen = ref(false);
-     const colorMode = useColorMode();
+     const lang = ref();
 
      onMounted(() => {
           window.addEventListener('resize', toggleNavbar);
           toggleNavbar();
           handleLanguage();
      });
-
      onUnmounted(() => {
           window.removeEventListener('resize', toggleNavbar);
-     });
-
+     }); 
      function toggleNavbar() {
           window.innerWidth >= 1024 ? navOpen.value = true : navOpen.value = false;
      }
 
      function toggleMode(mode: string) {
-          colorMode.preference = mode;
+           useColorMode().preference = mode;
      }
-
+     
      function handleLanguage() {
           lang.value = localStorage.getItem('lang');
           if (lang.value) {
-               useLocal.locale.value = lang.value;
+               locale.value = lang.value;
           } else {
-               lang.value = localStorage.setItem('lang', useLocal.locale.value);
+               lang.value = localStorage.setItem('lang', locale.value);
           }
-          document.documentElement.lang = useLocal.locale.value;
+          document.documentElement.lang = locale.value;
      }
-
      function updateLangue(e: any) {
           lang.value = localStorage.setItem('lang', e.target.value);
-          document.documentElement.lang = useLocal.locale.value;
+          document.documentElement.lang = locale.value;
      }
-
-    
-
 
 </script>
 
@@ -53,7 +45,7 @@
                <NuxtLink to="/">
                     <img
                          src="~assets/images/logo/zool-developer.svg"
-                         alt="icon zool developer" />
+                         :alt="$t('logo_img_desc')" />
                </NuxtLink>
           </div>
           <button
@@ -99,7 +91,8 @@
           width: 100%;
           height: 60px;
           padding: 1.2rem;
-          position: relative;
+          position: fixed;
+          top: 0;
           z-index: 10;
           color: $color-text-primary;
           background-color: $color-brand-tertiary;
@@ -311,6 +304,11 @@
 
                     ul {
                          @include flexbox($justify-content: space-between,$flex-direction: row !important);
+
+                         li {
+                              opacity: 1 !important; 
+                              transform: translateX(0) !important;
+                         }
                     }
 
                     &__color-switcher {
