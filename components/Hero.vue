@@ -35,6 +35,13 @@
 				<img src="~/assets/images/backgrounds/personal-image.png" :alt="$t('hero_img_desc')" />
 			</div>
 		</div>
+		<NuxtLink to="#bottom" :aria-label="$t('arrow_navigation_to_bottom')">
+			<div class="hero-section__scroll-container">
+				<div class="arrow"></div>
+				<div class="arrow"></div>
+				<div class="arrow"></div>
+			</div>
+		</NuxtLink>
 	</section>
 </template>
 
@@ -175,6 +182,41 @@
 			}
 		}
 
+		&__scroll-container {
+			@include flexbox($flex-direction: column);
+			margin-top: 4rem;
+
+			.arrow {
+				@include arrow-indicator;
+			}
+
+			:nth-child(2) {
+				@include animation(2s, 200ms) {
+						0% {
+							transform: translateY(-15px) rotate(-45deg);
+							opacity: 1;
+						}
+						100% {
+							transform: translateY(17px) rotate(-45deg);
+							opacity: 0;
+						}
+				}
+			}
+
+			:nth-child(3) {
+				@include animation(2s) {
+						0% {
+							transform: translateY(-30px) rotate(-45deg);
+							opacity: 1;
+						}
+						100% {
+							transform: translateY(15px) rotate(-45deg);
+							opacity: 0;
+						}
+				}
+			}
+		}
+
 		@media screen and (min-width: 768px) {
 			&__description-container.active &__additional-description {
 				max-height: 120px !important;
@@ -213,6 +255,10 @@
 				width: 50%;
 				height: inherit;
 				@include flexbox(flex-end);
+			}
+
+			&__scroll-container {
+				margin-top: 0rem !important;
 			}
 		}
 
