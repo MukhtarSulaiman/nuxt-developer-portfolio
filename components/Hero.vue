@@ -133,7 +133,7 @@
 		&__main-description {
 			font-weight: 400;
 			word-spacing: 2px;
-			opacity: 0.8;
+			opacity: 0.8 !important;
 			@include top-level-animation($translate: 150px);
 		}
 
@@ -143,8 +143,9 @@
 			font-size: 0.9rem;
 			font-weight: 200;
 			word-spacing: 3px;
-			opacity: 0;
-			transition: all .6s;
+			opacity: 0.8 ;
+			overflow: hidden;
+			transition: max-height 1s;
 
 			span:nth-child(1) {
 				color: $color-brand-primary;
@@ -154,8 +155,7 @@
 		}
 
 		&__description-container.active &__additional-description {
-			opacity: 0.8 ;
-			max-height: fit-content;
+			max-height: 215px !important;
 		}
 
 		&__btn-more-info {
@@ -172,6 +172,12 @@
 			i {
 				color: var(--color-text-icon);
 				background-color: transparent;
+			}
+		}
+
+		@media screen and (min-width: 768px) {
+			&__description-container.active &__additional-description {
+				max-height: 120px !important;
 			}
 		}
 
@@ -192,6 +198,10 @@
 				}
 			}
 
+			&__description-container.active &__additional-description {
+				max-height: 150px !important;
+			}
+
 			&__intro {
 				order: 1;
 				width: 50%;
@@ -203,6 +213,12 @@
 				width: 50%;
 				height: inherit;
 				@include flexbox(flex-end);
+			}
+		}
+
+		@media screen and (min-width: 1280px) {
+			&__description-container.active &__additional-description {
+				max-height: 110px !important;
 			}
 		}
 	}
