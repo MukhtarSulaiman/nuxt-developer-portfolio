@@ -1,6 +1,7 @@
 {    
     "main_title": "Zool Developer {pipe} Mukhtar Sulaiman {pipe} Web Developer Portfolio",
     "main_description": "Front-end and Fullstack web developer. Specialized in JavaScript {pipe} Vue.js {pipe} React.js {pipe} Node.js. Based in Nantes, France and alumnus of OpenClassrooms",
+    "logo_img_desc": "zool developer logo",
     "home_title": "Home",
     "home_path": "/",
     "skills_title": "Skills",
@@ -11,5 +12,17 @@
     "education_path": "#education",
     "contact_title": "Contact",
     "contact_path": "#contact",
-    "network_aria_label": "link to Mukhtar's {iconName} account"
+    "network_aria_label": "link to Mukhtar's {iconName} account",
+
+    "main_heading": {
+        "static_desc": "Hello and welcome ! | My name's | Mukhtar",
+        "dynamic_desc": "I am a | Full Stack developer"
+    },
+    "description_info": {
+        "main": "Curious and passionate about the world of tech and more particularly web development. It's been over a year since I've decided to take the step and take the time to train myself. I therefore joined the OpenClassrooms program in July 2021 in order to perfect my knowledge and acquire new ones.",
+        "additional": "Currently | looking for a company for a work-study contract as Full stack web Developer or a React JavaScript Developer. Endowed with great rigor and motivation, I know how to be autonomous in my missions and creative in my achievements in order to increase the volume of my skills and accompany you in this wonderful world which is tech.",
+        "button": "More info | Less info"
+    },
+    "hero_img_desc": "Mukhtar Sulaiman's image",
+    "arrow_navigation_to_bottom": "Click to go to the bottom of the page"
 }
