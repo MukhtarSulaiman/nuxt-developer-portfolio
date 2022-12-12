@@ -2,13 +2,13 @@
 <script setup lang="ts">
     import { useI18n } from 'vue-i18n';
     
-    const useLocal = useI18n();
+    const { t } = useI18n();
    
     onMounted(() => {
         useHead({
-            title: useLocal.t('main_title', { pipe: '|' }),
+            title: t('main_title', { pipe: '|' }),
             meta: [
-                { name: 'description', content: useLocal.t('main_description', { pipe: '|' }) },
+                { name: 'description', content: t('main_description', { pipe: '|' }) },
             ],
         });
         
