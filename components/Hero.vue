@@ -1,6 +1,8 @@
 <!-- @format -->
 
 <script setup lang="ts">
+	import { useI18n } from 'vue-i18n';
+
 	const isAdditionalDescActive = ref(false);
 </script>
 
@@ -8,11 +10,11 @@
 	<section>
 		<div class="hero-section hero-section__container">
 			<SocialNetwork />
-			<div class="hero-section__intro">
+			<div :class="[ 'hero-section__intro ', { 'lang-ar' : useI18n().locale.value === 'ar' }]">
 				<h1 class="hero-section__main-heading">
 						<span>{{ $t('main_heading.static_desc', 0) }}</span>{{ $t('main_heading.static_desc', 1) }}
 						<span>{{ $t('main_heading.static_desc', 2) }}</span>
-						<span>
+						<span  :class="{ 'lang-ar' : useI18n().locale.value === 'ar' }">
 							<span class="static-description">{{$t('main_heading.dynamic_desc', 1)}}</span>
 							<span class="dynamic-description">{{$t('main_heading.dynamic_desc', 2)}}</span>
 						</span>
@@ -32,7 +34,7 @@
 				</div>
 			</div>
 			<div class="hero-section__hero-img ">
-				<img src="~/assets/images/backgrounds/personal-image.png" :alt="$t('hero_img_desc')" />
+				<img :class="{ 'lang-ar' : useI18n().locale.value === 'ar' }" src="~/assets/images/backgrounds/personal-image.png" :alt="$t('hero_img_desc')" />
 			</div>
 		</div>
 		<NuxtLink to="#bottom" :aria-label="$t('arrow_navigation_to_bottom')">
@@ -103,32 +105,54 @@
 				margin-right: 5px;
 			}
 
+			span:nth-child(3).lang-ar .static-description {
+				margin-right: 0;
+				margin-left: 5px;
+			}
+
 			span:nth-child(3) .dynamic-description {
 				position: relative;
 				color: $color-brand-secondary;
 				&::before {
-						content: '';
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						padding-left: 5px;
-						font-size: 2rem;
-						z-index: 1;
-						background-color: inherit;
-						border-left: 2px solid $color-brand-secondary;
-						animation: steps(15) infinite;
-						@include flexbox(left);
-						@include animation(4s) {
-							40%,
-							60% {
-								left: calc(100% + 5px);
-							}
-							100% {
-								left: 0;
-							}
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					padding-left: 5px;
+					font-size: 2rem;
+					z-index: 1;
+					background-color: inherit;
+					border-left: 2px solid $color-brand-secondary;
+					animation: steps(15) infinite;
+					@include flexbox(left);
+					@include animation(4s) {
+						40%,
+						60% {
+							left: calc(100% + 5px);
 						}
+						100% {
+							left: 0;
+						}
+					}
+				}
+			}
+
+			span:nth-child(3).lang-ar .dynamic-description {
+				&::before {
+					padding-left: 0 !important;
+					border-left: none !important;
+					border-right: 2px solid $color-brand-secondary !important;
+					@include animation(4s) {
+						40%,
+						60% {
+							left: calc(-100% + -5px);
+						}
+						100% {
+							left: 0;
+						}
+					}
 				}
 			}
 		}
@@ -250,11 +274,20 @@
 				margin-left: 5rem;
 			}
 
+			&__intro.lang-ar {
+				margin-left: 0rem;
+				margin-right: 5rem;
+			}
+
 			&__hero-img {
 				order: 2;
 				width: 50%;
 				height: inherit;
 				@include flexbox(flex-end);
+
+				img.lang-ar {
+					transform: scaleX(-1);
+				}
 			}
 
 			&__scroll-container {
