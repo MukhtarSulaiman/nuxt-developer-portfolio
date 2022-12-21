@@ -19,6 +19,7 @@
 <template>
      <main>
          <Hero />
+         <Skills />
      </main>
 </template>
 
