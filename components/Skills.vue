@@ -88,8 +88,8 @@
  
 <template>
     <section id="skills">
-        <h2>Compétences</h2>
-        <div class="row skills-container">
+        <h2>{{ $t('skills_main_title') }}</h2>
+        <div class="skills-container">
             <div class="skills-container__bg-color">
                 <h3>Front-end</h3>
                 <div class="skills-container__frontend">
@@ -113,18 +113,12 @@
 </template>
 
 <style lang="scss" scoped>
-
-    #skills {
-        // margin-top: 10rem;
-        height: fit-content;
-    }
     .skills-container {
-        @include flexbox($justify-content: space-between, $flex-direction: column);
         gap: 1.5rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
         text-align: center;
-         color: $color-text-primary;
+        color: $color-text-primary;
         background-image: url('~/assets/images/backgrounds/desktop-bg.jpeg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -162,6 +156,11 @@
                 margin-bottom: 20px;
             }
 
+            small {
+                display: block;
+                padding: 7px 0
+            }
+
             &::after {
                 content: '';
                 width: 60px;
@@ -175,14 +174,24 @@
                 background-color: $color-text-primary;
                 color: $color-text-inverted;
 
-                & img {
+                img {
                     width: 47px;
                     transform: translateY(8px);
                     transition: width 500ms, transform 500ms;
                 }
+                
+                small {    
+                    transform: translateY(-15px);
+                    transition: transform 500ms;
+                }
 
                 &::after {
                     background-color: $color-text-inverted;
+                    @include animation(400ms) {
+                        0% { opacity: 0; bottom: 50px; }
+                        40% { opacity: 0.5; bottom: 25px; }
+                        100% { opacity: 1; bottom: 10px };
+                    }
                 }
             } 
         }
@@ -192,18 +201,13 @@
                 width: 160px;
             }
         }
-        @media screen and (min-width: 768px) {
 
-            @include flexbox(space-around, $align-items: flex-start);
-            padding-top: 2rem !important;
-            padding-bottom: 12rem !important;
-            width: auto;
-            height: auto;
-            
+        @media screen and (min-width: 768px) {
+            display: flex;
+            padding: 2rem 2rem 12rem !important;
+            height: fit-content;
 
             &__bg-color {
-                width: 45%;
-                min-height: 100%;
                 flex: 1;                
             }
         }
@@ -214,5 +218,4 @@
             }
         }
     }
-
 </style>
