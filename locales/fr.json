@@ -25,5 +25,7 @@
     },
     "hero_img_desc": "image de Mukhtar Sulaiman",
     "arrow_navigation_to_bottom": "Cliquez pour aller en bas de la page",
-    "skills_main_title": "Compétences"
+    "skills_main_title": "Compétences",
+        "tools_alt_desc": "îcone",
+    "download_resume": "Télécharger mon CV"
 }

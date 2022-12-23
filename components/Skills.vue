@@ -1,89 +1,26 @@
 <!-- @format -->
 
 <script setup lang="ts">
-    import { Tools } from '../types/index';
-    
-    const frontTools: Tools[] = [
-        {
-            id: 1,
-            title: 'JavaScript',
-            alt: 'javascript icon' 
-        },
-        {
-            id: 2,
-            title: 'VueJS',
-            alt: 'vue icon'
-        },
-        {
-            id: 3,
-            title: 'ReactJS',
-            alt: 'react icon'
-        },
-        {
-            id: 4,
-            title: 'TypeScript',
-            alt: 'typescript icon'
-        },
-        {
-            id: 5,
-            title: 'HTML',
-            alt: 'html icon'
-        },
-        {
-            id: 6,
-            title: 'CSS',
-            alt: 'css icon'
-        },
-        {
-            id: 7,
-            title: 'SASS',
-            alt: 'sass icon'
-        },
-        {
-            id: 8,
-            title: 'Bootstrap',
-            alt: 'bootstrap icon'
-        },
-        {
-            id: 9,
-            title: 'Figma',
-            alt: 'figma icon'
-        },
+    import { useI18n } from 'vue-i18n';
+        
+    const frontTools: string[] = [
+        'JavaScript', 'VueJS', 'ReactJS', 'TypeScript',
+        'HTML', 'CSS', 'SASS', 'Bootstrap', 'Figma',
     ] 
 
-     const backTools: Tools[] = [
-        {
-            id: 1,
-            title: 'NodeJS',
-            alt: 'nodejs icon' 
-        },
-        {
-            id: 2,
-            title: 'MySql',
-            alt: 'mysql icon'
-        },
-        {
-            id: 3,
-            title: 'MongoDB',
-            alt: 'react icon'
-        },
-        {
-            id: 4,
-            title: 'Express',
-            alt: 'typescript icon'
-        },
-        {
-            id: 5,
-            title: 'GitHub',
-            alt: 'html icon'
-        },
-        {
-            id: 6,
-            title: 'Postman',
-            alt: 'css icon'
-        }
+     const backTools: string[] = [
+        'NodeJS', 'MySql', 'MongoDB',
+        'Express','GitHub','Postman',
     ]
 
+    const downLoadResume = () => {
+        window.open(
+            '/files/cv-mukhtar_sulaiman-fr.pdf',
+            '_blank',
+            'fullscreen=yes'
+        );
+    }
+    
 </script>
  
 <template>
@@ -93,21 +30,26 @@
             <div class="skills-container__bg-color">
                 <h3>Front-end</h3>
                 <div class="skills-container__frontend">
-                    <div v-for="frontTool in frontTools" :key="frontTool.id" class="skills-container__content">
-                        <img :src="`/images/${frontTool.title.toLocaleLowerCase()}.png`" :alt="frontTool.alt" />
-                        <small>{{ frontTool.title }}</small>
+                    <div v-for="(frontTool, index) in frontTools" :key="index" class="skills-container__content">
+                        <img 
+                            :src="`/images/${frontTool.toLocaleLowerCase()}.png`" 
+                            :alt="useI18n().locale.value === 'fr' ? `${$t('tools_alt_desc')} ${frontTool}` : `${frontTool} ${$t('tools_alt_desc')}`" />
+                        <small>{{ frontTool }}</small>
                     </div>
                 </div>
             </div>
             <div class="skills-container__bg-color">
                 <h3>Back-end</h3>
                 <div class="skills-container__backend">
-                    <div v-for="backTool in backTools" :key="backTool.id" class="skills-container__content">
-                        <img :src="`/images/${backTool.title.toLocaleLowerCase()}.png`" alt="nodejs icon" />
-                        <small>{{ backTool.title }}</small>
+                    <div v-for="(backTool, index) in backTools" :key="index" class="skills-container__content">
+                        <img 
+                            :src="`/images/${backTool.toLocaleLowerCase()}.png`"
+                            :alt="useI18n().locale.value === 'fr' ? `${$t('tools_alt_desc')} ${backTool}` : `${backTool} ${$t('tools_alt_desc')}`" />
+                        <small>{{ backTool }}</small>
                     </div>
                 </div>
             </div>
+            <button @click="downLoadResume">{{ $t('download_resume')}}</button>
         </div>
     </section>
 </template>
@@ -199,6 +141,15 @@
         &__content.show {
             @include animation-on-scroll(1, translateY(0));
         }
+
+
+        button {
+            @include custom-btn(200px);
+            position: absolute;
+            left: 50%;
+            bottom: -80px;
+            transform: translateX(-50%);
+        }
         
         @media screen and (min-width: 576px) {
             &__content {
@@ -215,6 +166,9 @@
                 flex: 1;                
             }
            
+            button {
+                bottom: 90px !important;
+            }
         }
 
         @media screen and (min-width: 768px) and (max-width: 900px) {
