@@ -140,7 +140,7 @@
             flex-wrap: wrap;
             margin-top: 20px;
             padding: 1rem;
-            // overflow: hidden;
+            overflow: hidden;
         }
 
         &__content {
@@ -149,7 +149,7 @@
             @include flexbox($flex-direction: column);
             cursor: pointer;
             position: relative;
-            // @include animation-on-scroll;
+            @include animation-on-scroll;
 
             img {
                 width: 40px;
@@ -196,6 +196,10 @@
             } 
         }
         
+        &__content.show {
+            @include animation-on-scroll(1, translateY(0));
+        }
+        
         @media screen and (min-width: 576px) {
             &__content {
                 width: 160px;
@@ -210,6 +214,7 @@
             &__bg-color {
                 flex: 1;                
             }
+           
         }
 
         @media screen and (min-width: 768px) and (max-width: 900px) {

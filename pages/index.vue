@@ -10,18 +10,26 @@
             meta: [
                 { name: 'description', content: t('main_description', { pipe: '|' }) },
             ],
-        });
-        
-    })
+        }); 
 
+        
+        const observer = new IntersectionObserver(enteries => {
+                enteries.forEach(entery => {
+                    entery.target.classList.toggle('show', entery.isIntersecting);
+                });
+            },
+            { threshold: 0.3, }
+        );
+        // This slector is declared in Skills component
+        document.querySelectorAll(`.skills-container__content`).forEach(selector => {
+            observer.observe(selector);
+        });
+    });
 </script>
 
 <template>
-     <main>
-         <Hero />
-         <Skills />
-     </main>
+    <main>
+        <Hero />
+        <Skills />
+    </main>
 </template>
-
-<style lang="scss" scoped>
-</style>
