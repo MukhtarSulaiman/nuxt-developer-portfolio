@@ -11,9 +11,12 @@
 	font-weight: bold;
 	font-size: 1rem;
 	border: none;
+	transition: all .4s ease-in-out;
 	cursor: pointer;
 	@include gradient;
 	&:hover {
+		box-shadow: 0 0 5px 0 rgb($color-brand-secondary, 1);
+        background-position: 100% 0;
 		@include gradient($opacity: 0.9);
 	}
 }
