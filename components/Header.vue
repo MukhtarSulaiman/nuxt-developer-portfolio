@@ -41,54 +41,60 @@
 
 <template>
      <header>
-          <div id="logo">
-               <NuxtLink to="/">
-                    <img
-                         src="~assets/images/logo/zool-developer.svg"
-                         :alt="$t('logo_img_desc')" />
-               </NuxtLink>
+          <div class="header-container">
+               <div id="logo">
+                    <NuxtLink to="/">
+                         <img
+                              src="~assets/images/logo/zool-developer.svg"
+                              :alt="$t('logo_img_desc')" />
+                    </NuxtLink>
+               </div>
+               <button
+                    @click="navOpen = !navOpen"
+                    :class="{active: !navOpen}"
+                    class="navbar-toggler"
+                    type="button"
+                    aria-label="toggle navigation">
+                    <span class="navbar-toggler__bar navbar-toggler__bar--top"></span>
+                    <span class="navbar-toggler__bar navbar-toggler__bar--middle"></span>
+                    <span class="navbar-toggler__bar navbar-toggler__bar--bottom"></span>
+               </button>
+               <nav  :class="['navbar ', { active: navOpen }]">
+                    <ul>
+                         <li><NuxtLink :to="$t('home_path')">{{ $t('home_title') }}</NuxtLink></li>
+                         <li><NuxtLink :to="$t('skills_path')">{{ $t('skills_title') }}</NuxtLink></li>
+                         <li><NuxtLink :to="$t('portfolio_path')">{{ $t('portfolio_title') }}</NuxtLink></li>
+                         <li><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li>
+                         <li><NuxtLink :to="$t('contact_path')">{{ $t('contact_title') }}</NuxtLink></li>
+                         <li class="navbar__color-switcher">
+                              <span v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">
+                                   <Icon name="ic:outline-wb-sunny" id="sun"/>
+                              </span>
+                              <span v-if="$colorMode.preference === 'light'" @click="toggleMode('dark')">
+                                   <Icon name="ic:baseline-bedtime" id="moon"/>
+                              </span>
+                         </li>
+                         <li class="navbar__lang-switcher">
+                              <select @change="updateLangue($event)" v-model="$i18n.locale" id="languages" name="language">
+                                   <option value="fr">FR</option>
+                                   <option value="en">EN</option>
+                                   <option value="ar">Ar</option>
+                              </select>
+                         </li>
+                    </ul>
+               </nav>
           </div>
-          <button
-               @click="navOpen = !navOpen"
-               :class="{active: !navOpen}"
-               class="navbar-toggler"
-               type="button"
-               aria-label="toggle navigation">
-               <span class="navbar-toggler__bar navbar-toggler__bar--top"></span>
-               <span class="navbar-toggler__bar navbar-toggler__bar--middle"></span>
-               <span class="navbar-toggler__bar navbar-toggler__bar--bottom"></span>
-          </button>
-          <nav  :class="['navbar ', { active: navOpen }]">
-               <ul>
-                    <li><NuxtLink :to="$t('home_path')">{{ $t('home_title') }}</NuxtLink></li>
-                    <li><NuxtLink :to="$t('skills_path')">{{ $t('skills_title') }}</NuxtLink></li>
-                    <li><NuxtLink :to="$t('portfolio_path')">{{ $t('portfolio_title') }}</NuxtLink></li>
-                    <li><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li>
-                    <li><NuxtLink :to="$t('contact_path')">{{ $t('contact_title') }}</NuxtLink></li>
-                    <li class="navbar__color-switcher">
-                         <span v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">
-                              <Icon name="ic:outline-wb-sunny" id="sun"/>
-                         </span>
-                         <span v-if="$colorMode.preference === 'light'" @click="toggleMode('dark')">
-                              <Icon name="ic:baseline-bedtime" id="moon"/>
-                         </span>
-                    </li>
-                    <li class="navbar__lang-switcher">
-                         <select @change="updateLangue($event)" v-model="$i18n.locale" id="languages" name="language">
-                              <option value="fr">FR</option>
-                              <option value="en">EN</option>
-                              <option value="ar">Ar</option>
-                         </select>
-                    </li>
-               </ul>
-          </nav>
      </header>
 </template>
 
 <style lang="scss" scoped>
      header {
+          max-width: 1728px;
+     }
+     .header-container {
           @include flexbox(space-between);
           width: 100%;
+          max-width: inherit;
           height: 60px;
           padding: 1.2rem;
           position: fixed;

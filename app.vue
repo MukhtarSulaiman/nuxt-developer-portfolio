@@ -51,6 +51,9 @@
 
      body {
           font-family: 'Raleway', sans-serif;
+          max-width: 1728px;
+          margin: 0 auto;
+          // position: relative;
      }
 
      * {
