@@ -67,6 +67,10 @@
           // overflow: hidden;
      }
 
+     section {
+          margin-top: 10rem;
+     }
+
      a {
           text-decoration: none;
      }

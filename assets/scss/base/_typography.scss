@@ -3,9 +3,15 @@ h2, h3 {
 }
 
 h2 {
-    margin-top: 13rem;
     margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 800;
     text-transform: uppercase;
     text-align: center;
-    font-weight: bold;
+}
+
+@media screen and (min-width: 576px) {
+    h2 {
+        font-size: 1.4rem;
+    } 
 }
