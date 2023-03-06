@@ -44,14 +44,13 @@
           <div id="logo">
                <NuxtLink to="/">
                     <img
-                         src="~assets/images/logo/zool-developer.svg"
+                         src="~assets/images/logo/logo-zool-developer.svg"
                          :alt="$t('logo_img_desc')" />
                </NuxtLink>
           </div>
           <button
                @click="navOpen = !navOpen"
-               :class="{active: !navOpen}"
-               class="navbar-toggler"
+               :class="['navbar-toggler', {active: !navOpen, 'light-mode': $colorMode.preference === 'light'}]"
                type="button"
                aria-label="toggle navigation">
                <span class="navbar-toggler__bar navbar-toggler__bar--top"></span>
@@ -89,15 +88,19 @@
      header {
           @include flexbox(space-between);
           width: 100%;
+          max-width: 1728px;
           height: 60px;
           padding: 1.2rem;
           position: fixed;
           top: 0;
           z-index: 10;
-          color: $color-text-primary;
-          background-color: $color-brand-tertiary;
           box-shadow: 0 0.5rem 1rem rgb($color-text-inverted, .15);
-          // overflow: hidden;
+
+          #logo {
+               img {
+                    width: 30px;
+               }
+          }
 
           .navbar-toggler {
                display: block;
@@ -114,7 +117,7 @@
                     height: 1.5px;
                     position: absolute;
                     left: 0;
-                    background: $color-text-primary;
+                    background-color: $color-text-primary;
                     border-radius: 2px;
                     transform: rotate(0deg);
                     transition: 400ms ease-in-out;
@@ -134,6 +137,9 @@
                     }
                }
 
+               .light-mode &__bar {
+                    background-color: $color-text-inverted;
+               }
                 // State when the navbar is collapsed
                &.active {
                     .navbar-toggler__bar {
@@ -171,7 +177,6 @@
                     height: 92vh;
                     display: block;
                     visibility: visible !important;
-                    background-color: $color-brand-tertiary;
                     @include animation(.7s) {
                          0% {opacity: 0; transform: translateX(100%);}
                          100% {opacity: 1; transform: translateX(0%);}
@@ -205,7 +210,6 @@
                               //      }
                               // }
                               .router-link-active {
-                                   color: rgb($color-text-primary, 0.7) !important;
                                    font-size: 1.3rem;
                               }
 
@@ -222,9 +226,6 @@
                     .navbar__color-switcher,
                      .navbar__lang-switcher {
                          position: static !important;
-                          #moon {
-                              color: var(--color-text-icon) !important;
-                         }
                     }
                }
 
@@ -247,10 +248,6 @@
                     border: 1px solid $color-brand-secondary;
                     cursor: pointer;
                     @include flexbox;
-
-                    #moon {
-                         color: $color-text-inverted !important;
-                    }
                }
 
                &__lang-switcher {
@@ -282,6 +279,12 @@
 
           @media only screen and (min-width: 640px) {
                padding: 0.6rem 4rem !important;
+
+               #logo {
+                    img {
+                         width: 40px;
+                    }
+               }
                .navbar {
                     &__lang-switcher {
                          right: 160px !important;

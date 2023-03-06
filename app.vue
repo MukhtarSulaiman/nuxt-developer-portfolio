@@ -30,7 +30,7 @@
      }
 
      .dark-mode,
-     .dark-mode :is(i, .dynamic-description) {
+     .dark-mode :is(header, nav.active, i, .dynamic-description) {
           @include color-mode(
                var(--color-text-icon),
                var(--color-page-background)
@@ -38,11 +38,19 @@
      }
 
      .light-mode,
-     .light-mode :is(i, .dynamic-description) {
+     .light-mode :is(header, nav.active, i, .dynamic-description) {
           @include color-mode(
                var(--color-page-background),
                var(--color-text-icon)
           );
+     }
+
+     .dark-mode :is(a) {
+          color: $color-text-primary;
+     }
+
+     .light-mode :is(a) {
+          color: $color-text-inverted;
      }
 
      html {
@@ -51,6 +59,9 @@
 
      body {
           font-family: 'Raleway', sans-serif;
+          max-width: 1728px;
+          margin: 0 auto;
+          // position: relative;
      }
 
      * {
@@ -62,6 +73,10 @@
      main {
           margin: 0 1.2rem;
           // overflow: hidden;
+     }
+
+     section {
+          margin-top: 10rem;
      }
 
      a {
