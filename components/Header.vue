@@ -41,69 +41,66 @@
 
 <template>
      <header>
-          <div class="header-container">
-               <div id="logo">
-                    <NuxtLink to="/">
-                         <img
-                              src="~assets/images/logo/zool-developer.svg"
-                              :alt="$t('logo_img_desc')" />
-                    </NuxtLink>
-               </div>
-               <button
-                    @click="navOpen = !navOpen"
-                    :class="{active: !navOpen}"
-                    class="navbar-toggler"
-                    type="button"
-                    aria-label="toggle navigation">
-                    <span class="navbar-toggler__bar navbar-toggler__bar--top"></span>
-                    <span class="navbar-toggler__bar navbar-toggler__bar--middle"></span>
-                    <span class="navbar-toggler__bar navbar-toggler__bar--bottom"></span>
-               </button>
-               <nav  :class="['navbar ', { active: navOpen }]">
-                    <ul>
-                         <li><NuxtLink :to="$t('home_path')">{{ $t('home_title') }}</NuxtLink></li>
-                         <li><NuxtLink :to="$t('skills_path')">{{ $t('skills_title') }}</NuxtLink></li>
-                         <li><NuxtLink :to="$t('portfolio_path')">{{ $t('portfolio_title') }}</NuxtLink></li>
-                         <li><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li>
-                         <li><NuxtLink :to="$t('contact_path')">{{ $t('contact_title') }}</NuxtLink></li>
-                         <li class="navbar__color-switcher">
-                              <span v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">
-                                   <Icon name="ic:outline-wb-sunny" id="sun"/>
-                              </span>
-                              <span v-if="$colorMode.preference === 'light'" @click="toggleMode('dark')">
-                                   <Icon name="ic:baseline-bedtime" id="moon"/>
-                              </span>
-                         </li>
-                         <li class="navbar__lang-switcher">
-                              <select @change="updateLangue($event)" v-model="$i18n.locale" id="languages" name="language">
-                                   <option value="fr">FR</option>
-                                   <option value="en">EN</option>
-                                   <option value="ar">Ar</option>
-                              </select>
-                         </li>
-                    </ul>
-               </nav>
+          <div id="logo">
+               <NuxtLink to="/">
+                    <img
+                         src="~assets/images/logo/logo-zool-developer.svg"
+                         :alt="$t('logo_img_desc')" />
+               </NuxtLink>
           </div>
+          <button
+               @click="navOpen = !navOpen"
+               :class="['navbar-toggler', {active: !navOpen, 'light-mode': $colorMode.preference === 'light'}]"
+               type="button"
+               aria-label="toggle navigation">
+               <span class="navbar-toggler__bar navbar-toggler__bar--top"></span>
+               <span class="navbar-toggler__bar navbar-toggler__bar--middle"></span>
+               <span class="navbar-toggler__bar navbar-toggler__bar--bottom"></span>
+          </button>
+          <nav  :class="['navbar ', { active: navOpen }]">
+               <ul>
+                    <li><NuxtLink :to="$t('home_path')">{{ $t('home_title') }}</NuxtLink></li>
+                    <li><NuxtLink :to="$t('skills_path')">{{ $t('skills_title') }}</NuxtLink></li>
+                    <li><NuxtLink :to="$t('portfolio_path')">{{ $t('portfolio_title') }}</NuxtLink></li>
+                    <li><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li>
+                    <li><NuxtLink :to="$t('contact_path')">{{ $t('contact_title') }}</NuxtLink></li>
+                    <li class="navbar__color-switcher">
+                         <span v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">
+                              <Icon name="ic:outline-wb-sunny" id="sun"/>
+                         </span>
+                         <span v-if="$colorMode.preference === 'light'" @click="toggleMode('dark')">
+                              <Icon name="ic:baseline-bedtime" id="moon"/>
+                         </span>
+                    </li>
+                    <li class="navbar__lang-switcher">
+                         <select @change="updateLangue($event)" v-model="$i18n.locale" id="languages" name="language">
+                              <option value="fr">FR</option>
+                              <option value="en">EN</option>
+                              <option value="ar">Ar</option>
+                         </select>
+                    </li>
+               </ul>
+          </nav>
      </header>
 </template>
 
 <style lang="scss" scoped>
      header {
-          max-width: 1728px;
-     }
-     .header-container {
           @include flexbox(space-between);
           width: 100%;
-          max-width: inherit;
+          max-width: 1728px;
           height: 60px;
           padding: 1.2rem;
           position: fixed;
           top: 0;
           z-index: 10;
-          color: $color-text-primary;
-          background-color: $color-brand-tertiary;
           box-shadow: 0 0.5rem 1rem rgb($color-text-inverted, .15);
-          // overflow: hidden;
+
+          #logo {
+               img {
+                    width: 30px;
+               }
+          }
 
           .navbar-toggler {
                display: block;
@@ -120,7 +117,7 @@
                     height: 1.5px;
                     position: absolute;
                     left: 0;
-                    background: $color-text-primary;
+                    background-color: $color-text-primary;
                     border-radius: 2px;
                     transform: rotate(0deg);
                     transition: 400ms ease-in-out;
@@ -140,6 +137,9 @@
                     }
                }
 
+               .light-mode &__bar {
+                    background-color: $color-text-inverted;
+               }
                 // State when the navbar is collapsed
                &.active {
                     .navbar-toggler__bar {
@@ -177,7 +177,6 @@
                     height: 92vh;
                     display: block;
                     visibility: visible !important;
-                    background-color: $color-brand-tertiary;
                     @include animation(.7s) {
                          0% {opacity: 0; transform: translateX(100%);}
                          100% {opacity: 1; transform: translateX(0%);}
@@ -211,7 +210,6 @@
                               //      }
                               // }
                               .router-link-active {
-                                   color: rgb($color-text-primary, 0.7) !important;
                                    font-size: 1.3rem;
                               }
 
@@ -228,9 +226,6 @@
                     .navbar__color-switcher,
                      .navbar__lang-switcher {
                          position: static !important;
-                          #moon {
-                              color: var(--color-text-icon) !important;
-                         }
                     }
                }
 
@@ -253,10 +248,6 @@
                     border: 1px solid $color-brand-secondary;
                     cursor: pointer;
                     @include flexbox;
-
-                    #moon {
-                         color: $color-text-inverted !important;
-                    }
                }
 
                &__lang-switcher {
@@ -288,6 +279,12 @@
 
           @media only screen and (min-width: 640px) {
                padding: 0.6rem 4rem !important;
+
+               #logo {
+                    img {
+                         width: 40px;
+                    }
+               }
                .navbar {
                     &__lang-switcher {
                          right: 160px !important;

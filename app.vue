@@ -30,7 +30,7 @@
      }
 
      .dark-mode,
-     .dark-mode :is(i, .dynamic-description) {
+     .dark-mode :is(header, nav.active, i, .dynamic-description) {
           @include color-mode(
                var(--color-text-icon),
                var(--color-page-background)
@@ -38,11 +38,19 @@
      }
 
      .light-mode,
-     .light-mode :is(i, .dynamic-description) {
+     .light-mode :is(header, nav.active, i, .dynamic-description) {
           @include color-mode(
                var(--color-page-background),
                var(--color-text-icon)
           );
+     }
+
+     .dark-mode :is(a) {
+          color: $color-text-primary;
+     }
+
+     .light-mode :is(a) {
+          color: $color-text-inverted;
      }
 
      html {
