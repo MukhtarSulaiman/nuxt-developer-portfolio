@@ -8,7 +8,8 @@ export type Projects = {
     id: number,
     title: string,
     type: string,
-    imgUrl: string,
+    imgUrlMain: string,
+    imgUrlPreview: string,
     description: string,
     year: string
 }
