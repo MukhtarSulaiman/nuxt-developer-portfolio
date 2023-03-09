@@ -27,5 +27,41 @@
     "arrow_navigation_to_bottom": "Cliquez pour aller en bas de la page",
     "skills_main_title": "Compétences",
         "tools_alt_desc": "îcone",
-    "download_resume": "Télécharger mon CV"
+    "download_resume": "Télécharger mon CV",
+    "portfolio": {
+        "headings": {
+            "main": "Portfolio",
+            "navigational_title": "Projets web | Designs"
+        },
+        "project1": {
+            "type": "Hôtels & activités",
+            "description": ""
+        },
+        "project2": {
+            "type": "Réservation de repas",
+            "description": ""
+        },
+        "project3": {
+            "type": "Référencement naturel",
+            "description": ""
+        },
+        "project4": {
+            "type": "É-commerce",
+            "description": ""
+        },
+        "project5": {
+            "type": "Avis critiques",
+            "description": ""
+        },
+        "project6": {
+            "type": "Réseau social",
+            "description": ""
+        },
+        "project7": {
+            "type": "Portfolio",
+            "description": ""
+        },
+        "btn_see_more": "En savoir plus",
+        "btn_load_more_less": "Afficher Plus | Afficher Moins"
+    }
 }

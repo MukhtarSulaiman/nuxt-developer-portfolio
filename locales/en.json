@@ -27,5 +27,41 @@
     "arrow_navigation_to_bottom": "Click to go to the bottom of the page",
     "skills_main_title": "Skills",
     "tools_alt_desc": "icon",
-    "download_resume": "Download my resume"
+    "download_resume": "Download my resume",
+    "portfolio": {
+        "headings": {
+            "main": "Portfolio",
+            "navigational_title": "Web Projects | Designs"
+        },
+        "project1": {
+            "type": "Hotels & entrtainment",
+            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+        },
+        "project2": {
+            "type": "Meal reservation",
+            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+        },
+        "project3": {
+            "type": "SEO",
+            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+        },
+        "project4": {
+            "type": "E-commerce",
+            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+        },
+        "project5": {
+            "type": "Application d'avis",
+            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+        },
+        "project6": {
+            "type": "Social media",
+            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+        },
+        "project7": {
+            "type": "Portfolio",
+            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+        },
+        "btn_see_more": "Read more",
+        "btn_load_more_less": "Show More | Show Less"
+    }
 }

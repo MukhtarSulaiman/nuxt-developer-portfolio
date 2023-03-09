@@ -27,5 +27,41 @@
     "arrow_navigation_to_bottom": "انقر للإنتقال إلى أسفل الصفحة",
     "skills_main_title": "المهارات",
     "tools_alt_desc": "أيقونة",
-    "download_resume": "تحميل السيرة الذاتية "
+    "download_resume": "تحميل السيرة الذاتية ",
+    "portfolio": {
+        "headings": {
+            "main": "أعمالي",
+            "navigational_title": "مشاريع الويب | التصاميم"
+        },
+        "project1": {
+            "type": "الفنادق  والأنشطة",
+            "description": ""
+        },
+        "project2": {
+            "type": "حجز الطلبات",
+            "description": ""
+        },
+        "project3": {
+            "type": "تحسين محركات البحث",
+            "description": ""
+        },
+        "project4": {
+            "type": "التجارة الإلكترونية",
+            "description": ""
+        },
+        "project5": {
+            "type": "التقيمات والمراجعات",
+            "description": ""
+        },
+        "project6": {
+            "type": "التواصل الإجتماعي",
+            "description": ""
+        },
+        "project7": {
+            "type": "حافظة أعمال",
+            "description": ""
+        },
+        "btn_see_more": "أقرا المزيد ",
+        "btn_load_more_less": "تحميل المزيد | إظهار أفل"
+    }
 }

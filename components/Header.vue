@@ -279,12 +279,7 @@
 
           @media only screen and (min-width: 640px) {
                padding: 0.6rem 4rem !important;
-
-               #logo {
-                    img {
-                         width: 40px;
-                    }
-               }
+               
                .navbar {
                     &__lang-switcher {
                          right: 160px !important;

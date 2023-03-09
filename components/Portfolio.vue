@@ -1,58 +1,21 @@
 <script setup lang="ts">
 
-import { Projects } from '../types/index';
+import projects  from '../content/projects';
 
-    const projects: Projects[] = [
-        {
-            id: 1,
-            title: 'Réservia',
-            type: 'portfolio.project1.type',
-            imgUrl: 'hotel.jpg',
-            description: 'portfolio.project1.description',
-            year: '07/2021'
-        },
-        {
-            id: 2,
-            title: 'Ohmyfood',
-            type: 'portfolio.project2.type',
-            imgUrl: 'restaurant.jpg',
-            description: 'portfolio.project2.description',
-            year: '08/2021'
-        },
-        {
-            id: 3,
-            title: 'La Chouette',
-            type: 'portfolio.project3.type',
-            imgUrl: 'seo.jpg',
-            description: 'portfolio.project3.description',
-            year: '09/2021'
-        },
-        {
-            id: 4,
-            title: 'Orinoco',
-            type: 'portfolio.project4.type',
-            imgUrl: 'camera.jpg',
-            description: 'portfolio.project4.description',
-            year: '10/2021'
-        },
-        {
-            id: 5,
-            title: 'Hot Take',
-            type: 'portfolio.project5.type',
-            imgUrl: 'like.jpg',
-            description: 'portfolio.project5.description',
-            year: '11/2021'
-        },
-        {
-            id: 6,
-            title: 'Groupomania',
-            type: 'portfolio.project6.type',
-            imgUrl: 'media.jpg',
-            description: 'portfolio.project6.description',
-            year: '01/2022'
-        },
-    ]
+    const currentItems = ref(6);
+    const isAllItemsVisible = ref(false);
 
+    const showMoreOrLessProject = () => {
+        if(currentItems.value === projects.length) {
+            currentItems.value = 6;
+            isAllItemsVisible.value = false;
+        } else {
+            currentItems.value = projects.length;
+            if(currentItems.value === projects.length) {
+                isAllItemsVisible.value = true;
+            }
+        }
+    }
 </script>
 
 
@@ -67,25 +30,31 @@ import { Projects } from '../types/index';
         </div>
         <div class="portfolio-container">
             <div 
-                v-for="project in projects"  :key="project.id"
+                v-for="project in projects.slice(-currentItems).reverse()"  :key="project.id"
                 class="portfolio-container__project-wrapper">
                 <div class="portfolio-container__img-preview">
                     <div 
                         :class="['portfolio-container__img-holder', {'light-mode': $colorMode.preference === 'light'}]"
-                        :style="{ backgroundImage: `url(/images/projects/previews/${project.imgUrl})`}">
+                        :style="{ backgroundImage: `url(/images/projects/previews/${project.imgUrlPreview})`}">
                     </div>
                 </div>
                 <div class="portfolio-container__project-details">
-                    <h4>{{ project.title }}</h4>
+                    <h4>{{ project.title.length > 14 ? project.title.slice(0, 14) + '...' :  project.title }}</h4>
                     <div class="portfolio-container__sub-heading-description">
                         <h5>{{ $t(project.type) }}</h5>
                         <p>{{ $t(project.description) }}</p>
                     </div>
-                    <button>{{ $t('portfolio.btn_see_more') }}</button>
+                    <NuxtLink to="/project/" class="btn-more-info">
+                       {{ $t('portfolio.btn_see_more') }}
+                    </NuxtLink>                  
                 </div>
                 <small>{{ project.year }}</small>
             </div>
         </div>
+        <button @click="showMoreOrLessProject" class="btn-load-more">
+            <Icon name="mdi:eye" /> 
+            {{ isAllItemsVisible ? $t('portfolio.btn_load_more_less', 2) : $t('portfolio.btn_load_more_less', 1) }}
+        </button>
     </section>
 </template>
 
@@ -159,7 +128,7 @@ import { Projects } from '../types/index';
             &__img-preview {
                 width: 67%;
                 height:inherit;
-                overflow: hidden; 
+                overflow: hidden;
             }
 
             &__img-holder {
@@ -180,13 +149,13 @@ import { Projects } from '../types/index';
                 position: absolute;
                 top: 0;
                 right: 0;
-                transform: translateY(15%);
+                transform: translateY(10%);
                 width: 150px;
                 @include flexbox(space-between, left, $flex-direction: column);
 
                 h4 {
                     font-family:  'Raleway', sans-serif;
-                    font-size: 1.3rem;
+                    font-size: 1rem;
                     font-weight:700;
                     text-transform: uppercase;
                 }
@@ -200,11 +169,12 @@ import { Projects } from '../types/index';
                 }
 
                 p {
-                    font-weight: 300;
+                    font-weight: 200;
                 }
             }
 
-            button {
+            .btn-more-info {
+                @include flexbox;
                 @include custom-btn(150px, 35px, light);
                 border-radius: 10px;
                 background: $color-brand-secondary;
@@ -218,9 +188,19 @@ import { Projects } from '../types/index';
 
                 &__project-details {
                     width: 180px !important;
+                    transform: translateY(15%);
+
+                    h4 {
+                        font-size: 1.2rem;
+                    }
                 }
             }
         }
+        .btn-load-more {
+                margin: 3rem auto;
+                @include custom-btn(150px, 40px, light);
+                @include flexbox(space-evenly);
+            }
     }
 
 </style>
