@@ -45,12 +45,12 @@
           );
      }
 
-     .dark-mode :is(a) {
-          color: $color-text-primary;
+     .dark-mode :is(a, .btn-see-source-code) {
+          color: $color-text-primary !important;
      }
 
-     .light-mode :is(a) {
-          color: $color-text-inverted;
+     .light-mode :is(a, .btn-see-source-code) {
+          color: $color-text-inverted !important;
      }
 
      html {
