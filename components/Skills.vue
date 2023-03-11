@@ -32,7 +32,7 @@
                 <div class="skills-container__frontend">
                     <div v-for="(frontTool, index) in frontTools" :key="index" class="skills-container__content">
                         <img 
-                            :src="`/images/${frontTool.toLocaleLowerCase()}.png`" 
+                            :src="`/images/toolIcons/${frontTool.toLocaleLowerCase()}.png`" 
                             :alt="useI18n().locale.value === 'fr' ? `${$t('tools_alt_desc')} ${frontTool}` : `${frontTool} ${$t('tools_alt_desc')}`" />
                         <small>{{ frontTool }}</small>
                     </div>
@@ -43,7 +43,7 @@
                 <div class="skills-container__backend">
                     <div v-for="(backTool, index) in backTools" :key="index" class="skills-container__content">
                         <img 
-                            :src="`/images/${backTool.toLocaleLowerCase()}.png`"
+                            :src="`/images/toolIcons/${backTool.toLocaleLowerCase()}.png`"
                             :alt="useI18n().locale.value === 'fr' ? `${$t('tools_alt_desc')} ${backTool}` : `${backTool} ${$t('tools_alt_desc')}`" />
                         <small>{{ backTool }}</small>
                     </div>

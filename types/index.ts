@@ -4,12 +4,19 @@ export type Network = {
     link: string,
 };
 
-export type Projects = {
-    id: number,
+type Image = {
+    url: string,
+    alt?: string,
+}
+
+export type Project = {
+    id: string | number,
     title: string,
     type: string,
-    imgUrlMain: string,
-    imgUrlPreview: string,
-    description: string,
-    year: string
+    briefDescription: string,
+    mainDescription: string,
+    year: string,
+    previewImageUrl: string,
+    mainImage: Image,
+    technology: Image[],
 }

@@ -22,10 +22,10 @@ import projects  from '../content/projects';
 <template>
     <section id="portfolio">
         <div class="portfolio-headings">
-            <h2>{{ $t('portfolio.headings.main') }}</h2>
+            <h2>{{ $t('portfolio.heading.main') }}</h2>
             <div class="portfolio-headings__navigational-titles">
-                <h3>{{ $t('portfolio.headings.navigational_title', 1) }}</h3>
-                <h3>{{ $t('portfolio.headings.navigational_title', 2) }}</h3>
+                <h3>{{ $t('portfolio.heading.navigational_title', 1) }}</h3>
+                <h3>{{ $t('portfolio.heading.navigational_title', 2) }}</h3>
             </div>
         </div>
         <div class="portfolio-container">
@@ -35,17 +35,17 @@ import projects  from '../content/projects';
                 <div class="portfolio-container__img-preview">
                     <div 
                         :class="['portfolio-container__img-holder', {'light-mode': $colorMode.preference === 'light'}]"
-                        :style="{ backgroundImage: `url(/images/projects/previews/${project.imgUrlPreview})`}">
+                        :style="{ backgroundImage: `url(/images/projects/previews/${project.previewImageUrl})`}">
                     </div>
                 </div>
                 <div class="portfolio-container__project-details">
                     <h4>{{ project.title.length > 14 ? project.title.slice(0, 14) + '...' :  project.title }}</h4>
                     <div class="portfolio-container__sub-heading-description">
                         <h5>{{ $t(project.type) }}</h5>
-                        <p>{{ $t(project.description) }}</p>
+                        <p>{{ $t(project.briefDescription) }}</p>
                     </div>
-                    <NuxtLink to="/project/" class="btn-more-info">
-                       {{ $t('portfolio.btn_see_more') }}
+                    <NuxtLink :to="`projects/${project.id}`" class="btn-read-more">
+                       {{ $t('portfolio.btn.read_more') }}
                     </NuxtLink>                  
                 </div>
                 <small>{{ project.year }}</small>
@@ -53,7 +53,7 @@ import projects  from '../content/projects';
         </div>
         <button @click="showMoreOrLessProject" class="btn-load-more">
             <Icon name="mdi:eye" /> 
-            {{ isAllItemsVisible ? $t('portfolio.btn_load_more_less', 2) : $t('portfolio.btn_load_more_less', 1) }}
+            {{ isAllItemsVisible ? $t('portfolio.btn.load_more_less', 2) : $t('portfolio.btn.load_more_less', 1) }}
         </button>
     </section>
 </template>
@@ -173,12 +173,13 @@ import projects  from '../content/projects';
                 }
             }
 
-            .btn-more-info {
+            .btn-read-more {
                 @include flexbox;
                 @include custom-btn(150px, 35px, light);
                 border-radius: 10px;
                 background: $color-brand-secondary;
                 background-size: 200%;
+                color: $color-text-primary !important;
             }
 
             @media screen and (min-width: 576px) {
