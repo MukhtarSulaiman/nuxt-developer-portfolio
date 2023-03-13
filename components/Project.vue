@@ -2,13 +2,6 @@
     import projects from '../content/projects';
 
     const route = useRoute();
-
-    const colorMode = useColorMode().preference;
-    const currentColor = ref('');
-    onMounted(() => currentColor.value = colorMode)
-    watch(currentColor, () => {
-        currentColor.value = colorMode;
-    } )
    
 </script>
 
@@ -31,8 +24,18 @@
                             <p>{{ project.year }}</p>
                             <p>{{ $t(project.type) }}</p>
                             <div class="project__buttons">
-                                <button>{{ $t('portfolio.btn.demo') }}</button>
-                                <button class="btn-see-source-code">{{ $t('portfolio.btn.see_source_code') }}</button>
+                                <a 
+                                    :href="project.links.demo" target="_blank"
+                                    v-if="project.links.demo">
+                                    {{ $t('portfolio.btn.demo') }}
+                                </a>
+                                <a 
+                                    :href="project.links.sourceCode" 
+                                    target="_blank"  
+                                    v-if="project.links.sourceCode" 
+                                    class="btn-see-source-code">
+                                    {{ $t('portfolio.btn.see_source_code') }}
+                                </a>
                             </div>
                         </div>
                         <div class="project__technology">
@@ -121,16 +124,18 @@
         &__buttons {
             margin-top: 2.5rem;
 
-            button {
+            a {
                 @include custom-btn(130px, 40px);
             }
 
-            button:first-child {
+            a:first-child {
                 border-radius: 5px;
                 margin-right: 20px;
+                padding: .5rem 2rem;
             }
 
-            button:last-child {
+            a:last-child {
+                padding: .4rem .5rem;
                 background: none;
                 border-bottom: 2px solid;
                 border-left: none;

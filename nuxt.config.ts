@@ -29,6 +29,7 @@ export default defineNuxtConfig({
                script: [],
                noscript: [],
           },
+          pageTransition: { name: 'page', mode: 'out-in' }
      },
      vite: {
           css: {

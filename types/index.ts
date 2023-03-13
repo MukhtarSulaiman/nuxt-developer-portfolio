@@ -18,5 +18,6 @@ export type Project = {
     year: string,
     previewImageUrl: string,
     mainImage: Image,
+    links: {demo?: string, sourceCode?: string}
     technology: Image[],
 }
