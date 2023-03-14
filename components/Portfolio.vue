@@ -138,11 +138,11 @@ import projects  from '../content/projects';
                 background-size: cover;
                 background-position: 30% 20%;
                 transition: all .5s;
-                box-shadow: inset -50px 0px 36px -28px $color-brand-tertiary;
+                @include box-shadow(inset -50px, 0px, 36px, -28px, $color-brand-tertiary);
             }
 
             &__img-holder.light-mode {
-                box-shadow: inset -50px 0px 36px -28px $color-text-primary;
+                @include box-shadow(inset -50px, 0px, 36px, -28px, $color-text-primary)
             }
 
             &__project-details {
