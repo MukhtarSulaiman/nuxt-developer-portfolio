@@ -76,11 +76,12 @@ const projects: Project[] = [
             { url: "css.png" },
             { url: "javascript.png" },
             { url: "bootstrap.png" },
+            { url: "netlify.png" },
         ]
     },
     {
         id: 5,
-        title: 'Piiquante',
+        title: 'Hot Takes',
         type: 'portfolio.project5.type',
         briefDescription: 'portfolio.project5.brief_description',
         mainDescription: 'portfolio.project5.main_description',
@@ -94,7 +95,7 @@ const projects: Project[] = [
         technology: [
             { url: "nodejs.png" },
             { url: "express.png" },
-            { url: "mysql.png" },
+            { url: "mongodb.png" },
             { url: "postman.png" },
         ]
     },
@@ -139,6 +140,7 @@ const projects: Project[] = [
             { url: "nodejs.png" },
             { url: "sass.png" },
             { url: "figma.png" },
+            { url: "heroku.png" },
         ]
     },
 ]
