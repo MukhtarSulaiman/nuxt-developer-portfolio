@@ -2,6 +2,19 @@
     import projects from '../content/projects';
 
     const route = useRoute();
+    const toolTitle = ref('');
+
+    const handleIconTitle = (eventType: string, title: any): void => {
+        switch(eventType) {
+            case 'mouseover':
+                    toolTitle.value = title.split('.').slice(0, 1).join();
+                break;
+            case 'mouseleave':
+                    setTimeout(() => toolTitle.value = '', 200);
+                break;
+            default :
+        }
+    }
    
 </script>
 
@@ -39,12 +52,17 @@
                             </div>
                         </div>
                         <div class="project__technology">
-                            <h2>{{ $t('portfolio.heading.technology') }}</h2>
-                            <div>
-                                <img 
-                                    v-for="technology in project.technology" 
-                                    :src="`/images/toolIcons/${technology.url}`" 
-                                    :alt="technology.alt">
+                            <h2>{{ toolTitle ? toolTitle : $t('portfolio.heading.technology') }}</h2>
+                            <div @mouseleave="handleIconTitle('mouseleave', null)">
+                                    <a  
+                                        v-for="technology in project.technology" 
+                                        :href="technology.link" 
+                                        target="_blank" >
+                                        <img 
+                                            @mouseover="handleIconTitle('mouseover', technology.url)"
+                                            :src="`/images/toolIcons/${technology.url}`" 
+                                            :alt="technology.url.split('.').slice(0, 1).join()">
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -112,10 +130,12 @@
                 width: 270px;
                 padding-top: 1rem;
                 @include flexbox(flex-start);
+                flex-wrap: wrap;
 
                 img {
-                    width: 25px;
+                    width: 30px;
                     margin: 0 1.5rem 0 0 !important;
+                    padding-bottom: 1rem;
                 }
             }
         }
@@ -132,6 +152,7 @@
                 border-radius: 5px;
                 margin-right: 20px;
                 padding: .5rem 2rem;
+                color: $color-text-primary !important;
             }
 
             a:last-child {
@@ -163,6 +184,19 @@
             &__context-technology {
                 width: 280px;
                 margin-top: 0 !important;
+            }
+
+            &__technology {
+                div:last-child img {
+                    filter: grayscale(100%);
+                    opacity: .5;
+                    transition: all .6s;
+                    &:hover {
+                        filter: grayscale(0) !important;
+                        transform: scale(1.1);
+                        opacity: 1 !important;
+                    }
+                }
             }
         }
 

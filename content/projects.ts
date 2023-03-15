@@ -1,5 +1,28 @@
 import { Project } from '../types/index';
 
+const html = 'https://www.w3schools.com/html/';
+const css = 'https://www.w3schools.com/css/';
+const javassript = 'https://developer.mozilla.org/en-US/docs/Web/JavaScript';
+const typescript = 'https://www.typescriptlang.org/';
+const vue = 'https://vuejs.org/';
+const nuxt = 'https://nuxt.com/';
+const react = 'https://reactjs.org/';
+const sass = 'https://sass-lang.com/';
+const figma = 'https://www.figma.com/';
+const tailwind = 'https://tailwindcss.com/';
+const boostrap = 'https://getbootstrap.com/';
+const node = 'https://nodejs.org/en/';
+const express = 'https://expressjs.com/';
+const mysql = 'https://www.mysql.com/';
+const mongodb = 'https://www.mongodb.com/';
+const github = 'https://github.com/';
+const postman = 'https://www.postman.com/';
+const heroku = 'https://www.heroku.com/home';
+const render = 'https://render.com/';
+const netlify = 'https://www.netlify.com/';
+const seo = 'https://en.wikipedia.org/wiki/Search_engine_optimization';
+
+
 const projects: Project[] = [
         {
         id: 1,
@@ -15,8 +38,9 @@ const projects: Project[] = [
             sourceCode: 'https://github.com/MukhtarSulaiman/HotelBookingPage_2_28072021'
         },
         technology: [
-            { url: "html.png" },
-            { url: "css.png" }
+            { url: "html.png", link: html, },
+            { url: "css.png", link: css },
+            { url: "github.png", link: github }
         ]
     },
     {
@@ -33,9 +57,10 @@ const projects: Project[] = [
             sourceCode: 'https://github.com/MukhtarSulaiman/Ohmyfood_3_04082021'
         },
         technology: [
-            { url: "html.png" },
-            { url: "css.png" },
-            { url: "sass.png" },
+            { url: "html.png", link: html, },
+            { url: "css.png", link: css },
+            { url: "sass.png", link: sass },
+            { url: "github.png", link: github }
         ]
     },
     {
@@ -52,10 +77,11 @@ const projects: Project[] = [
             sourceCode: 'https://github.com/MukhtarSulaiman/SEO_4_18082021'
         },
         technology: [
-            { url: "html.png" },
-            { url: "css.png" },
-            { url: "bootstrap.png" },
-            { url: "seo.png" },
+            { url: "html.png", link: html },
+            { url: "css.png", link: css },
+            { url: "bootstrap.png", link: boostrap },
+            { url: "seo.png", link: seo },
+            { url: "github.png", link: github }
         ]
     },
     {
@@ -72,11 +98,12 @@ const projects: Project[] = [
             sourceCode: 'https://github.com/MukhtarSulaiman/orinoco_5_10092021'
         },
         technology: [
-            { url: "html.png" },
-            { url: "css.png" },
-            { url: "javascript.png" },
-            { url: "bootstrap.png" },
-            { url: "netlify.png" },
+            { url: "html.png", link: html },
+            { url: "css.png", link: css },
+            { url: "javascript.png", link: javassript },
+            { url: "bootstrap.png", link: boostrap },
+            { url: "netlify.png", link: netlify },
+            { url: "render.png", link: render },
         ]
     },
     {
@@ -93,10 +120,10 @@ const projects: Project[] = [
             sourceCode: 'https://github.com/MukhtarSulaiman/piiquante_6_14102021'
         },
         technology: [
-            { url: "nodejs.png" },
-            { url: "express.png" },
-            { url: "mongodb.png" },
-            { url: "postman.png" },
+            { url: "nodejs.png", link: node },
+            { url: "express.png", link: express },
+            { url: "mongodb.png", link: mongodb },
+            { url: "postman.png", link: postman },
         ]
     },
     {
@@ -113,12 +140,12 @@ const projects: Project[] = [
             sourceCode: 'https://github.com/MukhtarSulaiman/Groupomania_10_112021'
         },
         technology: [
-            { url: "vuejs.png" },
-            { url: "javascript.png" },
-            { url: "nodejs.png" },
-            { url: "mysql.png" },
-            { url: "sass.png" },
-            { url: "figma.png" },
+            { url: "vuejs.png", link: vue },
+            { url: "javascript.png", link: javassript },
+            { url: "nodejs.png", link: node },
+            { url: "mysql.png", link: mysql },
+            { url: "sass.png", link: sass },
+            { url: "figma.png", link: figma },
         ]
     },
     {
@@ -135,12 +162,13 @@ const projects: Project[] = [
             sourceCode: 'https://github.com/MukhtarSulaiman/zool-developer'
         },
         technology: [
-            { url: "nuxtjs.png" },
-            { url: "vuejs.png" },
-            { url: "nodejs.png" },
-            { url: "sass.png" },
-            { url: "figma.png" },
-            { url: "heroku.png" },
+            { url: "nuxtjs.png", link: nuxt },
+            { url: "vuejs.png", link: vue },
+            { url: "typescript.png", link: typescript },
+            { url: "nodejs.png", link: node },
+            { url: "sass.png", link: sass },
+            { url: "figma.png", link: figma },
+            { url: "heroku.png", link: heroku },
         ]
     },
 ]

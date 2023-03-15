@@ -7,6 +7,7 @@ export type Network = {
 type Image = {
     url: string,
     alt?: string,
+    link?: string
 }
 
 export type Project = {
