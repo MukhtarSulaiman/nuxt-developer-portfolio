@@ -94,7 +94,7 @@
           position: fixed;
           top: 0;
           z-index: 10;
-          box-shadow: 0 0.5rem 1rem rgb($color-text-inverted, .15);
+          @include box-shadow;
 
           #logo {
                img {
@@ -241,7 +241,7 @@
 
                &__color-switcher {
                     top: 80vh;
-                    right: 127px;
+                    right: 30px;
                     width: 30px;
                     height: 30px;
                     border-radius: 50%;
@@ -252,7 +252,7 @@
 
                &__lang-switcher {
                     top: 90vh;
-                    right: 118px;
+                    right: 24px;
 
                     select {
                          width: 42px;
@@ -282,10 +282,10 @@
                
                .navbar {
                     &__lang-switcher {
-                         right: 160px !important;
+                         right: 60px !important;
                     }
                     &__color-switcher {
-                         right: 168px !important;
+                         right: 70px !important;
                     }
                }
           }

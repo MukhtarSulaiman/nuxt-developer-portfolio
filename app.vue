@@ -45,12 +45,12 @@
           );
      }
 
-     .dark-mode :is(a) {
-          color: $color-text-primary;
+     .dark-mode :is(a, .btn-see-source-code) {
+          color: $color-text-primary !important;
      }
 
-     .light-mode :is(a) {
-          color: $color-text-inverted;
+     .light-mode :is(a, .btn-see-source-code) {
+          color: $color-text-inverted !important;
      }
 
      html {
@@ -85,6 +85,16 @@
 
      ul {
           list-style: none;
+     }
+
+     .page-enter-active,
+     .page-leave-active {
+          transition: all 0.4s;
+     }
+     .page-enter-from,
+     .page-leave-to {
+          opacity: 0;
+          filter: blur(1rem);
      }
 
      @media only screen and (min-width: 640px) {

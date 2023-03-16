@@ -29,39 +29,78 @@
     "tools_alt_desc": "icon",
     "download_resume": "Download my resume",
     "portfolio": {
-        "headings": {
+        "heading": {
             "main": "Portfolio",
-            "navigational_title": "Web Projects | Designs"
+            "navigational_title": "Web Projects | Designs",
+            "context": "Context",
+            "technology": "technology"
         },
         "project1": {
             "type": "Hotels & entrtainment",
-            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
+            "main_description": "",
+            "alt_main_image": "Reservia project"
         },
         "project2": {
             "type": "Meal reservation",
-            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
+            "main_description": "",
+            "alt_main_image": "Ohmyfoof project"
         },
         "project3": {
             "type": "SEO",
-            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
+            "main_description": "",
+            "alt_main_image": "La Chouette agence project"
         },
         "project4": {
             "type": "E-commerce",
-            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
+            "main_description": "",
+            "alt_main_image": "Orinoco project"
         },
         "project5": {
-            "type": "Application d'avis",
-            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+            "type": "Reviews app",
+            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
+            "main_description": "",
+            "alt_main_image": "Piiquante project"
         },
         "project6": {
             "type": "Social media",
-            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
+            "main_description": "",
+            "alt_main_image": "Groupomania project"
         },
         "project7": {
             "type": "Portfolio",
-            "description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…"
+            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
+            "main_description": "Hignissimos qui quasi nulla placeat assumenda voluptatum, corrupti impedit neque dignissimos sapiente illum sit nam fugiat soluta esse mollitia adipisci sed laudantium beatae deserunt assumenda. | Hignissimos qui quasi nulla placeat assumenda voluptatum, corrupti impedit neque pariatur repudiandae et. Culpa cumque maxime nostrum exercitationem voluptatum perferendis harum necessitatibus est facere eum provident, dignissimos sapiente illum sit nam fugiat soluta esse mollitia adipisci sed laudantium beatae deserunt assumenda",
+            "alt_main_image": "Zool developer website"
+        },        
+        "btn": {
+            "read_more": "Read more",
+            "load_more_less": "Show More | Show Less",
+            "demo": "Demo",
+            "see_source_code": "See source code"
+        }
+    },
+    "education": {
+        "main_title": "Education",
+        "level1": {
+            "institution": "2022 OpenClassrooms",
+            "degree": "Web developer - Bootcamp"
         },
-        "btn_see_more": "Read more",
-        "btn_load_more_less": "Show More | Show Less"
+        "level2": {
+            "institution": "2021 Codecademy",
+            "degree": "Self-taught web developer"
+        },
+        "level3": {
+            "institution": "2019 FCMP",
+            "degree": "Electrician - Apprenticeship"
+        },
+        "level4": {
+            "institution": "2013 Al-Taliah",
+            "degree": "High school degree"
+        }
     }
 }

@@ -62,3 +62,7 @@
     background-color: $backgorund-color;
 	transition: all .7s;
 }
+
+@mixin box-shadow($offset-y: 0, $offset-x: 0.5rem, $blur-r: 1rem, $spread: 0, $color: rgb($color-text-inverted, .15)) {
+	box-shadow: $offset-y $offset-x $blur-r $spread $color;
+}

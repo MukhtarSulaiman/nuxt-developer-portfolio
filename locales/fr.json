@@ -29,39 +29,78 @@
         "tools_alt_desc": "îcone",
     "download_resume": "Télécharger mon CV",
     "portfolio": {
-        "headings": {
+        "heading": {
             "main": "Portfolio",
-            "navigational_title": "Projets web | Designs"
+            "navigational_title": "Projets web | Designs",
+            "context": "Contexte",
+            "technology": "technologies"
         },
         "project1": {
             "type": "Hôtels & activités",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "Projet Réservia"
         },
         "project2": {
             "type": "Réservation de repas",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "Projet Ohmyfood"
         },
         "project3": {
             "type": "Référencement naturel",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "Projet La Chouette agence"
         },
         "project4": {
             "type": "É-commerce",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "Projet Orinoco"
         },
         "project5": {
             "type": "Avis critiques",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "Projet Piiquante"
         },
         "project6": {
             "type": "Réseau social",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "Projet Groupomania"
         },
         "project7": {
             "type": "Portfolio",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "Projet Zool Developer"
         },
-        "btn_see_more": "En savoir plus",
-        "btn_load_more_less": "Afficher Plus | Afficher Moins"
+        "btn": {
+            "read_more": "En savoir plus",
+            "load_more_less": "Afficher Plus | Afficher Moins",
+            "demo": "Démo",
+            "see_source_code": "Voir code source"
+        }
+    },
+    "education": {
+        "main_title": "Formation",
+        "level1": {
+            "institution": "2022 OpenClassrooms",
+            "degree": "Développeur web - Bootcamp"
+        },
+        "level2": {
+            "institution": "2021 Codecademy",
+            "degree": "Développeur web - Autodidacte"
+        },
+        "level3": {
+            "institution": "2019 FCMP",
+            "degree": "CAP Électricien - Alternance"
+        },
+        "level4": {
+            "institution": "2013 Al-Taliah",
+            "degree": "Baccalauréat général"
+        }
     }
 }

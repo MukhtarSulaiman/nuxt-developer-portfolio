@@ -3,12 +3,12 @@
 @use '../utilities/mixins' as *;
 @use '../utilities/variables' as *;
 
-@mixin custom-btn($width: 160px, $height: 50px, $font-weight: bold) {
+@mixin custom-btn($width: 160px, $height: 50px, $font-weight: 100) {
 	width: $width;
 	height: $height;
 	border-radius: 15px;
-	color: $color-text-primary !important;
-	font-weight: $font-weight;
+	color: $color-text-primary;
+	font-weight: $font-weight !important;
 	font-size: 1rem;
 	border: none;
 	transition: all .4s ease-in-out;
