@@ -22,3 +22,9 @@ export type Project = {
     links: {demo?: string, sourceCode?: string}
     technology: Image[],
 }
+
+export type SchoolLevel = {
+    id: number,
+    institution: string,
+    degree: string
+}

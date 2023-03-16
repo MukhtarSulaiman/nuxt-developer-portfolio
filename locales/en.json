@@ -44,7 +44,8 @@
         "project2": {
             "type": "Meal reservation",
             "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
-            "main_description": "Ohmyfoof project"
+            "main_description": "",
+            "alt_main_image": "Ohmyfoof project"
         },
         "project3": {
             "type": "SEO",
@@ -81,6 +82,25 @@
             "load_more_less": "Show More | Show Less",
             "demo": "Demo",
             "see_source_code": "See source code"
+        }
+    },
+    "education": {
+        "main_title": "Education",
+        "level1": {
+            "institution": "2022 OpenClassrooms",
+            "degree": "Web developer - Bootcamp"
+        },
+        "level2": {
+            "institution": "2021 Codecademy",
+            "degree": "Self-taught web developer"
+        },
+        "level3": {
+            "institution": "2019 FCMP",
+            "degree": "Electrician - Apprenticeship"
+        },
+        "level4": {
+            "institution": "2013 Al-Taliah",
+            "degree": "High school degree"
         }
     }
 }

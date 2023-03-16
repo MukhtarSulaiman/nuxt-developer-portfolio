@@ -83,5 +83,24 @@
             "demo": "Démo",
             "see_source_code": "Voir code source"
         }
+    },
+    "education": {
+        "main_title": "Formation",
+        "level1": {
+            "institution": "2022 OpenClassrooms",
+            "degree": "Développeur web - Bootcamp"
+        },
+        "level2": {
+            "institution": "2021 Codecademy",
+            "degree": "Développeur web - Autodidacte"
+        },
+        "level3": {
+            "institution": "2019 FCMP",
+            "degree": "CAP Électricien - Alternance"
+        },
+        "level4": {
+            "institution": "2013 Al-Taliah",
+            "degree": "Baccalauréat général"
+        }
     }
 }

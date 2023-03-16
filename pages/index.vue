@@ -32,5 +32,6 @@
         <Hero />
         <Skills />
         <Portfolio />
+        <Education />
     </main>
 </template>

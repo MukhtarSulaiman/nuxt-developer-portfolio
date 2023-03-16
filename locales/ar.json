@@ -31,37 +31,76 @@
     "portfolio": {
         "headings": {
             "main": "أعمالي",
-            "navigational_title": "مشاريع الويب | التصاميم"
+            "navigational_title": "مشاريع الويب | التصاميم",
+            "context": "",
+            "technology": ""
         },
         "project1": {
             "type": "الفنادق  والأنشطة",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": ""
         },
         "project2": {
             "type": "حجز الطلبات",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": ""
         },
         "project3": {
             "type": "تحسين محركات البحث",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": ""
         },
         "project4": {
             "type": "التجارة الإلكترونية",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": ""
         },
         "project5": {
             "type": "التقيمات والمراجعات",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": ""
         },
         "project6": {
             "type": "التواصل الإجتماعي",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": ""
         },
         "project7": {
             "type": "حافظة أعمال",
-            "description": ""
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": ""
         },
-        "btn_see_more": "أقرا المزيد ",
-        "btn_load_more_less": "تحميل المزيد | إظهار أفل"
+        "btn": {
+            "read_more": "اقرأ المزيد ",
+            "load_more_less": "تحميل المزيد | إظهار أفل",
+            "demo": "عرض",
+            "see_source_code": "رؤية الكود المصدري"
+        }
+    },
+    "education": {
+        "main_title": "المسيرة التعليمية",
+        "level1": {
+            "institution": "2022 OpenClassrooms",
+            "degree": "مطور ويب ـ بوت كامب"
+        },
+        "level2": {
+            "institution": "2021 Codecademy",
+            "degree": "مطور ويب  ـ  تعليم ذاتي"
+        },
+        "level3": {
+            "institution": "2019 FCMP",
+            "degree": "كهربائي  ـ  تأهيل"
+        },
+        "level4": {
+            "institution": "2013 Al-Taliah",
+            "degree": "شهادة ثانوية"
+        }
     }
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import projects  from '../content/projects';
+import { projects }  from '../content/projects';
 
     const currentItems = ref(6);
     const isAllItemsVisible = ref(false);

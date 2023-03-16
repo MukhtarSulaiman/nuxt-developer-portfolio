@@ -1,4 +1,4 @@
-import { Project } from '../types/index';
+import { Project, SchoolLevel } from '../types/index';
 
 const html = 'https://www.w3schools.com/html/';
 const css = 'https://www.w3schools.com/css/';
@@ -23,7 +23,7 @@ const netlify = 'https://www.netlify.com/';
 const seo = 'https://en.wikipedia.org/wiki/Search_engine_optimization';
 
 
-const projects: Project[] = [
+export const projects: Project[] = [
         {
         id: 1,
         title: 'Réservia',
@@ -173,4 +173,9 @@ const projects: Project[] = [
     },
 ]
 
-export default projects
+export const schoolLevels: SchoolLevel[] = [
+    { id: 1, institution: 'education.level1.institution', degree: 'education.level1.degree' },
+    { id: 2, institution: 'education.level2.institution', degree: 'education.level2.degree' },
+    { id: 3, institution: 'education.level3.institution', degree: 'education.level3.degree' },
+    { id: 4, institution: 'education.level4.institution', degree: 'education.level4.degree' },
+]
