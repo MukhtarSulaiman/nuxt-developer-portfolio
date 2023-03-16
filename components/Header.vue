@@ -65,12 +65,12 @@
                     <li><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li>
                     <li><NuxtLink :to="$t('contact_path')">{{ $t('contact_title') }}</NuxtLink></li>
                     <li class="navbar__color-switcher">
-                         <span v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">
-                              <Icon name="ic:outline-wb-sunny" id="sun"/>
-                         </span>
-                         <span v-if="$colorMode.preference === 'light'" @click="toggleMode('dark')">
-                              <Icon name="ic:baseline-bedtime" id="moon"/>
-                         </span>
+                         <i v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">
+                              <Icon name="sun" id="sun"/>
+                         </i>
+                         <i v-if="$colorMode.preference === 'light'" @click="toggleMode('dark')">
+                              <Icon name="moon" id="moon"/>
+                         </i>
                     </li>
                     <li class="navbar__lang-switcher">
                          <select @change="updateLangue($event)" v-model="$i18n.locale" id="languages" name="language">
@@ -248,6 +248,10 @@
                     border: 1px solid $color-brand-secondary;
                     cursor: pointer;
                     @include flexbox;
+
+                    i {
+                         background: none;
+                    }
                }
 
                &__lang-switcher {
