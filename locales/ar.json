@@ -29,7 +29,7 @@
     "tools_alt_desc": "أيقونة",
     "download_resume": "تحميل السيرة الذاتية ",
     "portfolio": {
-        "headings": {
+        "heading": {
             "main": "أعمالي",
             "navigational_title": "مشاريع الويب | التصاميم",
             "context": "",
@@ -101,6 +101,7 @@
         "level4": {
             "institution": "2013 Al-Taliah",
             "degree": "شهادة ثانوية"
-        }
+        },
+        "languages": "إنجليزي | فرنسي | عربي"
     }
 }

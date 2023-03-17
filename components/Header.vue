@@ -241,7 +241,7 @@
 
                &__color-switcher {
                     top: 80vh;
-                    right: 30px;
+                    right: 17px;
                     width: 30px;
                     height: 30px;
                     border-radius: 50%;
@@ -256,7 +256,7 @@
 
                &__lang-switcher {
                     top: 90vh;
-                    right: 24px;
+                    right: 17px;
 
                     select {
                          width: 42px;
@@ -285,11 +285,12 @@
                padding: 0.6rem 4rem !important;
                
                .navbar {
-                    &__lang-switcher {
-                         right: 60px !important;
-                    }
                     &__color-switcher {
-                         right: 70px !important;
+                         right: 62px !important;
+                    }
+
+                    &__lang-switcher {
+                         right: 57px !important;
                     }
                }
           }
