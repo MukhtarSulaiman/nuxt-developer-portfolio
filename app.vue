@@ -5,6 +5,16 @@
      
      const { locale, t} = useI18n();
 
+     onMounted(() => {
+
+          const { selectors, isAnimateProgress, interCallback, interOptions, observer } =  useIntersectionEntry();
+        
+          selectors.value = document.querySelectorAll(`.skills-container__content, .lang-progress-bar`);
+          interOptions(null,  0.3);
+          interCallback(selectors.value);
+          selectors.value.forEach(selector => observer.observe(selector));
+     })
+
      function changLangDirection() {
           locale.value === 'ar' ?
                document.body.style.direction = 'rtl'
