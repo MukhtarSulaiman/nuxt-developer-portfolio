@@ -1,12 +1,74 @@
+<script lang="ts" setup>
+    import { useIntersectionObserver } from '~/composables/onItersectionObserver';
 
-<script setup lang="ts">
+    onMounted(() => {
+
+        const selectors = document.querySelectorAll<HTMLElement>(`.lang-progress-bar`);
+        const { isIntersecting } =  useIntersectionObserver(selectors, 0);
+
+        watch(isIntersecting, () => {
+            if(isIntersecting.value === true) {
+                animateProgressCircles();
+            } else if(isIntersecting.value === false) { 
+                resetAnimateProgressCircles(); 
+            } 
+        })
+    })
+    
+    const backgroundStyle = (currentValue: number): string => {
+        return `conic-gradient(#BE2E73 ${currentValue * 3.6}deg, #000 ${currentValue * 3.6}deg)`;
+    }
+
+    const progressOne = reactive({ currentValue: 0, endValue: 80, background: ''});
+    const progressTwo = reactive({ currentValue: 0, endValue: 90, background: '' });
+    const progressThree = reactive({ currentValue: 0, endValue: 100, background: ''});
+
+    const speed: number = 23;
+
+    const animateProgressCircles = (): void => {
+        const progressValueOne = setInterval(() => {    
+            if( progressOne.currentValue < 80) {
+                progressOne.currentValue++;
+                progressOne.background = backgroundStyle(progressOne.currentValue);
+                if(progressOne.currentValue === progressOne.endValue) clearInterval(progressValueOne);
+            }
+        }, speed);
+
+        const progressValueTwo = setInterval(() => {    
+            if( progressTwo.currentValue < 90) {
+                progressTwo.currentValue++;
+                progressTwo.background = backgroundStyle(progressTwo.currentValue);
+                if(progressTwo.currentValue === progressTwo.endValue) clearInterval(progressValueTwo);
+            }
+        }, speed);
+
+        const progressValueThree = setInterval(() => {    
+            if( progressThree.currentValue < 100) {
+                progressThree.currentValue++;
+                progressThree.background = backgroundStyle(progressThree.currentValue);
+                if(progressThree.currentValue === progressThree.endValue) clearInterval(progressValueThree);
+            }
+        }, speed);
+    }
+
+    const resetAnimateProgressCircles = (): void => {
+        progressOne.currentValue = 0;
+        progressOne.background = '';
+
+        progressTwo.currentValue = 0;
+        progressTwo.background = '';
+
+        progressThree.currentValue = 0;
+        progressThree.background = '';
+    }
+
 
 </script>
 
 <template>
     <div class="language">
         <div class="language__globe-icon  position-relative">
-            <i><Icon class="globe-icon" name="globe" size="3/5rem"/></i>    
+            <i><Icon class="globe-icon" name="globe" size="3.7rem"/></i>    
         </div>
         <div class="language__language-levels position-relative">
             <div class="individual-languages">
@@ -15,14 +77,14 @@
                 <small class="lang-progress-bar">{{ $t('education.languages', 2) }}</small>
             </div>
             <div class="progress-bars">
-                <div class="progress-bar-circle">
-                    <div class="progress-value progress-value-one">0%</div>
+                <div class="progress-bar-circle" :style="progressOne">
+                    <div class="progress-value progress-value-one">{{ progressOne.currentValue }}%</div>
                 </div>
-                <div class="progress-bar-circle">
-                    <div class="progress-value progress-value-two">0%</div>
+                <div class="progress-bar-circle" :style="progressTwo">
+                    <div class="progress-value progress-value-two">{{ progressTwo.currentValue }}%</div>
                 </div>
-                <div class="progress-bar-circle">
-                    <div class="progress-value progress-value-three">0%</div>
+                <div class="progress-bar-circle" :style="progressThree">
+                    <div class="progress-value progress-value-three">{{ progressThree.currentValue }}%</div>
                 </div>
             </div>
         </div>
@@ -72,12 +134,13 @@
                         @include gradient;
                         height: 6px !important;
                         left: 70px !important;
+                        display: none;
                     }
                 }
 
-                // :nth-child(n)::before {
-                // 	display: none;
-                // }
+                .show:nth-child(n)::before {
+                	display: block;
+                }
 
                 :nth-child(1)::before {
                     @include line(0%, $top: 5px);
@@ -124,8 +187,10 @@
                     width: 35px;
                     height: 35px;
                     border-radius: 50%;
+
+                    // background: conic-gradient(#BE2E73 80 * 3.6deg, #000 80 * 3.6deg);
                     
-                    @include gradient;
+                    // @include gradient;
                     @include flexbox;
                     &::after {
                         content: '';
