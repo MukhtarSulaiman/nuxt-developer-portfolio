@@ -65,12 +65,12 @@
                     <li><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li>
                     <li><NuxtLink :to="$t('contact_path')">{{ $t('contact_title') }}</NuxtLink></li>
                     <li class="navbar__color-switcher">
-                         <span v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">
-                              <Icon name="ic:outline-wb-sunny" id="sun"/>
-                         </span>
-                         <span v-if="$colorMode.preference === 'light'" @click="toggleMode('dark')">
-                              <Icon name="ic:baseline-bedtime" id="moon"/>
-                         </span>
+                         <i v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">
+                              <Icon name="sun" id="sun"/>
+                         </i>
+                         <i v-if="$colorMode.preference === 'light'" @click="toggleMode('dark')">
+                              <Icon name="moon" id="moon"/>
+                         </i>
                     </li>
                     <li class="navbar__lang-switcher">
                          <select @change="updateLangue($event)" v-model="$i18n.locale" id="languages" name="language">
@@ -241,18 +241,22 @@
 
                &__color-switcher {
                     top: 80vh;
-                    right: 30px;
+                    right: 17px;
                     width: 30px;
                     height: 30px;
                     border-radius: 50%;
                     border: 1px solid $color-brand-secondary;
                     cursor: pointer;
                     @include flexbox;
+
+                    i {
+                         background: none;
+                    }
                }
 
                &__lang-switcher {
                     top: 90vh;
-                    right: 24px;
+                    right: 17px;
 
                     select {
                          width: 42px;
@@ -281,11 +285,12 @@
                padding: 0.6rem 4rem !important;
                
                .navbar {
-                    &__lang-switcher {
-                         right: 60px !important;
-                    }
                     &__color-switcher {
-                         right: 70px !important;
+                         right: 62px !important;
+                    }
+
+                    &__lang-switcher {
+                         right: 57px !important;
                     }
                }
           }

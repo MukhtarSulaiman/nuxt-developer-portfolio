@@ -2,6 +2,11 @@
 
 <script setup lang="ts">
     import { useI18n } from 'vue-i18n';
+    import { useIntersectionObserver } from '~/composables/onItersectionObserver';
+
+    onMounted(() => {
+        useIntersectionObserver(document.querySelectorAll<HTMLElement>(`.skills-container__content`), 0.3);
+    })
         
     const frontTools: string[] = [
         'JavaScript', 'VueJS', 'ReactJS', 'TypeScript',

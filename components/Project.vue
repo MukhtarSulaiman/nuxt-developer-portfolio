@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { projects } from '../content/projects';
+    import { projects } from '../content/db';
 
     const route = useRoute();
     const toolTitle = ref('');

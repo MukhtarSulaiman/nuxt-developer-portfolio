@@ -28,7 +28,7 @@
 					<button @click="(isAdditionalDescActive = !isAdditionalDescActive)"  class="hero-section__btn-more-info" type="button"> 
 						{{ isAdditionalDescActive ? $t('description_info.button', 0) : $t('description_info.button', 1) }}
 						<i>
-							<Icon :name="isAdditionalDescActive ? 'ic:baseline-arrow-back-ios' : 'ic:baseline-arrow-forward-ios'"/>
+							<Icon :name="isAdditionalDescActive ? 'arrow-back' : 'arrow-forward'"/>
 						</i>
 					</button>
 				</div>

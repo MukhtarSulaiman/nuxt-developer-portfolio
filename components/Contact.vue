@@ -1,0 +1,412 @@
+<!-- <script setup lang="ts">
+
+</script>
+
+<template>
+     <section id="contact" class="position-relative">
+                <h2>Contact</h2>
+                <div class="discription-wrapper ">
+                    <div class="discription-wrapper__discription">
+                        <p>Un projet ? Une idée ? <br> Ou simplement un conseil ? <br> N’hésitez pas à me contacter par
+                            <br>le moyen qui vous convient !</p>
+                    </div>
+                </div>
+                <div class="row contact-container">
+                    <div class="col-12 col-md-6 contact-container__network-personal-info">
+                        <div class="contact-contaienr__network-info">
+                            <h3>réseaux sociaux :</h3>
+                            <div class="contact-container__network-account">
+                                <div class="social-icon-wrapper">
+                                    <a href="https://linkedin.com/in/mukhtar-sulaiman" target="_blank"
+                                        aria-label="Lien vers le compte linkedin de Mukhtar">
+                                        <div><i class="fab fa-linkedin" aria-hidden="true"></i></div>
+                                    </a>
+                                </div>
+                                <div class="social-icon-wrapper">
+                                    <a href="https://github.com/MukhtarSulaiman" target="_blank"
+                                        aria-label="Lien vers le compte github de Mukhtar">
+                                        <i class="fab fa-github" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="social-icon-wrapper">
+                                    <a href="https://www.youtube.com/channel/UCSvuJVJdF3NDsg9CjeM6I-Q" target="_blank"
+                                        aria-label="Lien vers le compte twitter de Mukhtar">
+                                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="social-icon-wrapper">
+                                    <a href="https://twitter.com/zooldeveloper" target="_blank"
+                                        aria-label="Lien vers le compte twitter de Mukhtar Sulaiman">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-container__personal-info fw-lighter">
+                            <a href="tel:+33767739978" class="text-decoration-none">
+                                <div class="contact-container__content-group">
+                                    <div class="contact-icon-bg">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <small>+ 33 7 67 73 99 78</small>
+                                </div>
+                            </a>
+                            <a class="text-decoration-none" href="mailto:contact@zooldeveloper.com">
+                                <div class="contact-container__content-group">
+                                    <div class="contact-icon-bg">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <small>contact@zooldeveloper.com</small>
+                                </div>
+                            </a>
+                            <a href="https://goo.gl/maps/XhRmup31zFzmJwbRA" target="_blank"
+                                class="text-decoration-none">
+                                <div class="contact-container__content-group">
+                                    <div class="contact-icon-bg">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <small>44300 Nantes, France</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <form class="col-12 col-md-6 contact-container__form-contact" novalidate>
+                        <div></div>
+                        <div class="contact-container__form-group">
+                            <label for="fullName">Nom</label>
+                            <input type="text" id="fullName" placeholder="David ALLAIN">
+                            <small></small>
+                        </div>
+                        <div class="contact-container__form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="example@gmail.com">
+                            <small></small>
+                        </div>
+                        <div class="contact-container__form-group">
+                            <label for="subject">Objet</label>
+                            <input type="text" id="subject" placeholder="Votre sujet">
+                            <small></small>
+                        </div>
+                        <div class="contact-container__form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Ecrivez votre message..."></textarea>
+                            <small class="textarea-error-message"></small>
+                        </div>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+                <div class="download">
+                    <button class="download-resume">Télécharger mon CV</button>
+                </div>
+                <a href="#top" aria-label="Cliquez pour aller en haut de la page">
+                    <div class="scroll-container">
+                        <div class="arrow"></div>
+                        <div class="arrow"></div>
+                        <div class="arrow"></div>
+                    </div>
+                </a>
+            </section>
+</template>
+
+<style lang="scss" scoped>
+    .discription-wrapper {
+	position: absolute;
+	right: -10px;
+	top: 10px;
+	width: 330px;
+	height: 130px;
+	overflow: hidden;
+	@include flexbox;
+	@include animation-on-scroll(0, translateX(120px));
+
+	&__discription {
+		width: 100%;
+		height: 100%;
+		padding: 1rem;
+		background-color: var(--color-text-icon);
+		transform: skewX(-40deg);
+		position: absolute;
+		left: 55px;
+
+		p {
+			transform: skew(40deg);
+			text-align: right;
+			position: absolute;
+			color: var(--color-page-background) !important;
+		}
+	}
+}
+.discription-wrapper.show {
+	@include animation-on-scroll(1, translateX(0) !important);
+}
+
+.contact-container {
+	padding: 8rem 5rem;
+	min-height: 630px;
+
+	&__network-personal-info {
+		height: inherit;
+		font-family: 'Lora', serif;
+		font-size: 1.3rem;
+		@include flexbox(space-between, start, column);
+
+		h3 {
+			@include border-gradient(0);
+			border-bottom: 3px solid;
+			border-left: 3px solid;
+			margin-bottom: 3rem;
+			padding: 0 0 0.6rem 0.6rem;
+		}
+	}
+
+	&__network-account {
+		@include flexbox(space-between);
+		@include contact-and-network-icon;
+	}
+
+	&__personal-info {
+		min-height: 140px;
+		@include flexbox(space-between, start, column);
+	}
+	&__content-group {
+		@include flexbox;
+		@include contact-and-network-icon(
+			$selector: '.contact-icon-bg',
+			$transform: scale(1)
+		);
+
+		small {
+			margin-left: 2rem;
+		}
+		&:hover i {
+			@include animation(500ms) {
+				0% {
+					transform: rotate(0deg);
+				}
+				33% {
+					transform: rotate(-30deg);
+				}
+				66% {
+					transform: rotate(60deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+		}
+	}
+
+	&__form-contact {
+		width: 50%;
+		height: 470px;
+		padding: 2rem;
+		border-top-width: 2px solid;
+		position: relative;
+
+		&::before,
+		&::after {
+			border-image: linear-gradient(to right, $primary, $secondary);
+			border-image-slice: 1;
+		}
+		&::before {
+			@include line(
+				$width: 50%,
+				$left: 0,
+				$right: auto,
+				$top: 0,
+				$bottom: auto
+			);
+			border-top: 2px solid;
+			border-left: 2px solid;
+			padding-bottom: 3rem;
+		}
+		&::after {
+			@include line(
+				$width: 50%,
+				$left: auto,
+				$right: 0,
+				$top: auto,
+				$bottom: 10px
+			);
+			border-bottom: 2px solid;
+			border-right: 2px solid;
+			padding-top: 3rem;
+		}
+		div:nth-child(1).loader {
+			width: 100%;
+			height: 70%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			opacity: 0.9;
+			z-index: 1;
+			@include flexbox();
+			&::after {
+				content: '';
+				width: 70px;
+				height: 70px;
+				border-radius: 50%;
+				border: 5px solid transparent;
+				border-top-color: $secondary;
+				border-bottom-color: $secondary;
+				z-index: 2;
+				animation-iteration-count: infinite !important;
+				@include animation(1.5s) {
+					0% {
+						transform: rotate(0deg);
+					}
+					100% {
+						transform: rotate(360deg);
+					}
+				}
+			}
+		}
+		button {
+			@include custom-btn(100px);
+			height: 40px !important;
+			position: absolute;
+			right: 60px;
+			bottom: 35px;
+			z-index: 1;
+		}
+	}
+	&__form-group {
+		width: 100%;
+		height: 50px;
+		margin-bottom: 1rem;
+		position: relative;
+
+		label {
+			display: block;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			border: none;
+			outline: none;
+			padding-left: 1rem;
+			color: var(--color-text-icon);
+			opacity: 0.7;
+			background: transparent;
+			border-bottom: 2px solid var(--color-text-icon);
+
+			&:focus {
+				border-color: var(--color-text-icon);
+			}
+		}
+
+		textarea {
+			min-height: 90px;
+			max-height: 120px;
+			transition: min-height 400ms;
+
+			&:focus {
+				min-height: 120px;
+			}
+		}
+		small {
+			display: none;
+		}
+		small.error {
+			display: initial;
+			position: absolute;
+			right: 0;
+			bottom: -22px;
+			color: $primary;
+		}
+		small.succes {
+			display: none !important;
+		}
+		.textarea-error-message {
+			top: 110px !important;
+			transition: top 400ms;
+		}
+		textarea:focus + .textarea-error-message {
+			top: 141px !important;
+		}
+	}
+}
+
+.download {
+	width: 100%;
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 300;
+	button {
+		@include custom-btn(200px);
+	}
+}
+
+.scroll-container {
+	position: absolute;
+	right: 5%;
+	bottom: 0;
+
+	.arrow {
+		@include arrow-indicator(top, 45deg);
+	}
+
+	:nth-child(1) {
+		@include animation(2s) {
+			0% {
+				transform: translateY(30px) rotate(45deg);
+				opacity: 1;
+			}
+			100% {
+				transform: translateY(-15px) rotate(45deg);
+				opacity: 0;
+			}
+		}
+	}
+
+	:nth-child(2) {
+		@include animation(2s, 150ms) {
+			0% {
+				transform: translateY(17px) rotate(45deg);
+				opacity: 1;
+			}
+			100% {
+				transform: translateY(-15px) rotate(45deg);
+				opacity: 0;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.contact-container {
+		padding: 6rem 2rem !important;
+
+		&__personal-info {
+			font-size: 1.1rem;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.discription-wrapper {
+		top: 70px !important;
+	}
+
+	.contact-container {
+		flex-direction: column-reverse !important;
+
+		&__network-personal-info {
+			height: 350px !important;
+		}
+
+		&__form-contact {
+			width: 100% !important;
+			margin: 7rem 0;
+		}
+	}
+}
+@include media-breakpoint-down(lg) {
+	.discription-wrapper {
+		right: -28px !important;
+	}
+}
+
+</style> -->

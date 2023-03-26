@@ -1,4 +1,4 @@
-import { Project, SchoolLevel } from '../types/index';
+import { Network, Project, SchoolLevel } from '../types/index';
 
 const html = 'https://www.w3schools.com/html/';
 const css = 'https://www.w3schools.com/css/';
@@ -22,6 +22,13 @@ const render = 'https://render.com/';
 const netlify = 'https://www.netlify.com/';
 const seo = 'https://en.wikipedia.org/wiki/Search_engine_optimization';
 
+
+export const socialNetworks: Network[] = [
+    { id: 1, icon: 'linkedin', link: 'https://linkedin.com/in/mukhtar-sulaiman' },
+    { id: 2, icon: 'github', link: 'https://github.com/MukhtarSulaiman' },
+    { id: 3, icon: 'youtube', link: 'https://www.youtube.com/channel/UCSvuJVJdF3NDsg9CjeM6I-Q' },
+    { id: 4, icon: 'twitter', link: 'https://twitter.com/zooldeveloper' },
+]
 
 export const projects: Project[] = [
         {

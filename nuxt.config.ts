@@ -55,7 +55,7 @@ export default defineNuxtConfig({
                }),
           ],
      },
-     modules: ['nuxt-icon', '@nuxtjs/color-mode'],
+     modules: [ 'nuxt-icon', '@nuxtjs/color-mode', '@nuxt/content' ],
      colorMode: {
           preference: 'dark', // default value of $colorMode.preference
           fallback: 'light', // fallback value if not system preference found
