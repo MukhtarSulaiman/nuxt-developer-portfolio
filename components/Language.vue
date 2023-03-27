@@ -76,15 +76,15 @@
                 <small class="lang-progress-bar">{{ $t('education.languages', 1) }}</small>
                 <small class="lang-progress-bar">{{ $t('education.languages', 2) }}</small>
             </div>
-            <div class="progress-bars">
+            <div :class="['progress-bars', {'light' : $colorMode.preference === 'light'}]">
                 <div class="progress-bar-circle" :style="progressOne">
-                    <div class="progress-value progress-value-one">{{ progressOne.currentValue }}%</div>
+                    <div class="progress-value">{{ progressOne.currentValue }}%</div>
                 </div>
                 <div class="progress-bar-circle" :style="progressTwo">
-                    <div class="progress-value progress-value-two">{{ progressTwo.currentValue }}%</div>
+                    <div class="progress-value">{{ progressTwo.currentValue }}%</div>
                 </div>
                 <div class="progress-bar-circle" :style="progressThree">
-                    <div class="progress-value progress-value-three">{{ progressThree.currentValue }}%</div>
+                    <div class="progress-value">{{ progressThree.currentValue }}%</div>
                 </div>
             </div>
         </div>
@@ -187,10 +187,8 @@
                     width: 35px;
                     height: 35px;
                     border-radius: 50%;
-
-                    // background: conic-gradient(#BE2E73 80 * 3.6deg, #000 80 * 3.6deg);
                     
-                    // @include gradient;
+                    @include gradient;
                     @include flexbox;
                     &::after {
                         content: '';
@@ -206,9 +204,14 @@
                     }
                 }
             }
-            // .show, .show::before {
-            // 	display: flex !important;
-            // }
+            .progress-bars.light {
+               .progress-bar-circle::after {
+                    background-color:var(--color-text-icon);
+                }
+                .progress-value {
+                    color: var(--color-page-background);
+                } 
+            }
         }
 
         @media screen and (min-width: 768px) {

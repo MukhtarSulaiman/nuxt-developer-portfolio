@@ -1,5 +1,3 @@
-// import { NodeSelector } from '../types/index';
-
 export const useIntersectionObserver = (selectors: NodeListOf<HTMLElement>, threshold: number) => {
 
     const isIntersecting = ref(false);
@@ -19,5 +17,5 @@ export const useIntersectionObserver = (selectors: NodeListOf<HTMLElement>, thre
     
     selectors.forEach(selector => observer.observe(selector));
 
-  return { isIntersecting };
+    return { isIntersecting };
 };
