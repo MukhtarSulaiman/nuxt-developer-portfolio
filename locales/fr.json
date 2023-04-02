@@ -103,5 +103,28 @@
             "degree": "Baccalauréat général"
         },
         "languages": "Anglais | Français | Arabe"
+    },
+    "contact": {
+        "title": {
+            "main": "Contact",
+            "social_media": "Réseaux sociaux"
+        },
+        "fullName_input": {
+            "label": "Nom",
+            "placeholder": "David ALLAIN"
+        },
+        "email_input": {
+            "label": "Email",
+            "placeholder": "example{at}gmail.com"
+        },
+        "subject_input": {
+            "label": "Objet",
+            "placeholder": "Votre sujet"
+        },
+        "textarea_input": {
+            "label": "Message",
+            "placeholder": "Ecrivez votre message..."
+        },
+        "submit_btn": "Envoyer"
     }
 }

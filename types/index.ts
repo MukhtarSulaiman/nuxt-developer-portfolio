@@ -2,7 +2,7 @@ export type Network = {
     id: number,
     icon: string,
     link: string,
-};
+}
 
 type Image = {
     url: string,
@@ -27,4 +27,12 @@ export type SchoolLevel = {
     id: number,
     institution: string,
     degree: string
+}
+
+export interface Input {
+    id: number;
+    for: string;
+    label: string;
+    type: string;
+    placeholder: string;
 }

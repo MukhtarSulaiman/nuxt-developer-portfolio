@@ -103,5 +103,28 @@
             "degree": "High school degree"
         },
         "languages": "English | French | Arabic"
+    },
+    "contact": {
+        "title": {
+            "main": "Contact",
+            "social_media": "Social networks"
+        },
+        "fullName_input": {
+            "label": "Full name",
+            "placeholder": "David ALLAIN"
+        },
+        "email_input": {
+            "label": "Email",
+            "placeholder": "example{at}gmail.com"
+        },
+        "subject_input": {
+            "label": "Subject",
+            "placeholder": "Your subject"
+        },
+        "textarea_input": {
+            "label": "Message",
+            "placeholder": "Type your message..."
+        },
+        "submit_btn": "Submit"
     }
 }
