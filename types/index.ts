@@ -1,8 +1,10 @@
-export type Network = {
+type Icon = {
     id: number,
     icon: string,
     link: string,
 }
+
+export type Network = Icon;
 
 type Image = {
     url: string,
@@ -27,6 +29,12 @@ export type SchoolLevel = {
     id: number,
     institution: string,
     degree: string
+}
+
+
+export interface PersonalInfo extends Icon { 
+    content: string; 
+    target?: boolean;
 }
 
 export interface Input {

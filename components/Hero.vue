@@ -9,7 +9,7 @@
 <template>
 	<section>
 		<div class="hero-section hero-section__container">
-			<SocialNetwork />
+			<SocialNetwork classElement="hero__column-layout" />
 			<div :class="[ 'hero-section__intro ', { 'lang-ar' : useI18n().locale.value === 'ar' }]">
 				<h1 class="hero-section__main-heading">
 						<span>{{ $t('main_heading.static_desc', 0) }}</span>{{ $t('main_heading.static_desc', 1) }}

@@ -21,5 +21,6 @@
         <Skills />
         <Portfolio />
         <Education />
+        <Contact />
     </main>
 </template>
