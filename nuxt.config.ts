@@ -61,4 +61,10 @@ export default defineNuxtConfig({
           fallback: 'light', // fallback value if not system preference found
           classPrefix: '',
      },
+     components: [
+          {
+               path: '~/components',
+               extensions: ['.vue'],
+          }
+     ]
 });

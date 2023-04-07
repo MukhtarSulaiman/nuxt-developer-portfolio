@@ -31,7 +31,6 @@ export type SchoolLevel = {
     degree: string
 }
 
-
 export interface PersonalInfo extends Icon { 
     content: string; 
     target?: boolean;
