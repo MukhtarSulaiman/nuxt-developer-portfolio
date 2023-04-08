@@ -43,3 +43,10 @@ export interface Input {
     type: string;
     placeholder: string;
 }
+
+export  interface FormContact {
+    fullName: string;
+    email: string;
+    subject: string;
+    message: string;
+}
