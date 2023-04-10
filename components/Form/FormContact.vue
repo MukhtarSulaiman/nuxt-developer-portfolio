@@ -10,9 +10,21 @@
         {   id: 3, for: 'subject', type: 'text', label: 'contact.subject_input.label', placeholder: 'contact.subject_input.placeholder' }
     ]
 
-    const handleSubmit = (values: FormContact, actions: any): void => {
-        console.log(values)
-        console.log(actions)
+    const sendFormContact = async (formData: FormContact) => {
+        return $fetch('/api/formdata', {
+            headers: {
+                'Content-type': 'application/json'
+            },
+            method: 'POST',
+            body: {
+                data: JSON.stringify(formData)
+            }
+        });
+    }
+
+    const handleSubmit = async (values: FormContact, actions: any): Promise<void> => {
+        const data = await sendFormContact(values);
+        console.log(data)
         actions.resetForm()
     }
 

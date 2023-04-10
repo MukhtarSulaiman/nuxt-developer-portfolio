@@ -1,6 +1,8 @@
 
 <script setup lang="ts">
 
+import { useI18n } from 'vue-i18n';
+
     const props = defineProps<{
         formGroupClass: string,
         errorClass?: string,
@@ -24,7 +26,10 @@
                 :placeholder="$t(props.placeholder, { at: '@'})"
                 :as="props.type === 'textarea' ? 'textarea' : ''"
             />
-            <VErrorMessage :name="props.name" as="span" :class="errorClass" />
+            <VErrorMessage 
+                :name="props.name" 
+                as="span" 
+                :class="[errorClass, {'lang-ar' : useI18n().locale.value === 'ar' }]" />
         </VField>
     </div>
 </template>
@@ -78,6 +83,11 @@
             right: 0;
             bottom: -27px;
             color: $color-brand-primary;
+        }
+
+        span.lang-ar {
+            right: initial !important;
+            left: 0px !important;
         }
 
         span.textarea-error-message {
