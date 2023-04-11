@@ -19,6 +19,9 @@
   },
   "dependencies": {
     "@vee-validate/rules": "^4.8.4",
+    "googleapis": "^115.0.0",
+    "helmet": "^6.1.4",
+    "nodemailer": "^6.9.1",
     "vee-validate": "^4.8.4",
     "yup": "^1.0.2"
   }

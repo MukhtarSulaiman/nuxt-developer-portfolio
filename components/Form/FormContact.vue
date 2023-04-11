@@ -10,21 +10,21 @@
         {   id: 3, for: 'subject', type: 'text', label: 'contact.subject_input.label', placeholder: 'contact.subject_input.placeholder' }
     ]
 
-    const sendFormContact = async (formData: FormContact) => {
-        return $fetch('/api/formdata', {
+    const sendFormContact = (formData: FormContact) => {
+        return useFetch('/api/sendmail', {
             headers: {
                 'Content-type': 'application/json'
             },
             method: 'POST',
             body: {
-                data: JSON.stringify(formData)
+                data: formData
             }
         });
     }
 
     const handleSubmit = async (values: FormContact, actions: any): Promise<void> => {
-        const data = await sendFormContact(values);
-        console.log(data)
+        const { data } = await sendFormContact(values);
+        console.log(data.value)
         actions.resetForm()
     }
 

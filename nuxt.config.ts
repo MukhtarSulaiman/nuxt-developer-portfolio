@@ -66,5 +66,17 @@ export default defineNuxtConfig({
                path: '~/components',
                extensions: ['.vue'],
           }
-     ]
+     ],
+     runtimeConfig: {
+          CLIENT_ID: process.env.CLIENT_ID,
+          CLIENT_SECRET: process.env.CLIENT_SECRET,
+          REDIRECT_URL: process.env.REDIRECT_URL,
+          SENDER_USER: process.env.SENDER_USER,
+		REFRESH_TOKEN: process.env.REFRESH_TOKEN,
+		RECEIVER_USER:  process.env.RECEIVER_USER,
+
+          public: {
+               // This object is intended to expose environment variables to the frontend!
+          }
+     }
 });
