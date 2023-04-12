@@ -31,6 +31,7 @@ import { PersonalInfo } from '~/types';
 					</a>
 				</div>
 			</div>
+			<DownloadButton bottom="-0px"/>
 		</div>
 	</section>
 </template>
@@ -40,6 +41,7 @@ import { PersonalInfo } from '~/types';
 section {
 	.contact {
 		padding: 8rem 0;
+		position: relative;
 
 		&__contact-network-wrapper {
 			height: inherit;
@@ -91,6 +93,7 @@ section {
 		}
 
 		@media screen and (min-width: 768px) {
+			padding-bottom: 5rem !important;
 			@include flexbox(space-between, flex-start);
 
 			&__form-contact {
