@@ -5,7 +5,7 @@ export default defineAppConfig({
           size: '24px', // default <Icon> size applied
           aliases: {
                'sun': 'ic:outline-wb-sunny',
-               'moon': 'ic:baseline-bedtime',
+               'moon': 'majesticons:moon-line',
                'linkedin': 'mdi:linkedin',
                'github': 'mdi:github',
                'youtube': 'mdi:youtube',

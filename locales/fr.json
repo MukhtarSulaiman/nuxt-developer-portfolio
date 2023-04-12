@@ -126,5 +126,8 @@
             "placeholder": "Ecrivez votre message..."
         },
         "submit_btn": "Envoyer"
+    },
+    "footer": {
+        "copyright": "Tous droits réservés"
     }
 }

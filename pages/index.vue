@@ -22,5 +22,6 @@
         <Portfolio />
         <Education />
         <Contact />
+        <Footer />
     </main>
 </template>

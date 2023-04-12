@@ -126,5 +126,8 @@
             "placeholder": "اكتب رسالتك..."
         },
         "submit_btn": "إرسال"
+    },
+    "footer": {
+        "copyright": "جميع الحقوق محفوظة"
     }
 }

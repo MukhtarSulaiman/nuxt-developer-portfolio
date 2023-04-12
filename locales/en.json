@@ -126,5 +126,8 @@
             "placeholder": "Type your message..."
         },
         "submit_btn": "Submit"
+    },
+    "footer": {
+        "copyright": "Copyright"
     }
 }
