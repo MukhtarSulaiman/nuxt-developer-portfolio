@@ -103,5 +103,31 @@
             "degree": "شهادة ثانوية"
         },
         "languages": "إنجليزي | فرنسي | عربي"
+    },
+    "contact": {
+        "title": {
+            "main": "معلومات التواصل",
+            "social_media": "الشبكات الإجتماعية"
+        },
+        "fullName_input": {
+            "label": "الإسم بالكامل",
+            "placeholder": "أحمد ادم"
+        },
+        "email_input": {
+            "label": "البريد الإلكتروني ",
+            "placeholder": "example{at}gmail.com"
+        },
+        "subject_input": {
+            "label": "الموضوع",
+            "placeholder": "عنوان الموضوع "
+        },
+        "textarea_input": {
+            "label": "الرسالة ",
+            "placeholder": "اكتب رسالتك..."
+        },
+        "submit_btn": "إرسال"
+    },
+    "footer": {
+        "copyright": "جميع الحقوق محفوظة"
     }
 }

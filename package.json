@@ -16,5 +16,13 @@
     "sass": "^1.56.0",
     "sass-loader": "^13.1.0",
     "vue-i18n": "^9.3.0-beta.10"
+  },
+  "dependencies": {
+    "@vee-validate/rules": "^4.8.4",
+    "googleapis": "^115.0.0",
+    "helmet": "^6.1.4",
+    "nodemailer": "^6.9.1",
+    "vee-validate": "^4.8.4",
+    "yup": "^1.0.2"
   }
 }

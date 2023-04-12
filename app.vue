@@ -45,11 +45,11 @@
           );
      }
 
-     .dark-mode :is(a, .btn-see-source-code) {
+     .dark-mode :is(a, .btn-see-source-code, input, textarea) {
           color: $color-text-primary !important;
      }
 
-     .light-mode :is(a, .btn-see-source-code) {
+     .light-mode :is(a, .btn-see-source-code, input, textarea) {
           color: $color-text-inverted !important;
      }
 

@@ -17,14 +17,6 @@
         'NodeJS', 'MySql', 'MongoDB',
         'Express','GitHub','Postman',
     ]
-
-    const downLoadResume = () => {
-        window.open(
-            '/files/cv-mukhtar_sulaiman-fr.pdf',
-            '_blank',
-            'fullscreen=yes'
-        );
-    }
     
 </script>
  
@@ -54,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <button @click="downLoadResume">{{ $t('download_resume')}}</button>
+            <DownloadButton  bottom="-80px" />
         </div>
     </section>
 </template>
@@ -145,15 +137,6 @@
         
         &__content.show {
             @include animation-on-scroll(1, translateY(0));
-        }
-
-
-        button {
-            @include custom-btn(200px);
-            position: absolute;
-            left: 50%;
-            bottom: -80px;
-            transform: translateX(-50%);
         }
         
         @media screen and (min-width: 576px) {

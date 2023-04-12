@@ -54,15 +54,15 @@
                         <div class="project__technology">
                             <h2>{{ toolTitle ? toolTitle : $t('portfolio.heading.technology') }}</h2>
                             <div @mouseleave="handleIconTitle('mouseleave', null)">
-                                    <a  
-                                        v-for="technology in project.technology" 
-                                        :href="technology.link" 
-                                        target="_blank" >
-                                        <img 
-                                            @mouseover="handleIconTitle('mouseover', technology.url)"
-                                            :src="`/images/toolIcons/${technology.url}`" 
-                                            :alt="technology.url.split('.').slice(0, 1).join()">
-                                    </a>
+                                <a  
+                                    v-for="technology in project.technology" 
+                                    :href="technology.link" 
+                                    target="_blank" >
+                                    <img 
+                                        @mouseover="handleIconTitle('mouseover', technology.url)"
+                                        :src="`/images/toolIcons/${technology.url}`" 
+                                        :alt="technology.url.split('.').slice(0, 1).join()">
+                                </a>
                             </div>
                         </div>
                     </div>
