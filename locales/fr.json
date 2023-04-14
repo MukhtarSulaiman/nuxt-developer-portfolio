@@ -109,6 +109,10 @@
             "main": "Contact",
             "social_media": "Réseaux sociaux"
         },
+        "description": { 
+            "two_first_lines": "Un projet ? Une idée ? | Ou simplement un conseil ?", 
+            "two_last_lines": "N'hésitez pas à me contacter par | le moyen qui vous convient !"
+        },
         "fullName_input": {
             "label": "Nom",
             "placeholder": "David ALLAIN"

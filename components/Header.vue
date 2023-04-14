@@ -244,13 +244,12 @@
                     right: 17px;
                     width: 30px;
                     height: 30px;
-                    border-radius: 50%;
-                    border: 1px solid $color-brand-secondary;
                     cursor: pointer;
                     @include flexbox;
 
                     i {
                          background: none;
+                         transform: rotate(-45deg);
                     }
                }
 

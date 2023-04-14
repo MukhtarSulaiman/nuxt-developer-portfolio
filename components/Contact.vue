@@ -11,8 +11,9 @@ import { PersonalInfo } from '~/types';
 </script>
 
 <template>
-	<section id="contact" class="contact">
+	<section id="contact">
 		<h2>{{ $t('contact.title.main') }}</h2>
+		<AttentionMessage />
 		<div class="contact">
 			<FormContact class="contact__form-contact" />
 			<div class="contact__contact-network-wrapper">
@@ -39,9 +40,12 @@ import { PersonalInfo } from '~/types';
 <style lang="scss" scoped>
 
 section {
+	position: relative ;
+
 	.contact {
-		padding: 8rem 0;
+		padding: 11rem 0 8rem;
 		position: relative;
+
 
 		&__contact-network-wrapper {
 			height: inherit;

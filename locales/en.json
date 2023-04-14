@@ -109,6 +109,10 @@
             "main": "Contact",
             "social_media": "Social networks"
         },
+        "description": { 
+            "two_first_lines": "A project ? An idea ? | Or simply an advice ?", 
+            "two_last_lines": "Feel free to contact me by | the way that suits you !"
+        },
         "fullName_input": {
             "label": "Full name",
             "placeholder": "David ALLAIN"
