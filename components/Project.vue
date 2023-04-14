@@ -29,7 +29,7 @@
                         {{ $t(project.mainDescription, 1) }}
                         <br>
                         <br>
-                        {{ $t(project.mainDescription, 2) }}
+                        {{ $t(project.mainDescription, 2) !== "null" ? $t(project.mainDescription, 2)  : null }}
                     </p>
                     <div class="project__context-technology">
                         <div class="project__context">

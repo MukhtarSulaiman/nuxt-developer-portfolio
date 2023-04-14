@@ -2,10 +2,10 @@
 
 export default defineAppConfig({
      nuxtIcon: {
-          size: '24px', // default <Icon> size applied
+          size: '28px', // default <Icon> size applied
           aliases: {
-               'sun': 'ic:outline-wb-sunny',
-               'moon': 'majesticons:moon-line',
+               'sun': 'system-uicons:sun'               ,
+               'moon': 'system-uicons:moon',
                'linkedin': 'mdi:linkedin',
                'github': 'mdi:github',
                'youtube': 'mdi:youtube',
