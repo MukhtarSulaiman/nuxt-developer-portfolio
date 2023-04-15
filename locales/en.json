@@ -37,43 +37,43 @@
         },
         "project1": {
             "type": "Hotels & entrtainment",
-            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
-            "main_description": "",
+            "brief_description": "This is an imaginary site for renting housing and planning tourist trips.",
+            "main_description": "First project carried out as part of my previous bootcamp training at OpenClassrooms. | Réservia is a prototype of an online hotel booking that involves to create a static website using HTML5 and CSS3 according with a responsive iterface. | null",
             "alt_main_image": "Reservia project"
         },
         "project2": {
             "type": "Meal reservation",
-            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
-            "main_description": "",
+            "brief_description": "A concept that allows users to compose their menu beforehand.",
+            "main_description": "This project is a prototype that represents an online meal resveration platform. It allows you to list the menus of gourmet restaurants. The project was developed using the CSS preprocessor (SASS) with the mobile-first approach. | null  | null",
             "alt_main_image": "Ohmyfoof project"
         },
         "project3": {
             "type": "SEO",
-            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
-            "main_description": "",
+            "brief_description": "Complete audit and improvement of the SEO of an existing website.",
+            "main_description": "This is an already existing project that has many issues ralted to SEO. | The site has therefore been analyzed and improved by reducing loading time and adopting good SEO ans accessibility practices. | An optimisation report was also made to indicate the pre and post optimization results.",
             "alt_main_image": "La Chouette agence project"
         },
         "project4": {
             "type": "E-commerce",
-            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
-            "main_description": "",
+            "brief_description": "Created an MVP of an e-commerce website.",
+            "main_description": "Orinoco is an MVP of an e-commerce website that was built with the mono-product concept. | The front-end was developed using pure JavaScript. The elements are integrated throught a provied API. A unit testing plan has also been put in place to ensure proper functioning. | null",
             "alt_main_image": "Orinoco project"
         },
         "project5": {
             "type": "Reviews app",
-            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
+            "brief_description": "",
             "main_description": "",
             "alt_main_image": "Piiquante project"
         },
         "project6": {
             "type": "Social media",
-            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
+            "brief_description": "",
             "main_description": "",
             "alt_main_image": "Groupomania project"
         },
         "project7": {
             "type": "Portfolio",
-            "brief_description": "isant le préprocesseur de CSS (SASS) et avec l'approche mobile-first.Ce projet est un prototype qui représente…",
+            "brief_description": "",
             "main_description": "Hignissimos qui quasi nulla placeat assumenda voluptatum, corrupti impedit neque dignissimos sapiente illum sit nam fugiat soluta esse mollitia adipisci sed laudantium beatae deserunt assumenda. | Hignissimos qui quasi nulla placeat assumenda voluptatum, corrupti impedit neque pariatur repudiandae et. Culpa cumque maxime nostrum exercitationem voluptatum perferendis harum necessitatibus est facere eum provident, dignissimos sapiente illum sit nam fugiat soluta esse mollitia adipisci sed laudantium beatae deserunt assumenda",
             "alt_main_image": "Zool developer website"
         },        

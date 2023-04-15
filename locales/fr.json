@@ -37,44 +37,44 @@
         },
         "project1": {
             "type": "Hôtels & activités",
-            "brief_description": "",
-            "main_description": "",
+            "brief_description": "Il s'agit d'un site fictif de location de logements et planification de voyages touristiques.",
+            "main_description": "Premier projet mené dans le cadre de ma précédente formation chez OpenClassrooms. Réservia est un prototype d'un site web de réservation d'hôtels en ligne. Il s'agit de coder un site web statique en utilisant HTML5 et CSS3 conformément à une interface responsive. | null | null",
             "alt_main_image": "Projet Réservia"
         },
         "project2": {
             "type": "Réservation de repas",
-            "brief_description": "",
-            "main_description": "",
+            "brief_description": "Un concept qui permet aux utilisateurs de composer leur menu de manière préalable.",
+            "main_description": "Ce projet est un prototype qui représente une plate-forme de réservation de repas en ligne. Il permet de répertorier les menus de restaurants gastronomiques. Le projet a été développé en utilisant le préprocesseur de CSS (SASS) avec l'approche mobile-first. | null  | null",
             "alt_main_image": "Projet Ohmyfood"
         },
         "project3": {
             "type": "Référencement naturel",
-            "brief_description": "",
-            "main_description": "",
+            "brief_description": "Audit complet et amélioration du référencement (SEO) d'un site web existant.",
+            "main_description": "Il s'agit d'un projet déjà existant mais il avait de problèmes liés au référencement naturel. | Le site a été donc analysé et amélioré en réduisant le temps de chargement et en appliquant les bonnes pratiques du SEO et d'accessibilité. | Un rapport d'optimisation a été également réalisé pour indiquer les résultats pré et post optimisation.",
             "alt_main_image": "Projet La Chouette agence"
         },
         "project4": {
             "type": "É-commerce",
-            "brief_description": "",
-            "main_description": "",
+            "brief_description": "Création d'un MVP d'un site e-commerce.",
+            "main_description": "Orinoco est un MVP d'un site e-commerce qui a été réalisé avec le concept mono-produit. | Le front-end a été développé en utilisant pur JavaScript. Les éléments sont intégrés grâce à une API fournie. Un plan de test unitaire a été également mis en place pour assurer le bon fonctionnement.  | null",
             "alt_main_image": "Projet Orinoco"
         },
         "project5": {
             "type": "Avis critiques",
-            "brief_description": "",
-            "main_description": "",
+            "brief_description": "Développement d'une API pour une application d'avis gastronomiques.",
+            "main_description": "Hot Takes est une application web d'avis critiques. Le but était de créer une API REST sécurisée qui respecte à la fois les règles de l'OWASP et permettant aux utilisateurs d'ajouter leurs sauces préférées et de liker ou disliker les sauces proposées par les autres utilisateurs. | J'ai donc utilisé Express pour définir le modèle MVC et MongooDB en tant que SGBD. | null",
             "alt_main_image": "Projet Piiquante"
         },
         "project6": {
             "type": "Réseau social",
-            "brief_description": "",
-            "main_description": "",
+            "brief_description": "Création d'un réseau sociale d'enreprise qui permet aux employeurs de partager des sujets qui leur passionnent.",
+            "main_description": "Groupomania est un projet fullstack. L'objectif était de créer un réseau social interne d'entreprise qui permet aux employé(es) de créer des comptes personnels, poster de contenu multimédia et interagir au contenu que d'autres partagent. | Le front-end de ce projet a été réalisé sous le framework Vue 2 avec la combinaison de Vuex pour la guestion d'état et Axios pour l'envoi des requpêts http. Et enfin, l'implémentation de SASS en tant que préprocesseur (CSS). | En back-end, j'ai utlisé Express comme un MVC framework avec l'intégration de bibliothèques tierces. Et MySql en tant que système de guestion de base de données (SGBD).",
             "alt_main_image": "Projet Groupomania"
         },
         "project7": {
             "type": "Portfolio",
-            "brief_description": "",
-            "main_description": "",
+            "brief_description": "Il s'agit de mon propre site web personel qui a été développé sous le meta-framework NuxtJS.",
+            "main_description": "Ce projet est tout simplement le site sur lequel vous vous trouvez actuellement. | La conception de ce portfolio a été faite sous Figma. Ensuite, son développement a été réalisé avec le mété-framework Nuxt 3, TypeScript et SASS. | En back-end, l'implémentation du Nodemailer avec la combinaison du protocole Oauth2 de Google API était nécessaire pour gérer la ré-direction et l'authentification des mails.",
             "alt_main_image": "Projet Zool Developer"
         },
         "btn": {
