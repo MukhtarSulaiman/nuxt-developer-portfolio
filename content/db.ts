@@ -161,7 +161,7 @@ export const projects: Project[] = [
         type: 'portfolio.project7.type',
         briefDescription: 'portfolio.project7.brief_description',
         mainDescription: 'portfolio.project7.main_description',
-        year: '07/2022',
+        year: '04/2023',
         previewImageUrl: 'portfolio.jpg',
         mainImage: { url: "zooldeveloper.png", alt: 'portfolio.project7.alt_main_image' },
         links: {

@@ -1,5 +1,6 @@
 <script setup lang="ts">
     import { projects } from '../content/db';
+    import { useI18n } from 'vue-i18n';
 
     const route = useRoute();
     const toolTitle = ref('');
@@ -26,14 +27,17 @@
                 <img :src="`/images/projects/main/${project.mainImage.url}`" :alt="$t(project.mainImage.alt)">
                 <div class="project__details-wrapper">
                     <p> 
-                        {{ $t(project.mainDescription, 1) }}
+                        {{ $t(project.mainDescription, 0) }}
                         <br>
                         <br>
+                        {{ $t(project.mainDescription, 1) !== "null" ? $t(project.mainDescription, 1)  : null }}
+                        <br/>
+                        <br/>
                         {{ $t(project.mainDescription, 2) !== "null" ? $t(project.mainDescription, 2)  : null }}
                     </p>
                     <div class="project__context-technology">
                         <div class="project__context">
-                            <h2>{{ $t('portfolio.heading.context') }}</h2>
+                            <h2 :class="{'lang-ar': useI18n().locale.value === 'ar'}">{{ $t('portfolio.heading.context') }}</h2>
                             <p>{{ project.year }}</p>
                             <p>{{ $t(project.type) }}</p>
                             <div class="project__buttons">
@@ -52,7 +56,7 @@
                             </div>
                         </div>
                         <div class="project__technology">
-                            <h2>{{ toolTitle ? toolTitle : $t('portfolio.heading.technology') }}</h2>
+                            <h2 :class="{'lang-ar': useI18n().locale.value === 'ar'}">{{ toolTitle ? toolTitle : $t('portfolio.heading.technology') }}</h2>
                             <div @mouseleave="handleIconTitle('mouseleave', null)">
                                 <a  
                                     v-for="technology in project.technology" 
@@ -93,9 +97,13 @@
             margin-bottom: .5rem;
         }
 
+        h2.lang-ar {
+            text-align: right !important;
+        }
+
         img {
             width: 90vmin;
-            max-width: 40vmax;
+            max-width: 35vmax;
             margin: 0 auto !important;
         }
 
@@ -110,7 +118,7 @@
         }
 
         &__context-technology{
-            margin-top: 3rem;
+            margin-top: 1rem;
             min-height: 250px;
             @include flexbox(space-between, flext-end, $flex-direction: column);
         }
@@ -142,20 +150,23 @@
 
 
         &__buttons {
-            margin-top: 2.5rem;
+            margin-top: 2rem;
+            width: 290px;
+            @include flexbox(space-between);
 
             a {
                 @include custom-btn(130px, 40px);
+                @include flexbox;
             }
 
             a:first-child {
                 border-radius: 5px;
-                margin-right: 20px;
                 padding: .5rem 2rem;
                 color: $color-text-primary !important;
             }
 
             a:last-child {
+                width: 140px !important;
                 padding: .4rem .5rem;
                 background: none;
                 border-bottom: 2px solid;
@@ -182,7 +193,7 @@
             }
 
             &__context-technology {
-                width: 280px;
+                width: 300px;
                 margin-top: 0 !important;
             }
 

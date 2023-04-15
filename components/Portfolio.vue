@@ -149,6 +149,7 @@ import { projects }  from '../content/db';
                 position: absolute;
                 top: 0;
                 right: 0;
+                min-height: 230px;
                 transform: translateY(10%);
                 width: 150px;
                 @include flexbox(space-between, left, $flex-direction: column);
@@ -160,7 +161,7 @@ import { projects }  from '../content/db';
                     text-transform: uppercase;
                 }
             }
-
+            
             &__sub-heading-description {
                 margin: 2rem 0;
 
