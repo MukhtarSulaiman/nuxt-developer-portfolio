@@ -2,7 +2,7 @@
 <script setup lang="ts">
     import { useI18n } from 'vue-i18n';
     
-    const { t } = useI18n();
+    const { locale, t } = useI18n();
 
     onMounted(() => {
         useHead({
@@ -16,7 +16,7 @@
 </script>
 
 <template>
-    <main>
+    <main :class="{'lang-ar': locale === 'ar'}">
         <Hero />
         <Skills />
         <Portfolio />
@@ -25,3 +25,10 @@
         <Footer />
     </main>
 </template>
+
+<style lang="scss" scoped>
+    main.lang-ar {
+        font-family: 'Cairo', sans-serif;;
+    }
+
+</style>

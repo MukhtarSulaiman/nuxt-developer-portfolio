@@ -161,9 +161,10 @@ import { projects }  from '../content/db';
                     text-transform: uppercase;
                 }
             }
-            
+
             &__sub-heading-description {
                 margin: 2rem 0;
+                // direction: rtl !important; Review this line !
 
                 h5 {
                     margin-bottom: .3rem;

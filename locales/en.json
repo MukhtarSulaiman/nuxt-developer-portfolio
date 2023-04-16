@@ -61,20 +61,20 @@
         },
         "project5": {
             "type": "Reviews app",
-            "brief_description": "",
-            "main_description": "",
+            "brief_description": "Developed an API for a reviewes web application.",
+            "main_description": "Hot Takes is a reviews web application. The goal was to create a secure REST API that respects both OWASP rules and allows users to add their favorite sauces and like or dislike the sauces that others share. | So I used Express framework to define the MVC pattern, Postman as a REST client and MogoDB as a database mangement system (DBMS). | null",
             "alt_main_image": "Piiquante project"
         },
         "project6": {
             "type": "Social media",
-            "brief_description": "",
-            "main_description": "",
+            "brief_description": "Built a company social network platform that allows employees to share topics that ther're passionate about.",
+            "main_description": "Groupomania is a fullstack project. The goal was to create an internal corporate social network platform that allows employees to create personal accounts, post multimedia content and interact with content that others share. | The front-end was built under Vue 3 framework with the combination of Vuex for the state mangement, Axios for sending http requests and the implementation of SASS as a preprocessor (CSS). | In the back-end, I used Express as an MVC framework with the integration of third-party libraries. And MySql as a database mangement system (DBMS).",
             "alt_main_image": "Groupomania project"
         },
         "project7": {
             "type": "Portfolio",
-            "brief_description": "",
-            "main_description": "Hignissimos qui quasi nulla placeat assumenda voluptatum, corrupti impedit neque dignissimos sapiente illum sit nam fugiat soluta esse mollitia adipisci sed laudantium beatae deserunt assumenda. | Hignissimos qui quasi nulla placeat assumenda voluptatum, corrupti impedit neque pariatur repudiandae et. Culpa cumque maxime nostrum exercitationem voluptatum perferendis harum necessitatibus est facere eum provident, dignissimos sapiente illum sit nam fugiat soluta esse mollitia adipisci sed laudantium beatae deserunt assumenda",
+            "brief_description": "This is my own personal website which was developed under the NuxtJS meta-framework.",
+            "main_description": "This project is simply the site you are currently on. | The design of this portfolio was made under Figma. Then, the development part was carried out under Nuxt 3 meta-framework, TypeScript and SASS. | In the back-end, the implementation of the Nodemailer with the combination of the Oauth2 protocol of Google API was necessary to manage the re-direction and the authentication of the mails.",
             "alt_main_image": "Zool developer website"
         },        
         "btn": {

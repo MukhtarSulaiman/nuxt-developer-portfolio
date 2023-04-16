@@ -40,7 +40,7 @@
 </script>
 
 <template>
-     <header>
+     <header :class="{'lang-ar': useI18n().locale.value === 'ar'}">
           <div id="logo">
                <NuxtLink to="/">
                     <img
@@ -85,6 +85,9 @@
 </template>
 
 <style lang="scss" scoped>
+     header.lang-ar {
+          font-family: 'Cairo', sans-serif;
+    }
      header {
           @include flexbox(space-between);
           width: 100%;

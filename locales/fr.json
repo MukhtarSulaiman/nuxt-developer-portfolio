@@ -62,19 +62,19 @@
         "project5": {
             "type": "Avis critiques",
             "brief_description": "Développement d'une API pour une application d'avis gastronomiques.",
-            "main_description": "Hot Takes est une application web d'avis critiques. Le but était de créer une API REST sécurisée qui respecte à la fois les règles de l'OWASP et permettant aux utilisateurs d'ajouter leurs sauces préférées et de liker ou disliker les sauces proposées par les autres utilisateurs. | J'ai donc utilisé Express pour définir le modèle MVC et MongooDB en tant que SGBD. | null",
+            "main_description": "Hot Takes est une application web d'avis critiques. Le but était de créer une API REST sécurisée qui respecte à la fois les règles de l'OWASP et permettant aux utilisateurs d'ajouter leurs sauces préférées et de liker ou disliker les sauces proposées par les autres utilisateurs. | J'ai donc utilisé le framework Express pour définir le modèle MVC, Postman comme un client REST et MongoDB en tant que système de guestion de base de données (SGBD). | null",
             "alt_main_image": "Projet Piiquante"
         },
         "project6": {
             "type": "Réseau social",
-            "brief_description": "Création d'un réseau sociale d'enreprise qui permet aux employeurs de partager des sujets qui leur passionnent.",
-            "main_description": "Groupomania est un projet fullstack. L'objectif était de créer un réseau social interne d'entreprise qui permet aux employé(es) de créer des comptes personnels, poster de contenu multimédia et interagir au contenu que d'autres partagent. | Le front-end de ce projet a été réalisé sous le framework Vue 2 avec la combinaison de Vuex pour la guestion d'état et Axios pour l'envoi des requpêts http. Et enfin, l'implémentation de SASS en tant que préprocesseur (CSS). | En back-end, j'ai utlisé Express comme un MVC framework avec l'intégration de bibliothèques tierces. Et MySql en tant que système de guestion de base de données (SGBD).",
+            "brief_description": "Création d'un réseau sociale d'entreprise qui permet aux employeurs de partager des sujets qui leur passionnent.",
+            "main_description": "Groupomania est un projet fullstack. L'objectif était de créer un réseau social interne d'entreprise qui permet aux employé(es) de créer des comptes personnels, poster de contenu multimédia et interagir au contenu que d'autres partagent. | Le front-end de projet a été réalisé sous le framework Vue 3 avec la combinaison de Vuex pour la guestion d'état, Axios pour l'envoi des requpêts http et l'implémentation de SASS en tant que préprocesseur (CSS). | En back-end, j'ai utlisé Express comme un MVC framework avec l'intégration de bibliothèques tierces. Et MySql en tant que système de guestion de base de données (SGBD).",
             "alt_main_image": "Projet Groupomania"
         },
         "project7": {
             "type": "Portfolio",
             "brief_description": "Il s'agit de mon propre site web personel qui a été développé sous le meta-framework NuxtJS.",
-            "main_description": "Ce projet est tout simplement le site sur lequel vous vous trouvez actuellement. | La conception de ce portfolio a été faite sous Figma. Ensuite, son développement a été réalisé avec le mété-framework Nuxt 3, TypeScript et SASS. | En back-end, l'implémentation du Nodemailer avec la combinaison du protocole Oauth2 de Google API était nécessaire pour gérer la ré-direction et l'authentification des mails.",
+            "main_description": "Ce projet est tout simplement le site sur lequel vous vous trouvez actuellement. | La conception de ce portfolio a été faite sous Figma. Ensuite, la partie développement a été réalisé avec le meta-framework Nuxt 3, TypeScript et SASS. | En back-end, l'implémentation du Nodemailer avec la combinaison du protocole Oauth2 de Google API était nécessaire pour gérer la ré-direction et l'authentification des mails.",
             "alt_main_image": "Projet Zool Developer"
         },
         "btn": {
