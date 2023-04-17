@@ -105,6 +105,7 @@
           font-size: 1rem;
           cursor: pointer;
           transition: background .3s ease;
+          color: $color-text-primary;
 
           &:hover {
                background-color: $color-brand-secondary;

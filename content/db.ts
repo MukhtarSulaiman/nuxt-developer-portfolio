@@ -21,6 +21,9 @@ const heroku = 'https://www.heroku.com/home';
 const render = 'https://render.com/';
 const netlify = 'https://www.netlify.com/';
 const seo = 'https://en.wikipedia.org/wiki/Search_engine_optimization';
+const wordpress = 'https://wordpress.com/';
+const elementor = 'https://elementor.com/';
+const hostinger = 'https://www.hostinger.com/';
 
 
 export const socialNetworks: Network[] = [
@@ -157,13 +160,109 @@ export const projects: Project[] = [
     },
     {
         id: 7,
-        title: 'Zool Developer',
+        title: 'Task Tracker',
         type: 'portfolio.project7.type',
         briefDescription: 'portfolio.project7.brief_description',
         mainDescription: 'portfolio.project7.main_description',
+        year: '09/2022',
+        previewImageUrl: 'note.jpg',
+        mainImage: { url: "tasktracker.png", alt: 'portfolio.project7.alt_main_image' },
+        links: {
+            demo: '',
+            sourceCode: 'https://github.com/MukhtarSulaiman/task-tracker-react.git'
+        },
+        technology: [
+            { url: "reactjs.png", link: react },
+            { url: "figma.png", link: figma },
+            { url: "github.png", link: github },
+        ]
+    },
+    {
+        id: 8,
+        title: 'The Jungle House',
+        type: 'portfolio.project8.type',
+        briefDescription: 'portfolio.project8.brief_description',
+        mainDescription: 'portfolio.project8.main_description',
+        year: '10/2022',
+        previewImageUrl: 'flower.jpg',
+        mainImage: { url: "thejunglehouse.png", alt: 'portfolio.project8.alt_main_image' },
+        links: {
+            demo: 'https://mukhtarsulaiman.github.io/the-jungle-house/',
+            sourceCode: 'https://github.com/MukhtarSulaiman/the-jungle-house.git'
+        },
+        technology: [
+            { url: "reactjs.png", link: react },
+            { url: "figma.png", link: figma },
+            { url: "github.png", link: github },
+        ]
+    },
+    {
+        id: 9,
+        title: 'Weather-app',
+        type: 'portfolio.project9.type',
+        briefDescription: 'portfolio.project9.brief_description',
+        mainDescription: 'portfolio.project9.main_description',
+        year: '10/2022',
+        previewImageUrl: 'weather.jpg',
+        mainImage: { url: "weatherapp.png", alt: 'portfolio.project9.alt_main_image' },
+        links: {
+            demo: 'https://zool-weather-app.onrender.com/',
+            sourceCode: 'https://github.com/MukhtarSulaiman/weather-app.git'
+        },
+        technology: [
+            { url: "reactjs.png", link: react },
+            { url: "tailwind.png", link: tailwind },
+            { url: "render.png", link: render },
+        ]
+    },
+    {
+        id: 10,
+        title: 'Tenzies Game',
+        type: 'portfolio.project10.type',
+        briefDescription: 'portfolio.project10.brief_description',
+        mainDescription: 'portfolio.project10.main_description',
+        year: '11/2022',
+        previewImageUrl: 'dice.jpg',
+        mainImage: { url: "tenzies.png", alt: 'portfolio.project10.alt_main_image' },
+        links: {
+            demo: 'https://mukhtarsulaiman.github.io/tenzies-game/',
+            sourceCode: 'https://github.com/MukhtarSulaiman/tenzies-game.git'
+        },
+        technology: [
+            { url: "reactjs.png", link: react },
+            { url: "figma.png", link: figma },
+            { url: "github.png", link: github },
+        ]
+    },
+    {
+        id: 11,
+        title: 'MP House Location',
+        type: 'portfolio.project11.type',
+        briefDescription: 'portfolio.project11.brief_description',
+        mainDescription: 'portfolio.project11.main_description',
+        year: '03/2023',
+        previewImageUrl: 'realestate.jpg',
+        mainImage: { url: "houselocation.png", alt: 'portfolio.project11.alt_main_image' },
+        links: {
+            demo: 'https://mphouselocation.com/',
+            sourceCode: 'https://www.figma.com/file/5Ndy1AFfl9WDCWYOsNxFDE/MyPortfolio?node-id=1634%3A988&t=T68aH7g7jaePnQtx-1'
+        },
+        technology: [
+            { url: "Wordpress.png", link: wordpress },
+            { url: "Elementor.png", link: elementor },
+            { url: "figma.png", link: figma },
+            { url: "hostinger.png", link: hostinger },
+        ]
+    },
+    {
+        id: 12,
+        title: 'Zool Developer',
+        type: 'portfolio.project12.type',
+        briefDescription: 'portfolio.project12.brief_description',
+        mainDescription: 'portfolio.project12.main_description',
         year: '04/2023',
         previewImageUrl: 'portfolio.jpg',
-        mainImage: { url: "zooldeveloper.png", alt: 'portfolio.project7.alt_main_image' },
+        mainImage: { url: "zooldeveloper.png", alt: 'portfolio.project12.alt_main_image' },
         links: {
             demo: 'https://www.figma.com/file/5Ndy1AFfl9WDCWYOsNxFDE/MyPortfolio?node-id=1634%3A988&t=rKI5xE0uNlbuiphP-0',
             sourceCode: 'https://github.com/MukhtarSulaiman/zool-developer'

@@ -72,10 +72,40 @@
             "alt_main_image": "Projet Groupomania"
         },
         "project7": {
+            "type": "Guestionnaire de tâches",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "projet tasck-tracker"
+        },
+        "project8": {
+            "type": "Boutique en ligne",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "projet the house jungle"
+        },
+        "project9": {
+            "type": "Conditions météo",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "projet weather-app"
+        },
+        "project10": {
+            "type": "Jeu de dés",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "projet tenzies game"
+        },
+        "project11": {
+            "type": "Location logement",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "projet mp house location"
+        },
+        "project12": {
             "type": "Portfolio",
             "brief_description": "Il s'agit de mon propre site web personel qui a été développé sous le meta-framework NuxtJS.",
             "main_description": "Ce projet est tout simplement le site sur lequel vous vous trouvez actuellement. | La conception de ce portfolio a été faite sous Figma. Ensuite, la partie développement a été réalisé avec le meta-framework Nuxt 3, TypeScript et SASS. | En back-end, l'implémentation du Nodemailer avec la combinaison du protocole Oauth2 de Google API était nécessaire pour gérer la ré-direction et l'authentification des mails.",
-            "alt_main_image": "Projet Zool Developer"
+            "alt_main_image": "projet Zool Developer"
         },
         "btn": {
             "read_more": "En savoir plus",

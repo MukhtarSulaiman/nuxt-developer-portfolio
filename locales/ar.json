@@ -39,43 +39,73 @@
             "type": "الفنادق  والأنشطة",
             "brief_description": "هذا الموقع عبارة عن منصة خيالية لتأجير المساكن وتخطيط الرحلات السياحية.",
             "main_description": "تم تنفيذ المشروع الأول كجزء من تدريبي السابق  في معهد OpenClassrooms. | Réservia هو نموذج أولي لحجز فندق عبر الإنترنت يتضمن إنشاء موقع ويب ثابت باستخدام HTML5 و CSS3 وفقًا لواجهة مستخدم متجاوب. | null",
-            "alt_main_image": ""
+            "alt_main_image": "réservia مشروع"
         },
         "project2": {
             "type": "حجز الطلبات",
             "brief_description": "مفهوم يتيح للأشخاص الراغبين بالذهاب الي المطاعم بتكوين قوائم الطعام بشكل مسبق.",
             "main_description": "هذا المشروع عبارة عن نموذج أولي يمثل منصة حجز وجبات عبر الإنترنت. يسمح لك بإدراج قوائم المطاعم الذواقة. تم تطوير هذا المشروع باستخدام معالج CSS المسبق (SASS) مع اتطباع نهج الهاتف المحمول أولاً. | null | null",
-            "alt_main_image": ""
+            "alt_main_image": "ohmyfood مشروع"
         },
         "project3": {
             "type": "تحسين محركات البحث",
             "brief_description": "التدقيق والمراجعة الكاملة  لموقع ويب موجود من اجل تحسين نتائج البحث  (SEO).",
             "main_description": "هذا المشروع تم تطويره من قبل ولكن لديه العديد من المشاكل التي تتعلق بتحسين محركات البحث. | لذلك تم تحليل الموقع وتحسينه عن طريق تقليل وقت التحميل واعتماد ممارسات تحسين محركات البحث وإمكانية الوصول الجيدة. | تم ايضا إعداد تقرير التحسين للإشارة إلى نتائج ما قبل وما بعد التحسين.",
-            "alt_main_image": ""
+            "alt_main_image": "la chouette agence مشروع"
         },
         "project4": {
             "type": "التجارة الإلكترونية",
             "brief_description": "إنشاء موقع التجارة الإلكترونية كنموذج اولي MVP.",
             "main_description": "Orinoco هو عبارة عن منتج الحد الأدنيMVP لموقع التجارة الإلكترونية الذي تم إنشاؤه بمفهوم المنتج الأحادي. | تم تطوير الواجهة الأمامية باستخدام JavaScript الخالص. ثم تم دمج العناصر من خلال واجهة برمجة التطبيقات التي تمت تقديمه. كما تم وضع خطة اختبار الوحدة (unit test) لضمان التشغيل السليم. | null",
-            "alt_main_image": ""
+            "alt_main_image": "orinoco مشروع"
         },
         "project5": {
             "type": "التقيمات والمراجعات",
             "brief_description": "تطوير واجهة برمجية (API)  لتطبيق مراجعات وتقييمات الطعام.",
             "main_description": "Hot Takes هو تطبيق ويب  وتقييمات الطعام. كان الهدف هو إنشاء واجهة برمجة تطبيقات REST آمنة تحترم قوانين ومعايير OWASP وتسمح للمستخدمين بإضافة الصلصات المفضلة لديهم وإبداء الإعجاب أو عدم الإعجاب بالصلصات التي يشاركها الآخرون. | لذلك استخدمت إطار العمل Express لتعريف نمط MVC ، و Postman كعميل REST و MogoDB كنظام إدارة قاعدة البيانات (DBMS). | null",
-            "alt_main_image": ""
+            "alt_main_image": "hot takes مشروع"
         },
         "project6": {
             "type": "التواصل الإجتماعي",
             "brief_description": "إنشاء منصة شبكة اجتماعية تتيح للموظفين بمشاركة الموضوعات التي يهتمون بها.",
             "main_description": "Groupomania هو مشروع Fullstack متكامل. كان الهدف هو إنشاء منصة شبكة اجتماعية داخلية للشركة تتيح للموظفين بإنشاء حسابات شخصية ونشر محتوى متعدد الوسائط  والتفاعل مع المحتوى الذي يشاركه الآخرون. | تم بناء الواجهة الأمامية بإستخدام Vue 3 مع دمج Vuex لإدارة حالة العناصر و Axios لإرسال طلبات http وأخيراً استخدام SASS كمعالج أولي (CSS). | في  ال back-end ، استخدمت Express كنموذج MVC مع دمج مكتبات الطرف الثالث. و MySql كنظام لإدارة قواعد البيانات (DBMS).",
-            "alt_main_image": ""
+            "alt_main_image": "groupomania مشروع"
         },
         "project7": {
+            "type": "مدير المهام",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "tasck-tracker مشروع"
+        },
+        "project8": {
+            "type": "متجر إلكتروني",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "the jungle house مشروع"
+        },
+        "project9": {
+            "type": "أحوال الطقس",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "weather-app مشروع"
+        },
+        "project10": {
+            "type": "لعبة النرد",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "tenzies-game مشروع"      
+        },
+        "project11": {
+            "type": "إيجار الشقق",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "mp house location مشروع"
+        },
+        "project12": {
             "type": "حافظة أعمال",
             "brief_description": "هذا المشروع هو عبارة عن موقع الويب الخاص بي الذي تم تطويره بإستخدام اطار عمل NuxtJS.",
             "main_description": "هذا المشروع هو ببساطة الموقع الذي تتصفحه عليه حاليًا. | تم تصميم هذه المحفظة تحت منصة Figma. بعد ذلك ، تم تنفيذ جزء التطوير بإستخدام  Nuxt 3 meta-framework و TypeScript و SASS. | في الجانب الـ back-end، كان استخدام Nodemailer مع دمج  بروتوكول Oauth2 الخاص بواجهة برمجة تطبيقات Google كان ضروريًا لإدارة إعادة التوجيه ومصادقة  الرسائل البريدية.",
-            "alt_main_image": ""
+            "alt_main_image": "zool developer مشروع"
         },
         "btn": {
             "read_more": "اقرأ المزيد ",

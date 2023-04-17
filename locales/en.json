@@ -72,6 +72,36 @@
             "alt_main_image": "Groupomania project"
         },
         "project7": {
+            "type": "Tasck manger",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "task-tracker project"
+        },
+        "project8": {
+            "type": "Online shop",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "the house jungle project"
+        },
+        "project9": {
+            "type": "Weather conditions",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "weather-app project"
+        },
+        "project10": {
+            "type": "Gaming",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "tenzies game project"
+        },
+        "project11": {
+            "type": "Rental accommodation",
+            "brief_description": "",
+            "main_description": "",
+            "alt_main_image": "mp house location project"
+        },
+        "project12": {
             "type": "Portfolio",
             "brief_description": "This is my own personal website which was developed under the NuxtJS meta-framework.",
             "main_description": "This project is simply the site you are currently on. | The design of this portfolio was made under Figma. Then, the development part was carried out under Nuxt 3 meta-framework, TypeScript and SASS. | In the back-end, the implementation of the Nodemailer with the combination of the Oauth2 protocol of Google API was necessary to manage the re-direction and the authentication of the mails.",

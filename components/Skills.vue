@@ -9,8 +9,8 @@
     })
         
     const frontTools: string[] = [
-        'JavaScript', 'VueJS', 'ReactJS', 'TypeScript',
-        'HTML', 'CSS', 'SASS', 'Bootstrap', 'Figma',
+        'JavaScript', 'VueJS', 'ReactJS', 'TypeScript', 
+        'HTML', 'Wordpress', 'SASS', 'Tailwind', 'Figma',
     ] 
 
      const backTools: string[] = [

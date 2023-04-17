@@ -288,8 +288,8 @@
                     top: 80vh;
                     right: 17px;
 
-                    position: relative;
-                    display: inline-block;
+                    // position: relative;
+                    // display: inline-block;
 
                     select {
                          width: 55px;
