@@ -87,6 +87,31 @@
           list-style: none;
      }
 
+     // ----------------------------------------
+     // These selectors have declared in Header components. Couldn't target them inside their component !!!
+     .selector-options {
+          width: 100%;
+          padding: 15px 0 5px;
+          position: absolute;
+          top: 0;
+          background-color: darken($color-brand-secondary, 20);
+          // direction: ltr;  
+     }
+
+     .selector-options li {
+          @include flexbox();
+          height: 35px;
+          padding: 0 15px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background .3s ease;
+
+          &:hover {
+               background-color: $color-brand-secondary;
+          }
+     }
+     // ------------------------------------
+
      .page-enter-active,
      .page-leave-active {
           transition: all 0.4s;

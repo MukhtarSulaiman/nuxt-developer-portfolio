@@ -30,11 +30,38 @@
           } else {
                lang.value = localStorage.setItem('lang', locale.value);
           }
+       
           document.documentElement.lang = locale.value;
      }
      function updateLangue(e: any) {
           lang.value = localStorage.setItem('lang', e.target.value);
           document.documentElement.lang = locale.value;
+     }
+
+     function handlMousedown(e: any) {
+          
+          e.preventDefault();
+
+          const select = e.target;
+          const dropdown = document.createElement('ul');
+          dropdown.className = 'selector-options';
+
+          [...select.children].forEach(option => {
+               const dropdownOptions = document.createElement('li');
+               dropdownOptions.textContent = option.textContent;
+               dropdown.appendChild(dropdownOptions);
+
+               dropdownOptions.addEventListener('mousedown', event => {
+                    e.stopPropagation();
+                    select.value = option.value;
+                    e.target.parentElement.value = option.value;
+                    select.dispatchEvent(new Event('change'));
+                    e.target.parentElement.dispatchEvent(new Event('change'));
+                    dropdown.remove();
+               });
+          });
+
+          e.target.parentElement.appendChild(dropdown)
      }
 
 </script>
@@ -73,10 +100,10 @@
                          </i>
                     </li>
                     <li class="navbar__lang-switcher">
-                         <select @change="updateLangue($event)" v-model="$i18n.locale" id="languages" name="language">
-                              <option value="fr">FR</option>
+                         <select @change="updateLangue($event)" @mousedown="handlMousedown($event)" v-model="$i18n.locale" id="languages" name="language">
                               <option value="en">EN</option>
-                              <option value="ar">Ar</option>
+                              <option value="fr">FR</option>
+                              <option value="ar">AR</option>
                          </select>
                     </li>
                </ul>
@@ -186,13 +213,14 @@
                     };
 
                     ul {
-                         height: inherit;
+                         height: 85%;
                          @include flexbox($justify-content: space-around,$flex-direction: column);
 
                          li {
                               margin: 0.6rem;
                               position: relative;
                               opacity: 0;
+                              font-size: 1.3rem;
 
                               .router-link-active:hover {
                                    &::after {
@@ -207,14 +235,14 @@
                                    transition: transform 350ms linear;
                               }
                               // Review these lines of code!
-                              // .active {
+                              // &.active {
                               //      &::after {
                               //           transform: scaleX(1);
                               //      }
                               // }
-                              .router-link-active {
-                                   font-size: 1.3rem;
-                              }
+                              // .router-link-active {
+                              //      font-size: 1.3rem;
+                              // }
 
                               @for $i from 1 to 8 {
                                    &:nth-child(#{$i}) {
@@ -243,8 +271,8 @@
                }
 
                &__color-switcher {
-                    top: 80vh;
-                    right: 17px;
+                    top: 90vh;
+                    right: 27px;
                     width: 30px;
                     height: 30px;
                     cursor: pointer;
@@ -257,28 +285,42 @@
                }
 
                &__lang-switcher {
-                    top: 90vh;
+                    top: 80vh;
                     right: 17px;
 
+                    position: relative;
+                    display: inline-block;
+
                     select {
-                         width: 42px;
+                         width: 55px;
                          height: 25px;
                          font-size: 1rem;
                          color: $color-text-primary;
                          font-weight: 700;
                          border: none;
                          outline: none;
-                         border-radius: 5px;
+                         border-radius: 5px;  
+                         padding: 0 4px;
+                         appearance: none;
+                         direction: ltr;       
                          cursor: pointer;
                          @include gradient;
                          @include animation(400ms) {
-                              0% {
-                                   opacity: 0;
-                              }
-                              100% {
-                                   opacity: 1;
-                              }
+                              0% { opacity: 0; }
+                              100% { opacity: 1; }
                          }
+                    }
+
+                    &::after {
+                         content: '';
+                         border-width: 5px;
+                         border-style: solid;
+                         border-color: transparent;
+                         border-top-color: $color-text-primary;
+                         display: inline-block;
+                         position: absolute;
+                         right: 10px;
+                         bottom: 5px;
                     }
                }
           }
@@ -288,7 +330,7 @@
                
                .navbar {
                     &__color-switcher {
-                         right: 62px !important;
+                         right: 67px !important;
                     }
 
                     &__lang-switcher {
