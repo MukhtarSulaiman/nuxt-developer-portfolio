@@ -73,31 +73,31 @@
         },
         "project7": {
             "type": "Tasck manger",
-            "brief_description": "",
+            "brief_description": "A mini task manager app that gives you the capability to add and track your tasks.",
             "main_description": "",
             "alt_main_image": "task-tracker project"
         },
         "project8": {
             "type": "Online shop",
-            "brief_description": "",
+            "brief_description": "An online plant shop that lists different categories of plants.",
             "main_description": "",
             "alt_main_image": "the house jungle project"
         },
         "project9": {
             "type": "Weather conditions",
-            "brief_description": "",
+            "brief_description": "An app that allows you to display the current weather and hourly & daily forecasts.",
             "main_description": "",
             "alt_main_image": "weather-app project"
         },
         "project10": {
             "type": "Gaming",
-            "brief_description": "",
+            "brief_description": "A dice game that allows you to roll 10 random numbers bettwen 1 - 6.",
             "main_description": "",
             "alt_main_image": "tenzies game project"
         },
         "project11": {
             "type": "Rental accommodation",
-            "brief_description": "",
+            "brief_description": "A housing rental website created under the Wordpress CMS.",
             "main_description": "",
             "alt_main_image": "mp house location project"
         },

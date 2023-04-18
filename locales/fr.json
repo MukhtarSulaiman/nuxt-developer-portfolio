@@ -73,31 +73,31 @@
         },
         "project7": {
             "type": "Guestionnaire de tâches",
-            "brief_description": "",
+            "brief_description": "Une mini application de gestion de tâches qui vous permet de planifier et de suivre vos tâches.",
             "main_description": "",
             "alt_main_image": "projet tasck-tracker"
         },
         "project8": {
             "type": "Boutique en ligne",
-            "brief_description": "",
+            "brief_description": "Une boutique de plantes en ligne qui répertorie différentes catégories de plantes.",
             "main_description": "",
             "alt_main_image": "projet the house jungle"
         },
         "project9": {
             "type": "Conditions météo",
-            "brief_description": "",
+            "brief_description": "Une application qui vous permet d'afficher la météo actuelle et prévisions horaires et journalières.",
             "main_description": "",
             "alt_main_image": "projet weather-app"
         },
         "project10": {
-            "type": "Jeu de dés",
-            "brief_description": "",
+            "type": "Gaming",
+            "brief_description": "Un jeu de dés qui vous permet de lancer 10 chiffres de manière aléatoire avec une valeur entre 1-6.",
             "main_description": "",
             "alt_main_image": "projet tenzies game"
         },
         "project11": {
             "type": "Location logement",
-            "brief_description": "",
+            "brief_description": "Un site vitrine de location de logements crée sous le CMS Wordpress.",
             "main_description": "",
             "alt_main_image": "projet mp house location"
         },

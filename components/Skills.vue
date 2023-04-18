@@ -9,13 +9,13 @@
     })
         
     const frontTools: string[] = [
-        'JavaScript', 'VueJS', 'ReactJS', 'TypeScript', 
-        'HTML', 'Wordpress', 'SASS', 'Tailwind', 'Figma',
+        'JavaScript', 'NuxtJS', 'ReactJS', 'VueJS', 
+        'TypeScript', 'Wordpress', 'SASS', 'Tailwind', 'Figma',
     ] 
 
      const backTools: string[] = [
         'NodeJS', 'MySql', 'MongoDB',
-        'Express','GitHub','Postman',
+        'Express', 'Docker', 'Postman','Jest',
     ]
     
 </script>
