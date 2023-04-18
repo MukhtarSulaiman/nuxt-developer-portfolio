@@ -72,7 +72,7 @@
             "alt_main_image": "Projet Groupomania"
         },
         "project7": {
-            "type": "Guestionnaire de tâches",
+            "type": "Gestionnaire de tâches",
             "brief_description": "Une mini application de gestion de tâches qui vous permet de planifier et de suivre vos tâches.",
             "main_description": "",
             "alt_main_image": "projet tasck-tracker"
@@ -86,19 +86,19 @@
         "project9": {
             "type": "Conditions météo",
             "brief_description": "Une application qui vous permet d'afficher la météo actuelle et prévisions horaires et journalières.",
-            "main_description": "",
+            "main_description": "Il s'agit d'une application météo qui a été créée à l'aide de React, Tailwind et le service API d'Openweathermap. | L'application vous permet d'afficher les prévisions horaires et quotidiennes et la météo actuelle en sélectionnant l'une des villes prédéfinies ou en entrant le nom de n'importe quelle ville de votre choix, ou même en sélectionnant votre position actuelle, qui dépend des coordonnées de latitude et de longitude . | Vous avez également la possibilité de basculer entre les unités Celsius et Fahrenheit. | null",
             "alt_main_image": "projet weather-app"
         },
         "project10": {
             "type": "Gaming",
             "brief_description": "Un jeu de dés qui vous permet de lancer 10 chiffres de manière aléatoire avec une valeur entre 1-6.",
-            "main_description": "",
+            "main_description": "Il s'agit d'un jeu de Tenzi qui vous affiche 10 dés de manière aléatoire avec une valeur entre 1 et 6 bien sûr ! Une fois que vous avez sélectionné les dés souhaités, vous pouvez en afficher de nouveaux en faisant rouler le bouton. Le jeu se termine une fois que vous avez sélectionné 10 dés qui ont la même valeur. | Le développement et l'hérbergement du projet ont été réalisé avec React et Github pages.  | null",
             "alt_main_image": "projet tenzies game"
         },
         "project11": {
             "type": "Location logement",
             "brief_description": "Un site vitrine de location de logements crée sous le CMS Wordpress.",
-            "main_description": "",
+            "main_description": "MP House location est un site vitrine de location de logements qui a été développé avec un système de gestion de contenu (SGC). |  Le projet a été premièrement conçu sous Figma, puis il a été développé avec le SGC Wordpress. J'ai donc choisi la thème Astra pour sa flexibilité et le constructeur de page Elementor pour sa fluidité. | null",
             "alt_main_image": "projet mp house location"
         },
         "project12": {

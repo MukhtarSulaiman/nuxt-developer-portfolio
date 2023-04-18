@@ -23,6 +23,7 @@ const netlify = 'https://www.netlify.com/';
 const seo = 'https://en.wikipedia.org/wiki/Search_engine_optimization';
 const wordpress = 'https://wordpress.com/';
 const elementor = 'https://elementor.com/';
+const astra = 'https://wpastra.com/';
 const hostinger = 'https://www.hostinger.com/';
 
 
@@ -248,8 +249,9 @@ export const projects: Project[] = [
             sourceCode: 'https://www.figma.com/file/5Ndy1AFfl9WDCWYOsNxFDE/MyPortfolio?node-id=1634%3A988&t=T68aH7g7jaePnQtx-1'
         },
         technology: [
-            { url: "Wordpress.png", link: wordpress },
-            { url: "Elementor.png", link: elementor },
+            { url: "wordpress.png", link: wordpress },
+            { url: "elementor.png", link: elementor },
+            { url: "astra.png", link: astra },
             { url: "figma.png", link: figma },
             { url: "hostinger.png", link: hostinger },
         ]

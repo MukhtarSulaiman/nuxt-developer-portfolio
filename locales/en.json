@@ -86,19 +86,19 @@
         "project9": {
             "type": "Weather conditions",
             "brief_description": "An app that allows you to display the current weather and hourly & daily forecasts.",
-            "main_description": "",
+            "main_description": "It's a weather app that was built using React, Tailwind, and the Openweathermap api service. | The app allows you to display the hourly and daily forecasts and the current weather by selecting one of the predefined cities or by entering the name of any city of your choice, or even by selecting your current location, which depends on the latitude and longitude coordinates. You also have the ability to toggle between Celsius and Fahrenheit units. | null",
             "alt_main_image": "weather-app project"
         },
         "project10": {
             "type": "Gaming",
             "brief_description": "A dice game that allows you to roll 10 random numbers bettwen 1 - 6.",
-            "main_description": "",
+            "main_description": "It's a tenzies game that shows you 10 random dice with a value between 1 - 6 of course! Once you've selected the disered dice, you can display new ones by rolling the button. The game ends once you've selected the 10 dice that have the same value.| The development and hosting of the project were carried out with React and Github pages. | null",
             "alt_main_image": "tenzies game project"
         },
         "project11": {
             "type": "Rental accommodation",
             "brief_description": "A housing rental website created under the Wordpress CMS.",
-            "main_description": "",
+            "main_description": "MP House location is an appartment rental showcase website that was developed with a content management system (CMS). | The project was first designed under Figma, then it was developed with the Wordpress CMS. So I chose the Astra theme for its flexibility and the Elementor page builder for its fluidity. | null",
             "alt_main_image": "mp house location project"
         },
         "project12": {

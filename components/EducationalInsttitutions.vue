@@ -27,7 +27,7 @@
 			padding: 0;
 			position: relative;
 			overflow: hidden;
-			box-shadow: 10px 10px 2px 1px lighten($color-text-inverted, 30%);
+			// box-shadow: 10px 10px 2px 1px lighten($color-text-inverted, 30%);
 
 			div:first-child {
 				width: 100%;
