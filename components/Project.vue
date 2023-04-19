@@ -43,14 +43,15 @@
                             <div class="project__buttons">
                                 <a 
                                     :href="project.links.demo" target="_blank"
-                                    v-if="project.links.demo">
+                                    v-if="project.links.demo"
+                                    id="btn-demo">
                                     {{ $t('portfolio.btn.demo') }}
                                 </a>
                                 <a 
                                     :href="project.links.sourceCode" 
                                     target="_blank"  
                                     v-if="project.links.sourceCode" 
-                                    class="btn-see-source-code">
+                                    id="btn-see-source-code">
                                     {{ $t('portfolio.btn.see_source_code') }}
                                 </a>
                             </div>
@@ -159,13 +160,13 @@
                 @include flexbox;
             }
 
-            a:first-child {
+            a#btn-demo {
                 border-radius: 5px;
                 padding: .5rem 2rem;
                 color: $color-text-primary !important;
             }
 
-            a:last-child {
+            a#btn-see-source-code {
                 width: 140px !important;
                 padding: .4rem .5rem;
                 background: none;
@@ -173,7 +174,6 @@
                 border-left: none;
                 border-top: none;
                 border-right: none;
-
                 border-color: linear-gradient(to right, $color-brand-primary, $color-brand-secondary);
 
                 &:hover {
@@ -210,6 +210,5 @@
                 }
             }
         }
-
     }
 </style>

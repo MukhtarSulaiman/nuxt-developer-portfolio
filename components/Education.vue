@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <section id="education-section">
+    <section id="education">
         <h2>{{ $t('education.main_title') }}</h2>
 		<EducationalInsttitutions />
         <Language />

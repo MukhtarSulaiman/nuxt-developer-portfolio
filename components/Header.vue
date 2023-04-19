@@ -8,22 +8,38 @@
      const lang = ref();
 
      onMounted(() => {
-          window.addEventListener('resize', toggleNavbar);
-          toggleNavbar();
-          handleLanguage();
+          window.addEventListener('resize', handleNavbar);
+          handleNavbar();
+          handleLanguage();         
      });
+
      onUnmounted(() => {
-          window.removeEventListener('resize', toggleNavbar);
-     }); 
-     function toggleNavbar() {
-          window.innerWidth >= 1024 ? navOpen.value = true : navOpen.value = false;
+          window.removeEventListener('resize', handleNavbar);
+     });
+
+     function handleNavbar(): void {
+
+          const windowInnerWidth = window.innerWidth >= 1024;
+          windowInnerWidth ? navOpen.value = true : navOpen.value = false;
+
+          const listItems = document.querySelectorAll<HTMLElement>('ul>li');
+
+          for(let i = 0; i < 5; i++) {
+               listItems[i].addEventListener('click', e => {
+                    if(!windowInnerWidth) {
+                         navOpen.value = false;
+                    } else {
+                         navOpen.value = true; 
+                    }
+               });
+          }
      }
 
      function toggleMode(mode: string) {
            useColorMode().preference = mode;
      }
      
-     function handleLanguage() {
+     function handleLanguage(): void {
           lang.value = localStorage.getItem('lang');
           if (lang.value) {
                locale.value = lang.value;
@@ -33,13 +49,14 @@
        
           document.documentElement.lang = locale.value;
      }
-     function updateLangue(e: any) {
+
+
+     function updateLangue(e: any): void {
           lang.value = localStorage.setItem('lang', e.target.value);
           document.documentElement.lang = locale.value;
      }
 
-     function handlMousedown(e: any) {
-          
+     function handlMousedown(e: any): void {  
           e.preventDefault();
 
           const select = e.target;
@@ -221,6 +238,7 @@
                               position: relative;
                               opacity: 0;
                               font-size: 1.3rem;
+                              font-weight: 200;
 
                               .router-link-active:hover {
                                    &::after {
@@ -248,10 +266,11 @@
                                    &:nth-child(#{$i}) {
                                         @include animation(.8s, $i * 0.15s) {
                                              0% { opacity: 0; transform: translateX(300%);}
-                                             100% { opacity: 1; transform: translateX(0%);}
+                                             100% { opacity: .7; transform: translateX(0%);}
                                         }
                                    }
                               }
+
                          }
                     }
                     .navbar__color-switcher,
@@ -353,7 +372,7 @@
                          @include flexbox($justify-content: space-between,$flex-direction: row !important);
 
                          li {
-                              opacity: 1 !important; 
+                              opacity: .7; 
                               transform: translateX(0) !important;
                          }
                     }
@@ -361,6 +380,11 @@
                     &__color-switcher {
                          margin-left: 3rem !important;
                          margin-right: 1rem !important;
+                    }
+
+                    &__color-switcher,
+                    &__lang-switcher {
+                         opacity: 1 !important;
                     }
                }
           }
