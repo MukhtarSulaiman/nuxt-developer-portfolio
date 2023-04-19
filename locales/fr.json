@@ -74,13 +74,13 @@
         "project7": {
             "type": "Gestionnaire de tâches",
             "brief_description": "Une mini application de gestion de tâches qui vous permet de planifier et de suivre vos tâches.",
-            "main_description": "",
+            "main_description": "Task-tracker est une mini application de suivi de tâches qui a été créée avec React et json-server db. L'application vous permet essentiellement d'ajouter des tâches, de suivre leur état et de les supprimer définitivement. | Le développement et l'hérbergement du projet ont été réalisé avec React et Github pages. | null",
             "alt_main_image": "projet tasck-tracker"
         },
         "project8": {
             "type": "Boutique en ligne",
             "brief_description": "Une boutique de plantes en ligne qui répertorie différentes catégories de plantes.",
-            "main_description": "",
+            "main_description": "Le projet est une simple boutique de plantes en ligne qui vous permet d'ajouter des plantes à votre panier et de les filtrer en sélectionnant une catégorie spécifique de plantes. | Le développement et l'hérbergement du projet ont été réalisé avec React et Github pages. | null",
             "alt_main_image": "projet the house jungle"
         },
         "project9": {

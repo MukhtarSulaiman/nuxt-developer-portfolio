@@ -74,13 +74,13 @@
         "project7": {
             "type": "Tasck manger",
             "brief_description": "A mini task manager app that gives you the capability to add and track your tasks.",
-            "main_description": "",
+            "main_description": "Task-tracker is a mini task manager app that has been created with React and json-server db. The app basically allows you to add tasks, track their state and remove them completely. | The development and hosting of the project were carried out with React and Github pages. | null",
             "alt_main_image": "task-tracker project"
         },
         "project8": {
             "type": "Online shop",
             "brief_description": "An online plant shop that lists different categories of plants.",
-            "main_description": "",
+            "main_description": "The project is a simple online plant shop that allows you to add plants to cart and filtering them by selecting a specific category of plants. | The development and hosting of the project were carried out with React and Github pages. | null",
             "alt_main_image": "the house jungle project"
         },
         "project9": {
@@ -96,8 +96,8 @@
             "alt_main_image": "tenzies game project"
         },
         "project11": {
-            "type": "Rental accommodation",
-            "brief_description": "A housing rental website created under the Wordpress CMS.",
+            "type": "Housing Rental",
+            "brief_description": "An appartment rental website created under the Wordpress CMS.",
             "main_description": "MP House location is an appartment rental showcase website that was developed with a content management system (CMS). | The project was first designed under Figma, then it was developed with the Wordpress CMS. So I chose the Astra theme for its flexibility and the Elementor page builder for its fluidity. | null",
             "alt_main_image": "mp house location project"
         },
