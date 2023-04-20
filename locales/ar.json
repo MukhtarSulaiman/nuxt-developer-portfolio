@@ -29,6 +29,10 @@
     "tools_alt_desc": "أيقونة",
     "download_resume": "تحميل السيرة الذاتية ",
     "portfolio": {
+        "meta": {
+            "page_title": "معلومات المشروع",
+            "page_description": "ستجد هنا معلومات مفصلة عن كل مشروع"
+        },
         "heading": {
             "main": "أعمالي",
             "navigational_title": "مشاريع الويب | التصاميم",

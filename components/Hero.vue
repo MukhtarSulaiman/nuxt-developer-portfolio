@@ -7,7 +7,7 @@
 </script>
 
 <template>
-	<section>
+	<section id="hero">
 		<div class="hero-section hero-section__container">
 			<SocialNetwork classElement="hero__column-layout" />
 			<div :class="[ 'hero-section__intro ', { 'lang-ar' : useI18n().locale.value === 'ar' }]">
@@ -37,7 +37,7 @@
 				<img :class="{ 'lang-ar' : useI18n().locale.value === 'ar' }" src="~/assets/images/backgrounds/personal-image.png" :alt="$t('hero_img_desc')" />
 			</div>
 		</div>
-		<NuxtLink to="#bottom" :aria-label="$t('arrow_navigation_to_bottom')">
+		<NuxtLink to="#skills" :aria-label="$t('arrow_navigation_to_bottom')">
 			<div class="hero-section__scroll-container">
 				<div class="arrow"></div>
 				<div class="arrow"></div>

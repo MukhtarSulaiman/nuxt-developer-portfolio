@@ -27,6 +27,7 @@
      :root {
           --color-page-background: #{$color-brand-tertiary};
           --color-text-icon: #{$color-text-primary};
+          scroll-behavior: smooth;
      }
 
      .dark-mode,
@@ -77,6 +78,7 @@
 
      section {
           margin-top: 10rem;
+          scroll-margin-top: 5rem !important;
      }
 
      a {

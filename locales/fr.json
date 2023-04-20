@@ -5,11 +5,11 @@
     "home_title": "Accueil",
     "home_path": "/",
     "skills_title": "Compétences",
-    "skills_path": "#competences",
+    "skills_path": "#skills",
     "portfolio_title": "Portfolio",
     "portfolio_path": "#portfolio",
     "education_title": "Formation",
-    "education_path": "#formation",
+    "education_path": "#education",
     "contact_title": "Contact",
     "contact_path": "#contact",
     "network_aria_label": "lien vers le compte {iconName} de Mukhtar",
@@ -29,6 +29,10 @@
         "tools_alt_desc": "îcone",
     "download_resume": "Télécharger mon CV",
     "portfolio": {
+        "meta": {
+            "page_title": "Informations du projet",
+            "page_description": "Vous trouverez ici les informations de chaque projet de manière détaillé"
+        },
         "heading": {
             "main": "Portfolio",
             "navigational_title": "Projets web | Designs",

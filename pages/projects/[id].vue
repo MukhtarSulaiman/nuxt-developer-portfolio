@@ -1,5 +1,17 @@
 <script setup lang="ts">
     import { useI18n } from 'vue-i18n';
+    
+    const { locale, t } = useI18n();
+
+    onMounted(() => {
+        useHead({
+            title: t('portfolio.meta.page_title', { pipe: '|' }),
+            meta: [
+                { name: 'description', content: t('portfolio.meta.page_description', { pipe: '|' }) },
+            ],
+        }); 
+    });
+
 </script>
 
 <template>

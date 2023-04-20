@@ -1,6 +1,7 @@
 <script setup lang="ts">
     import { projects } from '../content/db';
     import { useI18n } from 'vue-i18n';
+    import { useRoute } from 'vue-router'
 
     const route = useRoute();
     const toolTitle = ref('');
@@ -16,6 +17,13 @@
             default :
         }
     }
+
+    // Try to find a better solution!
+    watch(() => route.name, (newValue, oldValue) => {
+        if(newValue === 'index' && oldValue !== 'index') {
+            location.reload();
+        }
+    });
    
 </script>
 
