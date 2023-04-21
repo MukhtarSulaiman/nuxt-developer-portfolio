@@ -116,6 +116,9 @@
             "load_more_less": "Afficher Plus | Afficher Moins",
             "demo": "Démo",
             "see_source_code": "Voir code source"
+        },
+        "design_project": {
+            "alt_image": "aperçu du projet { project }"
         }
     },
     "education": {

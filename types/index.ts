@@ -50,3 +50,5 @@ export  interface FormContact {
     subject: string;
     message: string;
 }
+
+export type Design = Image;

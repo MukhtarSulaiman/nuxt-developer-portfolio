@@ -116,6 +116,9 @@
             "load_more_less": "تحميل المزيد | إظهار أفل",
             "demo": "عرض",
             "see_source_code": "رؤية الكود المصدري"
+        },
+        "design_project": {
+            "alt_image": "{ project } لمحة من مشروع"
         }
     },
     "education": {

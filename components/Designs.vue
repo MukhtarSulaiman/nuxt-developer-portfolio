@@ -1,8 +1,19 @@
 <script setup lang="ts">
+    import { designs } from '../content/db';
 
-    const designs: string[] = [
-        'Flyer-kidekchan', 'mp-house-location', 'Baraka-saken', 'Iftar-ramadan', 'Cultural-day', 'Zool-developer', 'Hinda-altahir',  'business-card',
-    ]
+    const openFileInNewTap = (src: string, link?: string): void => {
+        if(link) {
+            const a = document.createElement('a');
+            const url = a.href = link;
+            window.open(url, '_blank')
+        } else {
+            window.open(
+                `/files/designs/${src}.png`,
+                '_blank',
+                'fullscreen=yes'
+            );
+        }
+    }
 
 </script>
 
@@ -11,8 +22,8 @@
     <div class="parent-container">
         <div class="grid-container">
             <div class="grid-container__file-group" v-for="(design , index) in designs"  :key="index">
-                <img :src="`/files/designs/${design.toLocaleLowerCase()}.png`" alt="">
-                <div class="icon-wrapper" role="button">
+                <img :src="`/files/designs/${design.url.toLocaleLowerCase()}.png`" :alt="$t('portfolio.design_project.alt_image', {project: design.url})">
+                <div class="icon-wrapper" role="button" @click="openFileInNewTap(design.url, design.link)">
                     <Icon name="new-tap" size="20" class="tap-icon"/>
                 </div>
             </div>

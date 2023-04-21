@@ -1,4 +1,4 @@
-import { Network, Project, SchoolLevel } from '../types/index';
+import { Network, Project, SchoolLevel, Design } from '../types/index';
 
 const html = 'https://www.w3schools.com/html/';
 const css = 'https://www.w3schools.com/css/';
@@ -25,6 +25,10 @@ const wordpress = 'https://wordpress.com/';
 const elementor = 'https://elementor.com/';
 const astra = 'https://wpastra.com/';
 const hostinger = 'https://www.hostinger.com/';
+
+const mpHouseLocation = 'https://www.figma.com/file/3KG2MkqGBkEhPP2sr901fJ/MP-House-Location?node-id=0%3A1&t=coUHFA0jBYSxwroR-1';
+const zoolDeveloper = 'https://www.figma.com/file/5Ndy1AFfl9WDCWYOsNxFDE/MyPortfolio?node-id=1634%3A988&t=rKI5xE0uNlbuiphP-0';
+const kidekchan = 'https://www.figma.com/file/Nicp78MoNcT6FuofKglkEy/kidekchan?node-id=0%3A1&t=28jmmSPwn1ZwtrRb-1';
 
 
 export const socialNetworks: Network[] = [
@@ -246,7 +250,7 @@ export const projects: Project[] = [
         mainImage: { url: "houselocation.png", alt: 'portfolio.project11.alt_main_image' },
         links: {
             demo: 'https://mphouselocation.com/',
-            sourceCode: 'https://www.figma.com/file/5Ndy1AFfl9WDCWYOsNxFDE/MyPortfolio?node-id=1634%3A988&t=T68aH7g7jaePnQtx-1'
+            sourceCode: mpHouseLocation
         },
         technology: [
             { url: "wordpress.png", link: wordpress },
@@ -266,7 +270,7 @@ export const projects: Project[] = [
         previewImageUrl: 'portfolio.jpg',
         mainImage: { url: "zooldeveloper.png", alt: 'portfolio.project12.alt_main_image' },
         links: {
-            demo: 'https://www.figma.com/file/5Ndy1AFfl9WDCWYOsNxFDE/MyPortfolio?node-id=1634%3A988&t=rKI5xE0uNlbuiphP-0',
+            demo: zoolDeveloper,
             sourceCode: 'https://github.com/MukhtarSulaiman/zool-developer'
         },
         technology: [
@@ -279,6 +283,17 @@ export const projects: Project[] = [
             { url: "heroku.png", link: heroku },
         ]
     },
+]
+
+export const designs: Design[] = [
+    { url: 'Flyer-kidekchan', link: kidekchan },
+    { url: 'mp-house-location',  link: mpHouseLocation },
+    { url: 'Baraka-saken' },
+    { url: 'Iftar-ramadan' },
+    { url: 'Cultural-day' },
+    { url: 'Zool-developer',  link: zoolDeveloper },
+    { url: 'Hinda-altahir' },
+    { url: 'business-card' },
 ]
 
 export const schoolLevels: SchoolLevel[] = [
