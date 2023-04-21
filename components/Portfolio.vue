@@ -1,5 +1,10 @@
 <script setup lang="ts">
     import { projects }  from '../content/db';
+    import { useIntersectionObserver } from '~/composables/onItersectionObserver';
+
+    onMounted(() => {
+        useIntersectionObserver(document.querySelectorAll<HTMLElement>(`.portfolio-container__project-wrapper`), 0.3);
+    })
 
     const currentItems = ref(6);
     const isAllItemsVisible = ref(false);
@@ -17,7 +22,7 @@
     }
 
     const isDevProjects = ref(true);
-    
+
     const filterProjectType = (type: string): void => {
         if( type === 'dev') isDevProjects.value = true;
          else if(type === 'design') isDevProjects.value = false;
@@ -107,7 +112,7 @@
                 height: 320px;
                 position: relative;
                 direction: ltr !important;
-                // @include animation-on-scroll($transform-value: translateY(90px));
+                @include animation-on-scroll($transform-value: translateX(90px));
 
                 small {
                     position: absolute;
@@ -139,14 +144,13 @@
                 }
             }
 
-            // &__project-wrapper.show:nth-child(n+1):nth-child(-n+6) {
-                
+            &__project-wrapper.show {
+                @include animation-on-scroll(1, translateX(0));
+            }
 
-            //     @include animation-on-scroll(1, translateY(0));
-            // }
-
-            // &__project-wrapper.show {
-            // }
+            &__project-wrapper:nth-child(n+7):nth-child(-n+12) {
+                @include animation-on-scroll(1, $transform-value: translateX(0));
+            }
 
             &__img-preview {
                 width: 67%;
