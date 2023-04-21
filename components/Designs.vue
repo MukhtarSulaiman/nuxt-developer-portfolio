@@ -1,0 +1,127 @@
+<script setup lang="ts">
+
+    const designs: string[] = [
+        'Flyer-kidekchan', 'mp-house-location', 'Baraka-saken', 'Iftar-ramadan', 'Cultural-day', 'Zool-developer', 'Hinda-altahir',  'business-card',
+    ]
+
+</script>
+
+
+<template>
+    <div class="parent-container">
+        <div class="grid-container">
+            <div class="grid-container__file-group" v-for="(design , index) in designs"  :key="index">
+                <img :src="`/files/designs/${design.toLocaleLowerCase()}.png`" alt="">
+                <div class="icon-wrapper" role="button">
+                    <Icon name="new-tap" size="20" class="tap-icon"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<style lang="scss" scoped>
+
+    .parent-container {
+        margin-top: 3rem;
+        @include flexbox;
+    }
+    .grid-container {
+        width: 100%;
+        display: grid;
+        grid-column: repeat(1, 1fr);
+        justify-items: center;
+        gap: 1rem;
+
+        &__file-group {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                max-width: 230px;
+                height: 100%;
+
+                object-position: top;
+                object-fit: cover;
+            }
+
+            .icon-wrapper {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                @include flexbox;
+                @include animation-on-scroll(0, $transform-value: translateY(20%));
+
+                .tap-icon {
+                    color: $color-text-primary !important;
+                }
+            }
+
+            &:hover .icon-wrapper {
+                @include animation-on-scroll(1, $transform-value: translateY(0),  $transition-duration:  .8s);
+                @include gradient(to top, .6);
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+           
+            grid-template-columns: repeat(6, 1fr) !important;
+            grid-auto-rows: minmax(50px, auto);
+            justify-items: normal !important;
+            width: 700px !important;
+            height: 40vh;
+
+            &__file-group {
+                img {
+                    width: 100%;
+                    max-width: 100% !important;
+                    height: 100%;
+                    object-position: top;
+                    object-fit: cover;
+                }
+            }
+
+            &__file-group:nth-child(1) {
+                grid-column: 1 / 3;
+                grid-row:  1 / 5 ;
+            }
+            &__file-group:nth-child(2) {
+                grid-column: 3 / 5;
+                grid-row: 1 / 3;
+            }
+            &__file-group:nth-child(3) {
+                grid-column: 5 / 7;
+                grid-row: 1 / 5 ;
+            }
+            &__file-group:nth-child(4) {
+                grid-column: 1 / 3;
+                grid-row: 5 / 7;
+            }
+            &__file-group:nth-child(5) {
+                grid-column: 3 / 5;
+                grid-row:  3 / 7;
+            }
+            &__file-group:nth-child(6) {
+                grid-column: 5 / 6;
+                grid-row: 5 / 6;
+            }
+            &__file-group:nth-child(7) {
+                grid-column: 6 / 7;
+                grid-row: 5 / 7;
+            }
+            &__file-group:nth-child(8) {
+                grid-column: 5 / 6;
+                grid-row: 6 / 7;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            width: 900px !important;
+        }
+    } 
+
+</style>

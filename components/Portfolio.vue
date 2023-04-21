@@ -28,6 +28,7 @@ import { projects }  from '../content/db';
                 <h3>{{ $t('portfolio.heading.navigational_title', 2) }}</h3>
             </div>
         </div>
+        <Designs />
         <div class="portfolio-container">
             <div 
                 v-for="project in projects.slice(-currentItems).reverse()"  :key="project.id"
@@ -85,7 +86,7 @@ import { projects }  from '../content/db';
         .portfolio-container {
             @include flexbox(space-around);
             flex-wrap: wrap;
-            column-gap:  2.3rem;
+            column-gap:  2rem;
             row-gap:  1.5rem;
             margin-top: 2.5rem;
 
@@ -94,6 +95,7 @@ import { projects }  from '../content/db';
                 height: 320px;
                 position: relative;
                 direction: ltr !important;
+                // @include animation-on-scroll($transform-value: translateY(90px));
 
                 small {
                     position: absolute;
@@ -124,6 +126,15 @@ import { projects }  from '../content/db';
                     }
                 }
             }
+
+            // &__project-wrapper.show:nth-child(n+1):nth-child(-n+6) {
+                
+
+            //     @include animation-on-scroll(1, translateY(0));
+            // }
+
+            // &__project-wrapper.show {
+            // }
 
             &__img-preview {
                 width: 67%;

@@ -26,9 +26,9 @@
 		right: 0px;
 		width: 330px;
 		height: 120px;
-		overflow: hidden;
 		direction: ltr;
-		// @include animation-on-scroll(0, translateX(250px));
+		overflow: hidden !important;
+
 
 		&__description {
 			width: 100%;
@@ -61,7 +61,16 @@
 			}
 		}
 	}
-    .description-wrapper.show {
-        @include animation-on-scroll(1, translateX(0px));
-    }
+
+	@media only screen and (min-width: 1024px) {
+
+		.description-wrapper {
+			@include animation-on-scroll(0, translateX(250px));
+		}
+          .description-wrapper.show {
+			@include animation-on-scroll(1, translateX(0px));
+          }
+     }
+
+
 </style>

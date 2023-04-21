@@ -15,7 +15,8 @@ export default defineAppConfig({
                'globe': 'heroicons:globe-alt-solid',
                'phone': 'ic:baseline-settings-phone',
                'mail': 'ic:baseline-mail',
-               'home': 'ic:round-home'
+               'home': 'ic:round-home',
+               'new-tap': 'material-symbols:open-in-new'
           }
      }
 });
