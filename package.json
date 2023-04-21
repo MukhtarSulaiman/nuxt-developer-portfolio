@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "nitro build",
     "dev": "nuxt dev",
     "start": "node .output/server/index.mjs",
     "generate": "nuxt generate",
