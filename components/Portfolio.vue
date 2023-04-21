@@ -1,11 +1,10 @@
 <script setup lang="ts">
-
-import { projects }  from '../content/db';
+    import { projects }  from '../content/db';
 
     const currentItems = ref(6);
     const isAllItemsVisible = ref(false);
 
-    const showMoreOrLessProject = () => {
+    const showMoreOrLessProject = (): void => {
         if(currentItems.value === projects.length) {
             currentItems.value = 6;
             isAllItemsVisible.value = false;
@@ -16,6 +15,13 @@ import { projects }  from '../content/db';
             }
         }
     }
+
+    const isDevProjects = ref(true);
+    
+    const filterProjectType = (type: string): void => {
+        if( type === 'dev') isDevProjects.value = true;
+         else if(type === 'design') isDevProjects.value = false;
+    }
 </script>
 
 
@@ -24,12 +30,20 @@ import { projects }  from '../content/db';
         <div class="portfolio-headings">
             <h2>{{ $t('portfolio.heading.main') }}</h2>
             <div class="portfolio-headings__navigational-titles">
-                <h3>{{ $t('portfolio.heading.navigational_title', 1) }}</h3>
-                <h3>{{ $t('portfolio.heading.navigational_title', 2) }}</h3>
+                <h3 
+                    @click="filterProjectType('dev')" 
+                    role="button" :class="{active: isDevProjects}">
+                    {{ $t('portfolio.heading.navigational_title', 1) }}
+                </h3>
+                <h3 
+                    @click="filterProjectType('design')" 
+                    role="button" :class="{active: !isDevProjects}">
+                    {{ $t('portfolio.heading.navigational_title', 2) }}
+                </h3>
             </div>
         </div>
-        <Designs />
-        <div class="portfolio-container">
+        <Designs v-show="!isDevProjects" />
+        <div v-show="isDevProjects" class="portfolio-container">
             <div 
                 v-for="project in projects.slice(-currentItems).reverse()"  :key="project.id"
                 class="portfolio-container__project-wrapper">
@@ -52,7 +66,7 @@ import { projects }  from '../content/db';
                 <small>{{ project.year }}</small>
             </div>
         </div>
-        <button @click="showMoreOrLessProject" class="btn-load-more">
+        <button @click="showMoreOrLessProject" v-show="isDevProjects" class="btn-load-more">
             <Icon name="mdi:eye" /> 
             {{ isAllItemsVisible ? $t('portfolio.btn.load_more_less', 2) : $t('portfolio.btn.load_more_less', 1) }}
         </button>
@@ -72,14 +86,12 @@ import { projects }  from '../content/db';
 
                 h3 {
                     font-size: 1.05rem;
-                    border-bottom: 2px solid transparent;
                     cursor: pointer;
-        
-                    &:hover {
-                        border-image: linear-gradient(to left, $color-brand-primary, $color-brand-secondary);
-                        border-image-slice: 1;
-                    }
+                    border-image: linear-gradient(to left, $color-brand-primary, $color-brand-secondary);
+                    border-image-slice: 1;
                 }
+                h3:first-child.active { border-bottom: 2px solid transparent; }
+                h3:last-child.active { border-bottom: 2px solid transparent; }
             }
         }
 
