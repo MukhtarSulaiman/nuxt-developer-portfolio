@@ -1,5 +1,3 @@
-import { Network, Project, SchoolLevel, Design } from '../types/index';
-
 const html = 'https://www.w3schools.com/html/';
 const css = 'https://www.w3schools.com/css/';
 const javassript = 'https://developer.mozilla.org/en-US/docs/Web/JavaScript';
@@ -28,17 +26,9 @@ const hostinger = 'https://www.hostinger.com/';
 
 const mpHouseLocation = 'https://www.figma.com/file/3KG2MkqGBkEhPP2sr901fJ/MP-House-Location?node-id=0%3A1&t=coUHFA0jBYSxwroR-1';
 const zoolDeveloper = 'https://www.figma.com/file/5Ndy1AFfl9WDCWYOsNxFDE/MyPortfolio?node-id=1634%3A988&t=rKI5xE0uNlbuiphP-0';
-const kidekchan = 'https://www.figma.com/file/Nicp78MoNcT6FuofKglkEy/kidekchan?node-id=0%3A1&t=28jmmSPwn1ZwtrRb-1';
+// const kidekchan = 'https://www.figma.com/file/Nicp78MoNcT6FuofKglkEy/kidekchan?node-id=0%3A1&t=28jmmSPwn1ZwtrRb-1';
 
-
-export const socialNetworks: Network[] = [
-    { id: 1, icon: 'linkedin', link: 'https://linkedin.com/in/mukhtar-sulaiman' },
-    { id: 2, icon: 'github', link: 'https://github.com/MukhtarSulaiman' },
-    { id: 3, icon: 'youtube', link: 'https://www.youtube.com/channel/UCSvuJVJdF3NDsg9CjeM6I-Q' },
-    { id: 4, icon: 'twitter', link: 'https://twitter.com/zooldeveloper' },
-]
-
-export const projects: Project[] = [
+export  default [
         {
         id: 1,
         title: 'Réservia',
@@ -283,22 +273,4 @@ export const projects: Project[] = [
             { url: "heroku.png", link: heroku },
         ]
     },
-]
-
-export const designs: Design[] = [
-    { url: 'Flyer-kidekchan', link: kidekchan },
-    { url: 'mp-house-location',  link: mpHouseLocation },
-    { url: 'Baraka-saken' },
-    { url: 'Iftar-ramadan' },
-    { url: 'Cultural-day' },
-    { url: 'Zool-developer',  link: zoolDeveloper },
-    { url: 'Hinda-altahir' },
-    { url: 'business-card' },
-]
-
-export const schoolLevels: SchoolLevel[] = [
-    { id: 1, institution: 'education.level1.institution', degree: 'education.level1.degree' },
-    { id: 2, institution: 'education.level2.institution', degree: 'education.level2.degree' },
-    { id: 3, institution: 'education.level3.institution', degree: 'education.level3.degree' },
-    { id: 4, institution: 'education.level4.institution', degree: 'education.level4.degree' },
 ]

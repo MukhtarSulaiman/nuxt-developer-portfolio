@@ -1,6 +1,8 @@
 <script setup lang="ts">
-    import { projects }  from '../content/db';
+    // import { projects }  from '../content/db';
     import { useIntersectionObserver } from '~/composables/onItersectionObserver';
+
+    const { data } = await useFetch(() => '/api/projects');
 
     onMounted(() => {
         useIntersectionObserver(document.querySelectorAll<HTMLElement>(`.portfolio-container__project-wrapper`), 0.3);
@@ -10,12 +12,12 @@
     const isAllItemsVisible = ref(false);
 
     const showMoreOrLessProject = (): void => {
-        if(currentItems.value === projects.length) {
+        if(currentItems.value === data.value.projects.length) {
             currentItems.value = 6;
             isAllItemsVisible.value = false;
         } else {
-            currentItems.value = projects.length;
-            if(currentItems.value === projects.length) {
+            currentItems.value = data.value.projects.length;
+            if(currentItems.value === data.value.projects.length) {
                 isAllItemsVisible.value = true;
             }
         }
@@ -50,7 +52,7 @@
         <Designs v-show="!isDevProjects" />
         <div v-show="isDevProjects" class="portfolio-container">
             <div 
-                v-for="project in projects.slice(-currentItems).reverse()"  :key="project.id"
+                v-for="project in data.projects.slice(-currentItems).reverse()"  :key="project.id"
                 class="portfolio-container__project-wrapper">
                 <div class="portfolio-container__img-preview">
                     <div 

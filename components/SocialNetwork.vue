@@ -1,5 +1,12 @@
 <script setup lang="ts">
-   import { socialNetworks } from '~/content/db';
+   import { Network } from '~/types';
+
+    const socialNetworks: Network[] = [
+        { id: 1, icon: 'linkedin', link: 'https://linkedin.com/in/mukhtar-sulaiman' },
+        { id: 2, icon: 'github', link: 'https://github.com/MukhtarSulaiman' },
+        { id: 3, icon: 'youtube', link: 'https://www.youtube.com/channel/UCSvuJVJdF3NDsg9CjeM6I-Q' },
+        { id: 4, icon: 'twitter', link: 'https://twitter.com/zooldeveloper' },
+    ]
 
     const props = defineProps<{
         classElement?: string

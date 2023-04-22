@@ -1,7 +1,8 @@
 <script setup lang="ts">
-    import { projects } from '../content/db';
     import { useI18n } from 'vue-i18n';
-    import { useRoute } from 'vue-router'
+    import { useRoute } from 'vue-router';
+
+    const { data } = await useFetch(() => '/api/projects');
 
     const route = useRoute();
     const toolTitle = ref('');
@@ -29,7 +30,7 @@
 
 <template>
     <section id="project-section">
-        <div v-for="project in projects" :key="project.id">
+        <div v-for="project in data.projects" :key="project.id">
             <div  v-if="project.id == route.params.id" class="project">
                 <h1>{{ project.title }}</h1>
                 <img :src="`/images/projects/main/${project.mainImage.url}`" :alt="$t(project.mainImage.alt)">

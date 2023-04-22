@@ -1,5 +1,20 @@
 <script setup lang="ts">
-    import { designs } from '../content/db';
+    import { Design } from '~/types';
+
+    const mpHouseLocation = 'https://www.figma.com/file/3KG2MkqGBkEhPP2sr901fJ/MP-House-Location?node-id=0%3A1&t=coUHFA0jBYSxwroR-1';
+    const zoolDeveloper = 'https://www.figma.com/file/5Ndy1AFfl9WDCWYOsNxFDE/MyPortfolio?node-id=1634%3A988&t=rKI5xE0uNlbuiphP-0';
+    const kidekchan = 'https://www.figma.com/file/Nicp78MoNcT6FuofKglkEy/kidekchan?node-id=0%3A1&t=28jmmSPwn1ZwtrRb-1';
+
+    const designs: Design[] = [
+        { url: 'Flyer-kidekchan', link: kidekchan },
+        { url: 'mp-house-location',  link: mpHouseLocation },
+        { url: 'Baraka-saken' },
+        { url: 'Iftar-ramadan' },
+        { url: 'Cultural-day' },
+        { url: 'Zool-developer',  link: zoolDeveloper },
+        { url: 'Hinda-altahir' },
+        { url: 'business-card' },
+    ]
 
     const openFileInNewTap = (src: string, link?: string): void => {
         if(link) {
