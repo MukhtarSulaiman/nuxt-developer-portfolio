@@ -143,7 +143,6 @@
                     }
                 }
             }
-
             &__project-wrapper.show {
                 @include animation-on-scroll(1, translateX(0));
             }
@@ -225,12 +224,18 @@
                     }
                 }
             }
+
+            @media screen and (min-width: 768px){
+                &__project-wrapper {
+                    @include animation-on-scroll($transform-value: translateX(90px));
+                }
+            }
         }
         .btn-load-more {
-                margin: 3rem auto;
-                @include custom-btn(150px, 40px, light);
-                @include flexbox(space-evenly);
-            }
+            margin: 3rem auto;
+            @include custom-btn(150px, 40px, light);
+            @include flexbox(space-evenly);
+        }
     }
 
 </style>

@@ -73,7 +73,7 @@
 
      main {
           margin: 0 1.2rem;
-          // overflow: hidden;
+          overflow: hidden;
      }
 
      section {

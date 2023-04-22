@@ -28,6 +28,7 @@
 		height: 120px;
 		direction: ltr;
 		overflow: hidden !important;
+		@include animation-on-scroll(0, translateX(230px));
 
 
 		&__description {
@@ -52,7 +53,6 @@
 				}
 			}
 		}
-
 		&__description.light-mode {
 			background-color:  var(--color-page-background) !important;
 
@@ -62,14 +62,13 @@
 		}
 	}
 
+	.description-wrapper.show {
+		@include animation-on-scroll(1, translateX(0px));
+	}
+
 	@media only screen and (min-width: 1024px) {
 
-		.description-wrapper {
-			@include animation-on-scroll(0, translateX(250px));
-		}
-          .description-wrapper.show {
-			@include animation-on-scroll(1, translateX(0px));
-          }
+	
      }
 
 
