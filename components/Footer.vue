@@ -1,6 +1,7 @@
 
 <script setup lang="ts">
-     import { useI18n } from 'vue-i18n';
+
+    const { locale } = useI18n();
 
     const year: number = new Date().getFullYear();
 
@@ -9,7 +10,7 @@
 <template>
     <footer>
         <div>
-            <small v-if="useI18n().locale.value === 'en'">&copy; {{ $t('footer.copyright') }} {{ year }} - Zool Developer</small>
+            <small v-if="locale === 'en'">&copy; {{ $t('footer.copyright') }} {{ year }} - Zool Developer</small>
             <small v-else>&copy; {{ year }}  Zool Developer - {{ $t('footer.copyright') }}</small>
             <small> 44300 Nantes, France</small>
         </div>

@@ -2,7 +2,6 @@
 <script setup lang="ts">
      
      const { locale } = useI18n();
-     // const localePath = useLocalePath();
 
      const navOpen = ref(false);
      const lang = ref();
@@ -11,7 +10,6 @@
           window.addEventListener('resize', handleNavbar);
           handleNavbar();
           handleLanguage();  
-          console.log(locale.value)       
      });
 
      onUnmounted(() => {

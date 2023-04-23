@@ -1,7 +1,8 @@
 <!-- @format -->
 
 <script setup lang="ts">
-	import { useI18n } from 'vue-i18n';
+
+ 	const { locale } = useI18n();
 
 	const isAdditionalDescActive = ref(false);
 </script>
@@ -10,11 +11,11 @@
 	<section id="hero">
 		<div class="hero-section hero-section__container">
 			<SocialNetwork classElement="hero__column-layout" />
-			<div :class="[ 'hero-section__intro ', { 'lang-ar' : useI18n().locale.value === 'ar' }]">
+			<div :class="[ 'hero-section__intro ', { 'lang-ar' : locale === 'ar' }]">
 				<h1 class="hero-section__main-heading">
 						<span>{{ $t('main_heading.static_desc', 0) }}</span>{{ $t('main_heading.static_desc', 1) }}
 						<span>{{ $t('main_heading.static_desc', 2) }}</span>
-						<span  :class="{ 'lang-ar' : useI18n().locale.value === 'ar' }">
+						<span  :class="{ 'lang-ar' : locale === 'ar' }">
 							<span class="static-description">{{$t('main_heading.dynamic_desc', 1)}}</span>
 							<span class="dynamic-description">{{$t('main_heading.dynamic_desc', 2)}}</span>
 						</span>
@@ -34,7 +35,7 @@
 				</div>
 			</div>
 			<div class="hero-section__hero-img ">
-				<img :class="{ 'lang-ar' : useI18n().locale.value === 'ar' }" src="~/assets/images/backgrounds/personal-image.png" :alt="$t('hero_img_desc')" />
+				<img :class="{ 'lang-ar' : locale === 'ar' }" src="~/assets/images/backgrounds/personal-image.png" :alt="$t('hero_img_desc')" />
 			</div>
 		</div>
 		<NuxtLink to="#skills" :aria-label="$t('arrow_navigation_to_bottom')">

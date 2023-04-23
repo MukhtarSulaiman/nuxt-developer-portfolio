@@ -6,13 +6,13 @@
     const kidekchan = 'https://www.figma.com/file/Nicp78MoNcT6FuofKglkEy/kidekchan?node-id=0%3A1&t=28jmmSPwn1ZwtrRb-1';
 
     const designs: Design[] = [
-        { url: 'Flyer-kidekchan', link: kidekchan },
+        { url: 'flyer-kidekchan', link: kidekchan },
         { url: 'mp-house-location',  link: mpHouseLocation },
-        { url: 'Baraka-saken' },
-        { url: 'Iftar-ramadan' },
-        { url: 'Cultural-day' },
-        { url: 'Zool-developer',  link: zoolDeveloper },
-        { url: 'Hinda-altahir' },
+        { url: 'baraka-saken' },
+        { url: 'iftar-ramadan' },
+        { url: 'cultural-day' },
+        { url: 'zool-developer',  link: zoolDeveloper },
+        { url: 'hinda-altahir' },
         { url: 'business-card' },
     ]
 
@@ -37,7 +37,7 @@
     <div class="parent-container">
         <div class="grid-container">
             <div class="grid-container__file-group" v-for="(design , index) in designs"  :key="index">
-                <img :src="`/files/designs/${design.url.toLocaleLowerCase()}.png`" :alt="$t('portfolio.design_project.alt_image', {project: design.url})">
+                <img :src="`/files/designs/${design.url}.png`" :alt="$t('portfolio.design_project.alt_image', {project: design.url})">
                 <div class="icon-wrapper" role="button" @click="openFileInNewTap(design.url, design.link)">
                     <Icon name="new-tap" size="20" class="tap-icon"/>
                 </div>

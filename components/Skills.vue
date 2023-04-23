@@ -1,8 +1,9 @@
 <!-- @format -->
 
 <script setup lang="ts">
-    import { useI18n } from 'vue-i18n';
     import { useIntersectionObserver } from '~/composables/onItersectionObserver';
+
+    const { locale } = useI18n();
 
     onMounted(() => {
         useIntersectionObserver(document.querySelectorAll<HTMLElement>(`.skills-container__content`), 0.3);
@@ -30,7 +31,7 @@
                     <div v-for="(frontTool, index) in frontTools" :key="index" class="skills-container__content">
                         <img 
                             :src="`/images/toolIcons/${frontTool.toLocaleLowerCase()}.png`" 
-                            :alt="useI18n().locale.value === 'fr' ? `${$t('tools_alt_desc')} ${frontTool}` : `${frontTool} ${$t('tools_alt_desc')}`" />
+                            :alt="locale === 'fr' ? `${$t('tools_alt_desc')} ${frontTool}` : `${frontTool} ${$t('tools_alt_desc')}`" />
                         <small>{{ frontTool }}</small>
                     </div>
                 </div>
@@ -41,7 +42,7 @@
                     <div v-for="(backTool, index) in backTools" :key="index" class="skills-container__content">
                         <img 
                             :src="`/images/toolIcons/${backTool.toLocaleLowerCase()}.png`"
-                            :alt="useI18n().locale.value === 'fr' ? `${$t('tools_alt_desc')} ${backTool}` : `${backTool} ${$t('tools_alt_desc')}`" />
+                            :alt="locale === 'fr' ? `${$t('tools_alt_desc')} ${backTool}` : `${backTool} ${$t('tools_alt_desc')}`" />
                         <small>{{ backTool }}</small>
                     </div>
                 </div>

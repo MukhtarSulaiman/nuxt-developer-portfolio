@@ -1,7 +1,8 @@
 <script setup lang="ts">
 
-import { useI18n } from 'vue-i18n';
 import { PersonalInfo } from '~/types';
+
+	const { locale } = useI18n();
 
 	const personalInfos: PersonalInfo[] = [
 		{ id: 1, icon: 'phone', content: '+ 33 7 67 73 99 78', link: 'tel:+33767739978' },
@@ -18,7 +19,7 @@ import { PersonalInfo } from '~/types';
 			<FormContact class="contact__form-contact" />
 			<div class="contact__contact-network-wrapper">
 				<div class="contact-__network-profiles">
-					<h3 :class="{'current-language-ar': useI18n().locale.value === 'ar'}">{{ $t('contact.title.social_media') }} :</h3>
+					<h3 :class="{'current-language-ar': locale === 'ar'}">{{ $t('contact.title.social_media') }} :</h3>
 					<SocialNetwork classElement="contact__row-layout" />
 				</div>
 				<div class="contact__contact-info">

@@ -1,7 +1,7 @@
 
 <script setup lang="ts">
 
-import { useI18n } from 'vue-i18n';
+    const { locale } = useI18n();
 
     const props = defineProps<{
         formGroupClass: string,
@@ -29,7 +29,7 @@ import { useI18n } from 'vue-i18n';
             <VErrorMessage 
                 :name="props.name" 
                 as="span" 
-                :class="[errorClass, {'lang-ar' : useI18n().locale.value === 'ar' }]" />
+                :class="[errorClass, {'lang-ar' : locale === 'ar' }]" />
         </VField>
     </div>
 </template>
