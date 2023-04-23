@@ -1,10 +1,10 @@
 <script setup lang="ts">
-    import { useI18n } from 'vue-i18n';
     import { useRoute } from 'vue-router';
+    
+    const { locale } = useI18n();
+    const route = useRoute();
 
     const { data } = await useFetch(() => '/api/projects');
-
-    const route = useRoute();
     const toolTitle = ref('');
 
     const handleIconTitle = (eventType: string, title: any): void => {
@@ -46,7 +46,7 @@
                     </p>
                     <div class="project__context-technology">
                         <div class="project__context">
-                            <h2 :class="{'lang-ar': useI18n().locale.value === 'ar'}">{{ $t('portfolio.heading.context') }}</h2>
+                            <h2 :class="{'lang-ar': locale === 'ar'}">{{ $t('portfolio.heading.context') }}</h2>
                             <p>{{ project.year }}</p>
                             <p>{{ $t(project.type) }}</p>
                             <div class="project__buttons">
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         <div class="project__technology">
-                            <h2 :class="{'lang-ar': useI18n().locale.value === 'ar'}">{{ toolTitle ? toolTitle : $t('portfolio.heading.technology') }}</h2>
+                            <h2 :class="{'lang-ar': locale === 'ar'}">{{ toolTitle ? toolTitle : $t('portfolio.heading.technology') }}</h2>
                             <div @mouseleave="handleIconTitle('mouseleave', null)">
                                 <a  
                                     v-for="technology in project.technology" 

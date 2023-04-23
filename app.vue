@@ -1,7 +1,6 @@
 <!-- @format -->
 
 <script setup lang="ts">
-     import { useI18n } from 'vue-i18n';
      
      const { locale, t} = useI18n();
 
@@ -72,7 +71,7 @@
      }
 
      main {
-          margin: 0 1.2rem;
+          padding: 0 1.2rem;
           overflow: hidden;
      }
 
@@ -127,7 +126,7 @@
 
      @media only screen and (min-width: 640px) {
           main {
-               margin: 0 4rem;
+               padding: 0 4rem;
           }
      }
 </style>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
-    // import { projects }  from '../content/db';
     import { useIntersectionObserver } from '~/composables/onItersectionObserver';
+
+    // const localePath = useLocalePath();
 
     const { data } = await useFetch(() => '/api/projects');
 

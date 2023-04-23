@@ -1,10 +1,4 @@
 /** @format */
-import { resolve, dirname } from 'node:path';
-import { fileURLToPath } from 'url';
-import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite';
-
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
-
 export default defineNuxtConfig({
      app: {
           head: {
@@ -44,18 +38,11 @@ export default defineNuxtConfig({
                     },
                },
           },
-          plugins: [
-               VueI18nVitePlugin({
-                    include: [
-                         resolve(
-                              dirname(fileURLToPath(import.meta.url)),
-                              './locales/*.json'
-                         ),
-                    ],
-               }),
-          ],
      },
-     modules: [ 'nuxt-icon', '@nuxtjs/color-mode', '@nuxt/content' ],
+     modules: [ 'nuxt-icon', '@nuxtjs/color-mode', '@nuxtjs/i18n'],
+     i18n: { 
+          vueI18n: './i18n.config.ts'
+     },
      colorMode: {
           preference: 'dark', // default value of $colorMode.preference
           fallback: 'light', // fallback value if not system preference found

@@ -1,16 +1,17 @@
 @format
-
 <script setup lang="ts">
-     import { useI18n } from 'vue-i18n';
      
      const { locale } = useI18n();
+     // const localePath = useLocalePath();
+
      const navOpen = ref(false);
      const lang = ref();
 
      onMounted(() => {
           window.addEventListener('resize', handleNavbar);
           handleNavbar();
-          handleLanguage();         
+          handleLanguage();  
+          console.log(locale.value)       
      });
 
      onUnmounted(() => {
@@ -84,7 +85,7 @@
 </script>
 
 <template>
-     <header :class="{'lang-ar': useI18n().locale.value === 'ar'}">
+     <header :class="{'lang-ar': locale === 'ar'}">
           <div id="logo">
                <NuxtLink to="/">
                     <img
@@ -117,7 +118,7 @@
                          </i>
                     </li>
                     <li class="navbar__lang-switcher">
-                         <select @change="updateLangue($event)" @mousedown="handlMousedown($event)" v-model="$i18n.locale" id="languages" name="language">
+                         <select @change="updateLangue($event)" @mousedown="handlMousedown($event)" v-model="locale" id="languages" name="language">
                               <option value="en">EN</option>
                               <option value="fr">FR</option>
                               <option value="ar">AR</option>
