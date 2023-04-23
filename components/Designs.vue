@@ -63,11 +63,11 @@
         &__file-group {
             position: relative;
             overflow: hidden;
+            width: 100%;
 
             img {
-                max-width: 230px;
-                height: 100%;
-
+                max-width: 100%;
+                height: auto;
                 object-position: top;
                 object-fit: cover;
             }

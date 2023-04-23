@@ -289,7 +289,7 @@
                }
 
                &__color-switcher {
-                    top: 90vh;
+                    top: 85vh;
                     right: 27px;
                     width: 30px;
                     height: 30px;
@@ -303,7 +303,7 @@
                }
 
                &__lang-switcher {
-                    top: 80vh;
+                    top: 75vh;
                     right: 17px;
 
                     // position: relative;
