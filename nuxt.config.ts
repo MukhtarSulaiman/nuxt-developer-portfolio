@@ -39,7 +39,7 @@ export default defineNuxtConfig({
                },
           },
      },
-     modules: [ 'nuxt-icon', '@nuxtjs/color-mode', '@nuxtjs/i18n'],
+     modules: ['nuxt-icon', '@nuxtjs/color-mode', '@nuxtjs/i18n', 'nuxt-security'],
      i18n: { 
           vueI18n: './i18n.config.ts'
      },

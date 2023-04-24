@@ -7,12 +7,12 @@
         useIntersectionObserver(document.querySelectorAll<HTMLElement>(`.portfolio-container__project-wrapper`), 0.3);
     })
 
-    const currentItems = ref(6);
+    const currentItems = ref(9);
     const isAllItemsVisible = ref(false);
 
     const showMoreOrLessProject = (): void => {
         if(currentItems.value === data.value.projects.length) {
-            currentItems.value = 6;
+            currentItems.value = 9;
             isAllItemsVisible.value = false;
         } else {
             currentItems.value = data.value.projects.length;
@@ -91,7 +91,7 @@
                 @include flexbox(space-between);
 
                 h3 {
-                    font-size: 1.05rem;
+                    font-size: 1.02rem;
                     cursor: pointer;
                     border-image: linear-gradient(to left, $color-brand-primary, $color-brand-secondary);
                     border-image-slice: 1;
@@ -148,7 +148,7 @@
                 @include animation-on-scroll(1, translateX(0));
             }
 
-            &__project-wrapper:nth-child(n+7):nth-child(-n+12) {
+            &__project-wrapper:nth-child(n+10):nth-child(-n+12) {
                 @include animation-on-scroll(1, $transform-value: translateX(0));
             }
 
