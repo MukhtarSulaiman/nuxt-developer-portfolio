@@ -30,6 +30,7 @@
 
 <template>
     <section id="project-section">
+       <Cursor />
         <div v-for="project in data.projects" :key="project.id">
             <div  v-if="project.id == route.params.id" class="project">
                 <h1>{{ project.title }}</h1>

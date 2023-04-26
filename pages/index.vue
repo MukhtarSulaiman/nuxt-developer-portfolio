@@ -16,6 +16,7 @@
 
 <template>
     <main :class="{'lang-ar': locale === 'ar'}">
+        <Cursor />
         <Hero />
         <Skills />
         <Portfolio />
