@@ -1,10 +1,16 @@
 @format
 <script setup lang="ts">
+     import { useRoute } from 'vue-router';
      
-     const { locale } = useI18n();
+     const route = useRoute();
+     const isHomePage = ref(true);
 
-     const navOpen = ref(false);
-     const lang = ref();
+     watch(() => route.name, (newValue, oldValue) => {
+        if(newValue === 'projects-id' && oldValue !== 'projects-id') {
+          isHomePage.value = false;
+        }
+     console.log(newValue, oldValue)
+    }, {immediate: true});
 
      onMounted(() => {
           window.addEventListener('resize', handleNavbar);
@@ -15,9 +21,11 @@
      onUnmounted(() => {
           window.removeEventListener('resize', handleNavbar);
      });
+     
+
+     const navOpen = ref(false);
 
      function handleNavbar(): void {
-
           const windowInnerWidth = window.innerWidth >= 1024;
           windowInnerWidth ? navOpen.value = true : navOpen.value = false;
 
@@ -38,6 +46,10 @@
            useColorMode().preference = mode;
      }
      
+
+     const { locale } = useI18n();
+     const lang = ref();
+
      function handleLanguage(): void {
           lang.value = localStorage.getItem('lang');
           if (lang.value) {
@@ -103,10 +115,10 @@
           <nav  :class="['navbar ', { active: navOpen }]">
                <ul>
                     <li><NuxtLink :to="$t('home_path')">{{ $t('home_title') }}</NuxtLink></li>
-                    <li><NuxtLink :to="$t('skills_path')">{{ $t('skills_title') }}</NuxtLink></li>
-                    <li><NuxtLink :to="$t('portfolio_path')">{{ $t('portfolio_title') }}</NuxtLink></li>
-                    <li><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li>
-                    <li><NuxtLink :to="$t('contact_path')">{{ $t('contact_title') }}</NuxtLink></li>
+                    <li v-show="isHomePage"><NuxtLink :to="$t('skills_path')">{{ $t('skills_title') }}</NuxtLink></li>
+                    <li v-show="isHomePage"><NuxtLink :to="$t('portfolio_path')">{{ $t('portfolio_title') }}</NuxtLink></li>
+                    <li v-show="isHomePage"><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li>
+                    <li v-show="isHomePage"><NuxtLink :to="$t('contact_path')">{{ $t('contact_title') }}</NuxtLink></li>
                     <li class="navbar__color-switcher">
                          <i v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">
                               <Icon name="sun" id="sun"/>

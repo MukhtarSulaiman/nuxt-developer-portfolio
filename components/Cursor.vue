@@ -1,8 +1,8 @@
 <script setup lang="ts">
 
     onMounted(() => {
-        const cursor1 = document.querySelector<HTMLElement>('.cursor1');
-        const cursor2 = document.querySelector<HTMLElement>('.cursor2');
+        const cursor1 = document.querySelector<HTMLElement | any>('.cursor1');
+        const cursor2 = document.querySelector<HTMLElement | any>('.cursor2');
         const cursors = document.querySelectorAll<HTMLElement>('.cursor');
         const elements = document.querySelectorAll<HTMLElement>(
             `
@@ -11,7 +11,7 @@
             .nav-item-mode-switch,
             .nav-item-lang,
             .form-group,
-            a, button, p`
+            a, button, p, li`
         );
 
         elements.forEach((element:  HTMLElement) :void => {

@@ -24,7 +24,7 @@
     }
 
     const handleSubmit = async (values: FormContact, actions: any): Promise<void> => {
-        const form = document.querySelector<HTMLElement>('form');
+        const form = document.querySelector<HTMLElement | any>('form');
         form.firstElementChild.classList.add('loader');
 
         const { data } = await sendFormContact(values);

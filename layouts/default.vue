@@ -3,5 +3,6 @@
           <Header />
           <!-- The content of the layout will be loaded in the <slot /> -->
           <slot />
+          <Footer />
      </div>
 </template>
