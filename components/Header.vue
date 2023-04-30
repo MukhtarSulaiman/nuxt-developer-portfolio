@@ -9,7 +9,6 @@
         if(newValue === 'projects-id' && oldValue !== 'projects-id') {
           isHomePage.value = false;
         }
-     console.log(newValue, oldValue)
     }, {immediate: true});
 
      onMounted(() => {

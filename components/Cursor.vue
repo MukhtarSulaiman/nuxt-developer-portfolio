@@ -1,6 +1,19 @@
 <script setup lang="ts">
+    import { useRoute } from 'vue-router';
+    
+    const route = useRoute();
+    
+    watch(() => route.name, () => {
+        setTimeout(() => {
+            handleMouseMouve();
+        }, 1000)
+    }, {immediate: true});
 
     onMounted(() => {
+        handleMouseMouve();
+    });
+
+    const handleMouseMouve = () => {
         const cursor1 = document.querySelector<HTMLElement | any>('.cursor1');
         const cursor2 = document.querySelector<HTMLElement | any>('.cursor2');
         const cursors = document.querySelectorAll<HTMLElement>('.cursor');
@@ -43,8 +56,7 @@
                 'left:' + e.clientX + 'px; top: ' + e.clientY + 'px;'
             }`;
         });
-
-    });
+    }
 </script>
 
 <template>
