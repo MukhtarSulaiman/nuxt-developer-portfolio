@@ -113,7 +113,7 @@
           </button>
           <nav  :class="['navbar ', { active: navOpen }]">
                <ul>
-                    <li><NuxtLink :to="$t('home_path')">{{ $t('home_title') }}</NuxtLink></li>
+                    <li><NuxtLink :to="$t('home_path')" class="current-section">{{ $t('home_title') }}</NuxtLink></li>
                     <li v-show="isHomePage"><NuxtLink :to="$t('skills_path')">{{ $t('skills_title') }}</NuxtLink></li>
                     <li v-show="isHomePage"><NuxtLink :to="$t('portfolio_path')">{{ $t('portfolio_title') }}</NuxtLink></li>
                     <li v-show="isHomePage"><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li>
@@ -250,6 +250,7 @@
                               font-size: 1.3rem;
                               font-weight: 200;
 
+                              .router-link-active.current-section,
                               .router-link-active:hover {
                                    &::after {
                                         transform: scaleX(1);

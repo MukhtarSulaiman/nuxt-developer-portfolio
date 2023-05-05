@@ -1,5 +1,7 @@
 <!-- @format -->
 <script setup lang="ts">
+    import { useScrollingSpy } from '~/composables/onSectionObserver';
+
     
     const { locale, t } = useI18n();
 
@@ -10,8 +12,9 @@
                 { name: 'description', content: t('main_description', { pipe: '|' }) },
             ],
         }); 
+        
+        useScrollingSpy();
     });
-
 </script>
 
 <template>
