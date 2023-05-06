@@ -19,10 +19,10 @@
 
 <style lang="scss" scoped>
     footer {
-        width: 100%;
-        margin-top: 6rem;
+        width: inherit;
+        margin: 6rem 1.2rem 0;
         padding: 2rem 0;
-        border-top: 2px solid darken($color-text-primary, 25);;
+        border-top: 2px solid darken($color-text-primary, 25);
         
         div:first-child {
             height: 80px;
@@ -34,6 +34,8 @@
                 font-weight: 200 !important;
             }
         }
-
+        @media only screen and (min-width: 640px) {
+            margin: 6rem 4rem 0 !important;
+        }
     }
 </style>

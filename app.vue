@@ -59,6 +59,8 @@
 
      body {
           font-family: 'Raleway', sans-serif;
+          font-variant-numeric: lining-nums;
+          font-feature-settings:"lnum" 1;
           max-width: 1728px;
           margin: 0 auto;
           // position: relative;
