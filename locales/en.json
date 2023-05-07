@@ -124,19 +124,19 @@
     "education": {
         "main_title": "Education",
         "level1": {
-            "institution": "2022 OpenClassrooms",
+            "institution": "2022 | OpenClassrooms",
             "degree": "Web developer - Bootcamp"
         },
         "level2": {
-            "institution": "2021 Codecademy",
+            "institution": "2021 | Codecademy",
             "degree": "Self-taught web developer"
         },
         "level3": {
-            "institution": "2019 FCMP",
+            "institution": "2019 | FCMP",
             "degree": "Electrician - Apprenticeship"
         },
         "level4": {
-            "institution": "2013 Al-Taliah",
+            "institution": "2013 | Al-Taliah",
             "degree": "High school degree"
         },
         "languages": "English | French | Arabic"

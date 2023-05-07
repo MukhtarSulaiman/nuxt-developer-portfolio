@@ -16,7 +16,8 @@ export default defineAppConfig({
                'phone': 'ic:baseline-settings-phone',
                'mail': 'ic:baseline-mail',
                'home': 'ic:round-home',
-               'new-tap': 'material-symbols:open-in-new'
+               'new-tap': 'material-symbols:open-in-new',
+               'cap': 'mdi:account-school'
           }
      }
 });

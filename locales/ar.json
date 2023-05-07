@@ -124,19 +124,19 @@
     "education": {
         "main_title": "المسيرة التعليمية",
         "level1": {
-            "institution": "2022 OpenClassrooms",
+            "institution": "2022 | OpenClassrooms",
             "degree": "مطور ويب ـ بوت كامب"
         },
         "level2": {
-            "institution": "2021 Codecademy",
+            "institution": "2021 | Codecademy",
             "degree": "مطور ويب  ـ  تعليم ذاتي"
         },
         "level3": {
-            "institution": "2019 FCMP",
+            "institution": "2019 | FCMP",
             "degree": "كهربائي  ـ  تأهيل"
         },
         "level4": {
-            "institution": "2013 Al-Taliah",
+            "institution": "2013 | Al-Taliah",
             "degree": "شهادة ثانوية"
         },
         "languages": "إنجليزي | فرنسي | عربي"
