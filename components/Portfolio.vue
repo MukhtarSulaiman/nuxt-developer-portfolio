@@ -28,6 +28,11 @@
         if( type === 'dev') isDevProjects.value = true;
          else if(type === 'design') isDevProjects.value = false;
     }
+
+    const toJoinAndToLowerCasseProjectTitle = (title: string): string => {
+        return title.split(' ').join('-').toLocaleLowerCase();
+    }
+
 </script>
 
 
@@ -65,7 +70,7 @@
                         <h5>{{ $t(project.type) }}</h5>
                         <p>{{ $t(project.briefDescription) }}</p>
                     </div>
-                    <NuxtLink :to="`projects/${project.id}`" class="btn-read-more">
+                    <NuxtLink :to="`projects/${toJoinAndToLowerCasseProjectTitle(project.title)}`" class="btn-read-more">
                        {{ $t('portfolio.btn.read_more') }}
                     </NuxtLink>                  
                 </div>

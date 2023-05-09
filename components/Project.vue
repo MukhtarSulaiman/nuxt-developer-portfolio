@@ -25,14 +25,20 @@
             location.reload();
         }
     });
-   
+
+    const alterProjectTitle = (title: string): boolean => {
+        const projectTitle = route.params.projectTitle.split('-').join(' ');
+
+        return projectTitle.includes(title);
+    }
+
 </script>
 
 <template>
     <section id="project-section">
        <Cursor />
         <div v-for="project in data.projects" :key="project.id">
-            <div  v-if="project.id == route.params.id" class="project">
+            <div  v-if="alterProjectTitle(project.title)" class="project">
                 <h1>{{ project.title }}</h1>
                 <img :src="`/images/projects/main/${project.mainImage.url}`" :alt="$t(project.mainImage.alt)">
                 <div class="project__details-wrapper">
@@ -55,14 +61,14 @@
                                     :href="project.links.demo" target="_blank"
                                     v-if="project.links.demo"
                                     id="btn-demo">
-                                    {{ $t('portfolio.btn.demo') }}
+                                    {{ project.isToShowMockup &&  project.id === 12 ? $t('portfolio.btn.demo', 2) : $t('portfolio.btn.demo', 1) }}
                                 </a>
                                 <a 
                                     :href="project.links.sourceCode" 
                                     target="_blank"  
                                     v-if="project.links.sourceCode" 
                                     id="btn-see-source-code">
-                                    {{ $t('portfolio.btn.see_source_code') }}
+                                    {{ project.isToShowMockup && project.id !== 12 ? $t('portfolio.btn.see_source_code', 2) : $t('portfolio.btn.see_source_code', 1) }}
                                 </a>
                             </div>
                         </div>
@@ -180,11 +186,7 @@
                 width: 140px !important;
                 padding: .4rem .5rem;
                 background: none;
-                border-bottom: 2px solid;
-                border-left: none;
-                border-top: none;
-                border-right: none;
-                border-color: linear-gradient(to right, $color-brand-primary, $color-brand-secondary);
+                box-shadow: lighten($color-text-inverted, 20) 0px 2px 6px;
 
                 &:hover {
                     box-shadow: 0 0 5px 0 rgb($color-brand-secondary, 1);                    

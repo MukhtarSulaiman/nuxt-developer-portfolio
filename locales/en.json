@@ -114,8 +114,8 @@
         "btn": {
             "read_more": "Read more",
             "load_more_less": "Show More | Show Less",
-            "demo": "Demo",
-            "see_source_code": "See source code"
+            "demo": "Demo | Design",
+            "see_source_code": "See source code | See design"
         },
         "design_project": {
             "alt_image": "glimpse of the project { project }"

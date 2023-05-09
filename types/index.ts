@@ -19,6 +19,7 @@ export type Project = {
     briefDescription: string,
     mainDescription: string,
     year: string,
+    isToShowMockup: boolean,
     previewImageUrl: string,
     mainImage: Image,
     links: {demo?: string, sourceCode?: string}

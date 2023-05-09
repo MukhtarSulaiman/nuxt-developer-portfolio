@@ -6,7 +6,7 @@
      const isHomePage = ref(true);
 
      watch(() => route.name, (newValue, oldValue) => {
-        if(newValue === 'projects-id' && oldValue !== 'projects-id') {
+        if(newValue === 'projects-projectTitle' && oldValue !== 'projects-projectTitle') {
           isHomePage.value = false;
         }
     }, {immediate: true});

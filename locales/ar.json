@@ -114,8 +114,8 @@
         "btn": {
             "read_more": "اقرأ المزيد ",
             "load_more_less": "تحميل المزيد | إظهار أفل",
-            "demo": "عرض",
-            "see_source_code": "رؤية الكود المصدري"
+            "demo": "عرض | التصميم",
+            "see_source_code": "رؤية الكود المصدري | رؤية التصميم"
         },
         "design_project": {
             "alt_image": "{ project } لمحة من مشروع"
