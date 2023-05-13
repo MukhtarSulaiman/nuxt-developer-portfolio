@@ -1,6 +1,6 @@
 {
     "main_title": "زول مطور {pipe} مختار سليمان {pipe} موقع مطور ويب ",
-    "main_description": "مطور ويب للواجهة الأمامية و Fullstack. متخصص في JavaScript {pipe} Vue.js {pipe} React.js {pipe} Node.js. اقيم في مدينة نانت ، فرنسا وخريج معهد OpenClassrooms",
+    "main_description": "مطور ويب للواجهة الأمامية و Frontend. متخصص في JavaScript {pipe} Vue.js {pipe} React.js {pipe} اقيم في مدينة نانت ، فرنسا  .وخريج معهد وأدوات تطوير الويب الأخرى OpenClassrooms",
     "logo_img_desc": "شعار زول ديفالبر",
     "home_title": "الصفحة الرئيسية",
     "home_path": "/",
@@ -16,7 +16,7 @@
 
     "main_heading": {
         "static_desc": "أهلًا ومرحبًا | انا | مختار",
-        "dynamic_desc": " مطور ويب |  Fullstack"
+        "dynamic_desc": " مطور ويب |  Frontend"
     },
     "description_info": {
         "main": "فضولي وشغوف بعالم التكنولوجيا وبشكل خاص تطوير مواقع الويب. لقد مرت أكثر من عام منذ ان قررت  إتخاذ الخطوة وأخذ الوقت الكافي لتدريب نفسي. لذلك انضممت إلى معهد اوبين كلاسروم في يوليو ٢٠٢١ من أجل تحسين مهاراتي واكتساب معرفة جديدة.",

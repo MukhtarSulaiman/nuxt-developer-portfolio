@@ -5,5 +5,7 @@ import ar  from './locales/ar.json';
 export default defineI18nConfig(nuxt => ({
     legacy: false,
     locale: 'en',
+    fallbackLocale: 'en',
+    globalInjection: true,
     messages: { en, fr, ar }
 }))

@@ -65,5 +65,6 @@ export default defineNuxtConfig({
           public: {
                // This object is intended to expose environment variables to the frontend!
           }
-     }
+     },
+     ssr: false,
 });

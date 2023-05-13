@@ -1,20 +1,15 @@
 <!-- @format -->
 <script setup lang="ts">
     import { useScrollingSpy } from '~/composables/onSectionObserver';
-
+    import { useSetMetaData } from '~/composables/onPageMetaData';
     
     const { locale, t } = useI18n();
-
+    
     onMounted(() => {
-        useHead({
-            title: t('main_title', { pipe: '|' }),
-            meta: [
-                { name: 'description', content: t('main_description', { pipe: '|' }) },
-            ],
-        }); 
-        
+        useSetMetaData('main_title', 'main_description');
         useScrollingSpy();
     });
+
 </script>
 
 <template>
@@ -30,7 +25,7 @@
 
 <style lang="scss" scoped>
     main.lang-ar {
-        font-family: 'Cairo', sans-serif;;
+        font-family: 'Cairo', sans-serif;
     }
 
 </style>

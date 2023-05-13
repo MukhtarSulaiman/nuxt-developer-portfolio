@@ -1,21 +1,16 @@
 <script setup lang="ts">
-    import { useI18n } from 'vue-i18n';
+    import { useSetMetaData } from '~/composables/onPageMetaData';
     
     const { locale, t } = useI18n();
 
     onMounted(() => {
-        useHead({
-            title: t('portfolio.meta.page_title', { pipe: '|' }),
-            meta: [
-                { name: 'description', content: t('portfolio.meta.page_description', { pipe: '|' }) },
-            ],
-        }); 
+        useSetMetaData('portfolio.meta.page_title', 'portfolio.meta.page_description')
     });
 
 </script>
 
 <template>
-    <main :class="{'lang-ar': useI18n().locale.value === 'ar'}">
+    <main :class="{'lang-ar': locale === 'ar'}">
         <Project />
     </main>
 </template>

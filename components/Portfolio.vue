@@ -55,8 +55,7 @@
         </div>
         <Designs v-show="!isDevProjects" />
         <div v-show="isDevProjects" class="portfolio-container">
-            <div 
-                v-for="project in data.projects.slice(-currentItems).reverse()"  :key="project.id"
+            <div v-for="project in data.projects.slice(-currentItems).reverse()"  :key="project.id"
                 class="portfolio-container__project-wrapper">
                 <div class="portfolio-container__img-preview">
                     <div 

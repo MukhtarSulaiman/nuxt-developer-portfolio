@@ -95,7 +95,7 @@
     .language {
         width: 100%;
         max-width:1200px;
-        margin: 7rem auto;
+        margin: 5rem auto;
         direction: ltr;
 
         &__globe-icon {

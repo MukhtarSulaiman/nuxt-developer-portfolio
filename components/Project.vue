@@ -54,8 +54,8 @@
                     <div class="project__context-technology">
                         <div class="project__context">
                             <h2 :class="{'lang-ar': locale === 'ar'}">{{ $t('portfolio.heading.context') }}</h2>
-                            <p>{{ project.year }}</p>
                             <p>{{ $t(project.type) }}</p>
+                            <p>{{ project.year }}</p>
                             <div class="project__buttons">
                                 <a 
                                     :href="project.links.demo" target="_blank"

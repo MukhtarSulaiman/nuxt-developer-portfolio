@@ -16,6 +16,7 @@
             opacity: 0.9;
             z-index: 1;
             @include flexbox;
+            
             &::after {
                 content: "";
                 width: 70px;

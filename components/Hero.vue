@@ -197,9 +197,9 @@
 			font-weight: 300;
 			margin-top: 1.5rem;
 			transform: translateY(0px);
-			transition: transform .6s;
+			// transition: transform .5s;
 			opacity: 0;
-			@include top-level-animation($dely: 2s,  $axe: translateY(150px));
+			@include top-level-animation(1.7s, $dely: 2s,  $axe: translateY(150px));
 
 			i {
 				color: var(--color-text-icon);
