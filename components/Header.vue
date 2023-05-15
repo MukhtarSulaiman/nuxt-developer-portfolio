@@ -14,7 +14,6 @@
      onMounted(() => {
           window.addEventListener('resize', handleNavbar);
           handleNavbar();
-          handleLanguage();  
      });
 
      onUnmounted(() => {
@@ -42,29 +41,18 @@
      }
 
      function toggleMode(mode: string) {
-           useColorMode().preference = mode;
+          useColorMode().preference = mode;
      }
      
 
-     const { locale } = useI18n();
-     const lang = ref();
+     const { locales, locale, setLocale } = useI18n();
 
-     function handleLanguage(): void {
-          lang.value = localStorage.getItem('lang');
-          if (lang.value) {
-               locale.value = lang.value;
-          } else {
-               lang.value = localStorage.setItem('lang', locale.value);
-          }
-       
-          document.documentElement.lang = locale.value;
-     }
-
-
-     function updateLangue(e: any): void {
-          lang.value = localStorage.setItem('lang', e.target.value);
-          document.documentElement.lang = locale.value;
-     }
+     const updateLangue = computed({
+          get: () => locale.value,
+          set: (value) => {
+               setLocale(value);
+          },
+     });
 
      function handlMousedown(e: any): void {  
           e.preventDefault();
@@ -88,8 +76,12 @@
                });
           });
 
-          e.target.parentElement.appendChild(dropdown)
+          e.target.parentElement.appendChild(dropdown);
      }
+
+     watchEffect(() => {
+          document.documentElement.lang = locale.value;
+     });
 
 </script>
 
@@ -127,10 +119,14 @@
                          </i>
                     </li>
                     <li class="navbar__lang-switcher">
-                         <select @change="updateLangue($event)" @mousedown="handlMousedown($event)" v-model="locale" id="languages" name="language">
-                              <option value="en">EN</option>
-                              <option value="fr">FR</option>
-                              <option value="ar">AR</option>
+                         <select @mousedown="handlMousedown($event)" v-model="updateLangue" id="languages" name="language">
+                              <option
+                                   v-for="item in locales"
+                                   :key="typeof item === 'object' ? item.code : item"
+                                   :value="typeof item === 'object' ? item.code : item"
+                              >
+                                   {{ typeof item === "object" ? item.name : item }}
+                              </option>
                          </select>
                     </li>
                </ul>

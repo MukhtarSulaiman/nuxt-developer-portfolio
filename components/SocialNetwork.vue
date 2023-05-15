@@ -1,6 +1,8 @@
 <script setup lang="ts">
    import { Network } from '~/types';
 
+   const { locales, locale, setLocale } = useI18n();
+
     const socialNetworks: Network[] = [
         { id: 1, icon: 'linkedin', link: 'https://linkedin.com/in/mukhtar-sulaiman' },
         { id: 2, icon: 'github', link: 'https://github.com/MukhtarSulaiman' },
@@ -15,7 +17,7 @@
 </script>
 
 <template>
-    <div class="network-container" :class="props.classElement">
+    <div :class="['network-container', props.classElement, {'lang-ar': locale === 'ar'}]">
         <div v-for="network in socialNetworks" :key="network.id" class="network-container__icon-wrapper">
             <NuxtLink :to="network.link" target="_blank" :aria-label="$t('network_aria_label', { iconName: network.icon })">
                 <i class=" dark-mode light-mode">
@@ -64,6 +66,10 @@
             }
         }
 	}
+
+    .network-container.hero__column-layout.lang-ar {
+        @include top-level-animation($dely: 1.7s, $translate: 118px);
+    }
 
     .network-container.contact__row-layout {
         @include flexbox(flex-start !important);

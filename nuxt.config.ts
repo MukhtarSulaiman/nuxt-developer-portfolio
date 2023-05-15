@@ -41,7 +41,31 @@ export default defineNuxtConfig({
      },
      modules: ['nuxt-icon', '@nuxtjs/color-mode', '@nuxtjs/i18n', 'nuxt-security'],
      i18n: {
-          vueI18n: './i18n.config.ts'
+          lazy: true,
+          langDir: "locales",
+          strategy: 'prefix',
+          locales: [
+               {
+                    code: "en",
+                    iso: "en-US",
+                    name: "EN",
+                    file: "en.json",
+               },
+               {
+                    code: "fr",
+                    iso: "fr-FR",
+                    name: "FR",
+                    file: "fr.json",
+               },
+               {
+                    code: "ar",
+                    iso: "ar-SD",
+                    name: "AR",
+                    file: "ar.json",
+               }
+          ],
+          defaultLocale: "en",        
+          // vueI18n: './i18n.config.ts'
      },
      colorMode: {
           preference: 'dark', // default value of $colorMode.preference

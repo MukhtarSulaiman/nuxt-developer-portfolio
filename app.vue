@@ -12,7 +12,7 @@
 
      watch(locale, () => {
           changLangDirection();
-     });
+     }, {immediate: true});
 
 </script>
 

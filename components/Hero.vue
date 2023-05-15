@@ -78,7 +78,7 @@
 		&__main-heading {
 			margin-top: 1.5rem;
 			margin-bottom: 3rem;
-			font-weight: 500;
+			font-weight: 300;
 			@include top-level-animation($translate: -150px);
 
 			span {
@@ -160,11 +160,12 @@
 
 		&__description-container {
 			text-align: initial;
+			font-weight: 200;
 		}
 
 		&__main-description {
-			font-weight: 400;
 			word-spacing: 2px;
+			font-size: 1.1rem;
 			opacity: 0.8 !important;
 			@include top-level-animation($translate: 150px);
 		}
@@ -173,7 +174,6 @@
 			max-height: 0;
 			margin-top: 2rem;
 			font-size: 0.9rem;
-			font-weight: 200;
 			word-spacing: 3px;
 			opacity: 0.8 ;
 			overflow: hidden;
