@@ -15,7 +15,7 @@
     "network_aria_label": "link to Mukhtar's {iconName} account",
 
     "main_heading": {
-        "static_desc": "Hello and welcome ! | My name's | Mukhtar",
+        "static_desc": "Hello and welcome ! | My name's | Mukhtar.",
         "dynamic_desc": "I am a | Frontend Developer"
     },
     "description_info": {
@@ -48,19 +48,19 @@
         "project2": {
             "type": "Meal reservation",
             "brief_description": "A concept that allows users to compose their menu beforehand.",
-            "main_description": "This project is a prototype that represents an online meal resveration platform. It allows you to list the menus of gourmet restaurants. The project was developed using the CSS preprocessor (SASS) with the mobile-first approach. | null  | null",
+            "main_description": "This project is a prototype that represents an online meal resveration platform. It allows you to list the menus of gourmet restaurants. The project was developed by using HTML and the CSS preprocessor (SASS) with the mobile-first approach. | null  | null",
             "alt_main_image": "Ohmyfoof project"
         },
         "project3": {
             "type": "SEO",
             "brief_description": "Complete audit and improvement of the SEO of an existing website.",
-            "main_description": "This is an already existing project that has many issues ralted to SEO. | The site has therefore been analyzed and improved by reducing loading time and adopting good SEO ans accessibility practices. | An optimisation report was also made to indicate the pre and post optimization results.",
+            "main_description": "This is an already existing project that has many issues ralted to SEO. | The site has therefore been analyzed and improved by reducing loading time and adopting good SEO and accessibility practices. | An optimisation report was also made to indicate the pre and post optimization results.",
             "alt_main_image": "La Chouette agence project"
         },
         "project4": {
             "type": "E-commerce",
             "brief_description": "Created an MVP of an e-commerce website.",
-            "main_description": "Orinoco is an MVP of an e-commerce website that was built with the mono-product concept. | The front-end was developed using pure JavaScript. The elements are integrated throught a provied API. A unit testing plan has also been put in place to ensure proper functioning. | null",
+            "main_description": "Orinoco is the MVP of an e-commerce website that was built with the mono-product concept. | The front-end was developed using pure JavaScript. The elements are integrated throught a provied API. A unit testing plan has also been put in place to ensure proper functioning of the features. | null",
             "alt_main_image": "Orinoco project"
         },
         "project5": {
@@ -72,11 +72,11 @@
         "project6": {
             "type": "Social media",
             "brief_description": "Built a company social network platform that allows employees to share topics that ther're passionate about.",
-            "main_description": "Groupomania is a fullstack project. The goal was to create an internal corporate social network platform that allows employees to create personal accounts, post multimedia content and interact with content that others share. | The front-end was built under Vue 3 framework with the combination of Vuex for the state mangement, Axios for sending http requests and the implementation of SASS as a preprocessor (CSS). | In the back-end, I used Express as an MVC framework with the integration of third-party libraries. And MySql as a database mangement system (DBMS).",
+            "main_description": "Groupomania is a fullstack project. The goal was to create an internal corporate social network platform that allows employees to create personal accounts, post multimedia content and interact with content that others share. | The front-end was built under Vue 3 framework with the combination of Vuex for the state mangement, Axios for sending http requests and the implementation of SASS as a  CSS preprocessor. | In the back-end, I used Express as an MVC framework with the integration of third-party libraries. And MySql as a database mangement system (DBMS).",
             "alt_main_image": "Groupomania project"
         },
         "project7": {
-            "type": "Tasck manger",
+            "type": "Task manger",
             "brief_description": "A mini task manager app that gives you the capability to add and track your tasks.",
             "main_description": "Task-tracker is a mini task manager app that has been created with React and json-server db. The app basically allows you to add tasks, track their state and remove them completely. | The development and hosting of the project were carried out with React and Github pages. | null",
             "alt_main_image": "task-tracker project"
@@ -96,13 +96,13 @@
         "project10": {
             "type": "Gaming",
             "brief_description": "A dice game that allows you to roll 10 random numbers bettwen 1 - 6.",
-            "main_description": "It's a tenzies game that shows you 10 random dice with a value between 1 - 6 of course! Once you've selected the disered dice, you can display new ones by rolling the button. The game ends once you've selected the 10 dice that have the same value.| The development and hosting of the project were carried out with React and Github pages. | null",
+            "main_description": "It's a tenzies game that displays 10 random dice with a value between 1 - 6 of course! Once you've selected the disered dice, you can display new ones by rolling the button. The game ends once you've selected the 10 dice that have the same value.| The development and hosting of the project were carried out with React and Github pages. | null",
             "alt_main_image": "tenzies game project"
         },
         "project11": {
             "type": "Housing Rental",
             "brief_description": "An appartment rental website created under the Wordpress CMS.",
-            "main_description": "MP House location is an appartment rental showcase website that was developed with a content management system (CMS). | The project was first designed under Figma, then it was developed with the Wordpress CMS. So I chose the Astra theme for its flexibility and the Elementor page builder for its fluidity. | null",
+            "main_description": "MP House Location is an appartment rental showcase website that was developed with a content management system (CMS). | So the project was firstly designed under Figma, then it was developed with the Wordpress CMS. So I chose the Astra theme for its flexibility and the Elementor page builder for its fluidity. | null",
             "alt_main_image": "mp house location project"
         },
         "project12": {

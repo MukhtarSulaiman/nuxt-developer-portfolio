@@ -241,7 +241,7 @@ export  default [
     },
     {
         id: 11,
-        title: 'mp souse location',
+        title: 'mp house location',
         type: 'portfolio.project11.type',
         briefDescription: 'portfolio.project11.brief_description',
         mainDescription: 'portfolio.project11.main_description',
