@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 import { google } from 'googleapis';
-// import helmet  from 'helmet';
+import { MailOption } from '../../types/index';
 
 export default defineEventHandler( async (event: any): Promise<any> => {
 
@@ -32,7 +32,7 @@ export default defineEventHandler( async (event: any): Promise<any> => {
             },
         });
 
-        const mailOption = {
+        const mailOption: MailOption = {
             from: `'${data.fullName}' <${SENDER_USER}>`,
             to: RECEIVER_USER,
             subject: data.subject,
@@ -48,7 +48,7 @@ export default defineEventHandler( async (event: any): Promise<any> => {
         const result = await transporter.sendMail(mailOption);
 
         return event.res.end('cotact.mail.response_message');
-    } catch (error) {
+    } catch (error: any) {
         return event.res.end(error)
     }        
 });

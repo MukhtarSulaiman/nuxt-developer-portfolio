@@ -52,4 +52,11 @@ export  interface FormContact {
     message: string;
 }
 
+export interface MailOption {
+    from: string;
+    to: string;
+    subject: string;
+    html: string;
+}
+
 export type Design = Image;

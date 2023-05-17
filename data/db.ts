@@ -279,7 +279,7 @@ export  default [
             { url: "nuxtjs.png", link: nuxt },
             { url: "vuejs.png", link: vue },
             { url: "typescript.png", link: typescript },
-            { url: "nodejs.png", link: node },
+            // { url: "nodejs.png", link: node },
             { url: "sass.png", link: sass },
             { url: "figma.png", link: figma },
             { url: "heroku.png", link: heroku },

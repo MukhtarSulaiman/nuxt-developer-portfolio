@@ -10,5 +10,5 @@ export const useSetMetaData = (title: string, description: string): void => {
         })
     }
 
-    watch(() => locale.value, () => setMetaData(), {immediate: true});
+    watch(() => locale.value, () => setMetaData(), {immediate: true });
 }
