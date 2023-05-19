@@ -110,7 +110,7 @@
             flex-wrap: wrap;
             column-gap:  2rem;
             row-gap:  1.5rem;
-            margin-top: 2.5rem;
+            margin-top: 1.8rem;
 
             &__project-wrapper {
                 width: 410px;

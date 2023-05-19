@@ -108,7 +108,7 @@
                     <li><NuxtLink :to="$t('home_path')" class="current-section">{{ $t('home_title') }}</NuxtLink></li>
                     <li v-show="isHomePage"><NuxtLink :to="$t('skills_path')">{{ $t('skills_title') }}</NuxtLink></li>
                     <li v-show="isHomePage"><NuxtLink :to="$t('portfolio_path')">{{ $t('portfolio_title') }}</NuxtLink></li>
-                    <li v-show="isHomePage"><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li>
+                    <!-- <li v-show="isHomePage"><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li> -->
                     <li v-show="isHomePage"><NuxtLink :to="$t('contact_path')">{{ $t('contact_title') }}</NuxtLink></li>
                     <li class="navbar__color-switcher">
                          <i v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">

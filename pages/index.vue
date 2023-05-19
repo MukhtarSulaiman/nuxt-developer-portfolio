@@ -18,7 +18,7 @@
         <Hero />
         <Skills />
         <Portfolio />
-        <Education />
+        <!-- <Education /> -->
         <Contact />
     </main>
 </template>
