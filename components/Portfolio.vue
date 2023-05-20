@@ -69,7 +69,11 @@
                         <h5>{{ $t(project.type) }}</h5>
                         <p>{{ $t(project.briefDescription) }}</p>
                     </div>
-                    <NuxtLink :to="`projects/${toJoinAndToLowerCasseProjectTitle(project.title)}`" class="btn-read-more">
+                    <NuxtLink 
+                        :to="`projects/${toJoinAndToLowerCasseProjectTitle(project.title)}`" 
+                        class="btn-read-more"
+                        role="button"
+                    >
                        {{ $t('portfolio.btn.read_more') }}
                     </NuxtLink>                  
                 </div>
