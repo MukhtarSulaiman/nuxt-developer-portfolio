@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    const { locales, locale, setLocale } = useI18n();
+
     const props = defineProps<{
         error: Object
     }>();
@@ -7,7 +9,7 @@
 </script>
     
 <template>
-    <div class="error-page">
+    <div :class="['error-page', {'lang-ar': locale === 'ar'}]">
         <div>
             <h1>{{ $t('errors.title') }} {{ props.error.statusCode }}</h1>
             <div v-if="props.error.statusCode === 500">
@@ -31,6 +33,10 @@
 
 
 <style lang="scss" scoped>
+
+    .error-page.lang-ar {
+        font-family: 'Cairo', sans-serif;
+    }
     .error-page {
        @include flexbox;
         width: 100vw;

@@ -170,5 +170,21 @@
     },
     "footer": {
         "copyright": "Tous droits réservés"
+    },
+    "errors": {
+        "title": "Erreur",
+        "server_side": {
+            "main_message": "Oh non, problème de serveur !",
+            "additional_info": "Nous essayons de résoudre le problème dès que possible."
+        },
+        "client_side": {
+            "main_message": "Oh non, page introuvable !",
+            "additional_info": "La page que vous avez demandée n'existe pas."
+        },
+        "else": {
+            "main_message": "Oh non, nous avons une erreur !",
+            "additional_info": "Contactez-nous pour y remédier."
+        },
+        "btn": "Retour à la page d'accueil"
     }
 }
