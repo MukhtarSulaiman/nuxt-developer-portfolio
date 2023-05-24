@@ -2,9 +2,16 @@
     import { useRoute } from 'vue-router';
     
     const { locale } = useI18n();
-    const route = useRoute();
 
-    const { data } = await useFetch(() => '/api/projects');
+    const route = useRoute();
+    const { id } = route.params;
+
+    const { data: project } = await useFetch(() => `/api/projects?id=${id}`);
+    if (!project.value) {
+        throw createError({ statusCode: 404, fatal: true})
+    }
+
+
     const toolTitle = ref('');
 
     const handleIconTitle = (eventType: string, title: any): void => {
@@ -26,65 +33,57 @@
         }
     });
 
-    const alterProjectTitle = (title: string): boolean => {
-        const projectTitle = route.params.projectTitle.split('-').join(' ');
-
-        return projectTitle.includes(title);
-    }
-
 </script>
 
 <template>
     <section id="project-section">
        <Cursor />
-        <div v-for="project in data.projects" :key="project.id">
-            <div  v-if="alterProjectTitle(project.title)" class="project">
-                <h1>{{ project.title }}</h1>
-                <img :src="`/images/projects/main/${project.mainImage.url}`" :alt="$t(project.mainImage.alt)">
-                <div class="project__details-wrapper">
-                    <p> 
-                        {{ $t(project.mainDescription, 0) }}
-                        <br>
-                        <br>
-                        {{ $t(project.mainDescription, 1) !== "null" ? $t(project.mainDescription, 1)  : null }}
-                        <br/>
-                        <br/>
-                        {{ $t(project.mainDescription, 2) !== "null" ? $t(project.mainDescription, 2)  : null }}
-                    </p>
-                    <div class="project__context-technology">
-                        <div class="project__context">
-                            <h2 :class="{'lang-ar': locale === 'ar'}">{{ $t('portfolio.heading.context') }}</h2>
-                            <p>{{ $t(project.type) }}</p>
-                            <p>{{ project.year }}</p>
-                            <div class="project__buttons">
-                                <a 
-                                    :href="project.links.demo" target="_blank"
-                                    v-if="project.links.demo"
-                                    id="btn-demo">
-                                    {{ project.isToShowMockup &&  project.id === 12 ? $t('portfolio.btn.demo', 2) : $t('portfolio.btn.demo', 1) }}
-                                </a>
-                                <a 
-                                    :href="project.links.sourceCode" 
-                                    target="_blank"  
-                                    v-if="project.links.sourceCode" 
-                                    id="btn-see-source-code">
-                                    {{ project.isToShowMockup && project.id !== 12 ? $t('portfolio.btn.see_source_code', 2) : $t('portfolio.btn.see_source_code', 1) }}
-                                </a>
-                            </div>
+        <div class="project">
+            <h1>{{ project.title }}</h1>
+            <img :src="`/images/projects/main/${project.mainImage.url}`" :alt="$t(project.mainImage.alt)">
+            <div class="project__details-wrapper">
+                <p> 
+                    {{ $t(project.mainDescription, 0) }}
+                    <br>
+                    <br>
+                    {{ $t(project.mainDescription, 1) !== "null" ? $t(project.mainDescription, 1)  : null }}
+                    <br/>
+                    <br/>
+                    {{ $t(project.mainDescription, 2) !== "null" ? $t(project.mainDescription, 2)  : null }}
+                </p>
+                <div class="project__context-technology">
+                    <div class="project__context">
+                        <h2 :class="{'lang-ar': locale === 'ar'}">{{ $t('portfolio.heading.context') }}</h2>
+                        <p>{{ $t(project.type) }}</p>
+                        <p>{{ project.year }}</p>
+                        <div class="project__buttons">
+                            <a 
+                                :href="project.links.demo" target="_blank"
+                                v-if="project.links.demo"
+                                id="btn-demo">
+                                {{ project.isToShowMockup &&  project.id === 12 ? $t('portfolio.btn.demo', 2) : $t('portfolio.btn.demo', 1) }}
+                            </a>
+                            <a 
+                                :href="project.links.sourceCode" 
+                                target="_blank"  
+                                v-if="project.links.sourceCode" 
+                                id="btn-see-source-code">
+                                {{ project.isToShowMockup && project.id !== 12 ? $t('portfolio.btn.see_source_code', 2) : $t('portfolio.btn.see_source_code', 1) }}
+                            </a>
                         </div>
-                        <div class="project__technology">
-                            <h2 :class="{'lang-ar': locale === 'ar'}">{{ toolTitle ? toolTitle : $t('portfolio.heading.technology') }}</h2>
-                            <div @mouseleave="handleIconTitle('mouseleave', null)">
-                                <a  
-                                    v-for="technology in project.technology" 
-                                    :href="technology.link" 
-                                    target="_blank" >
-                                    <img 
-                                        @mouseover="handleIconTitle('mouseover', technology.url)"
-                                        :src="`/images/toolIcons/${technology.url}`" 
-                                        :alt="technology.url.split('.').slice(0, 1).join()">
-                                </a>
-                            </div>
+                    </div>
+                    <div class="project__technology">
+                        <h2 :class="{'lang-ar': locale === 'ar'}">{{ toolTitle ? toolTitle : $t('portfolio.heading.technology') }}</h2>
+                        <div @mouseleave="handleIconTitle('mouseleave', null)">
+                            <a  
+                                v-for="technology in project.technology" 
+                                :href="technology.link" 
+                                target="_blank" >
+                                <img 
+                                    @mouseover="handleIconTitle('mouseover', technology.url)"
+                                    :src="`/images/toolIcons/${technology.url}`" 
+                                    :alt="technology.url.split('.').slice(0, 1).join()">
+                            </a>
                         </div>
                     </div>
                 </div>

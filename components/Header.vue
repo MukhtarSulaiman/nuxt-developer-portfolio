@@ -6,7 +6,7 @@
      const isHomePage = ref(true);
 
      watch(() => route.name, (newValue, oldValue) => {
-        if(newValue === 'projects-projectTitle' && oldValue !== 'projects-projectTitle') {
+        if(newValue === 'projects-id' && oldValue !== 'projects-id') {
           isHomePage.value = false;
         }
     }, {immediate: true});
@@ -29,7 +29,7 @@
 
           const listItems = document.querySelectorAll<HTMLElement>('ul>li');
 
-          for(let i = 0; i < 5; i++) {
+          for(let i = 0; i < 4; i++) {
                listItems[i].addEventListener('click', e => {
                     if(!windowInnerWidth) {
                          navOpen.value = false;
