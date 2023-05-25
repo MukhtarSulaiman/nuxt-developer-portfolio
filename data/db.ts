@@ -31,7 +31,7 @@ const zoolDeveloper = 'https://www.figma.com/file/5Ndy1AFfl9WDCWYOsNxFDE/MyPortf
 export  default [
         {
         id: 1,
-        title: 'réservia',
+        title: 'Réservia',
         type: 'portfolio.project1.type',
         briefDescription: 'portfolio.project1.brief_description',
         mainDescription: "portfolio.project1.main_description",
@@ -51,7 +51,7 @@ export  default [
     },
     {
         id: 2,
-        title: 'ohmyfood',
+        title: 'Ohmyfood',
         type: 'portfolio.project2.type',
         briefDescription: 'portfolio.project2.brief_description',
         mainDescription: 'portfolio.project2.main_description',
@@ -72,7 +72,7 @@ export  default [
     },
     {
         id: 3,
-        title: 'la chouette agence',
+        title: 'La chouette agence',
         type: 'portfolio.project3.type',
         briefDescription: 'portfolio.project3.brief_description',
         mainDescription: 'portfolio.project3.main_description',
@@ -94,7 +94,7 @@ export  default [
     },
     {
         id: 4,
-        title: 'orinoco',
+        title: 'Orinoco',
         type: 'portfolio.project4.type',
         briefDescription: 'portfolio.project4.brief_description',
         mainDescription: 'portfolio.project4.main_description',
@@ -117,7 +117,7 @@ export  default [
     },
     {
         id: 5,
-        title: 'hot takes',
+        title: 'Hot Takes',
         type: 'portfolio.project5.type',
         briefDescription: 'portfolio.project5.brief_description',
         mainDescription: 'portfolio.project5.main_description',
@@ -138,7 +138,7 @@ export  default [
     },
     {
         id: 6,
-        title: 'groupomania',
+        title: 'Groupomania',
         type: 'portfolio.project6.type',
         briefDescription: 'portfolio.project6.brief_description',
         mainDescription: 'portfolio.project6.main_description',
@@ -161,7 +161,7 @@ export  default [
     },
     {
         id: 7,
-        title: 'task tracker',
+        title: 'Task Tracker',
         type: 'portfolio.project7.type',
         briefDescription: 'portfolio.project7.brief_description',
         mainDescription: 'portfolio.project7.main_description',
@@ -181,7 +181,7 @@ export  default [
     },
     {
         id: 8,
-        title: 'the jungle house',
+        title: 'The Jungle House',
         type: 'portfolio.project8.type',
         briefDescription: 'portfolio.project8.brief_description',
         mainDescription: 'portfolio.project8.main_description',
@@ -201,7 +201,7 @@ export  default [
     },
     {
         id: 9,
-        title: 'weather app',
+        title: 'Weather App',
         type: 'portfolio.project9.type',
         briefDescription: 'portfolio.project9.brief_description',
         mainDescription: 'portfolio.project9.main_description',
@@ -221,7 +221,7 @@ export  default [
     },
     {
         id: 10,
-        title: 'tenzies game',
+        title: 'Tenzies Game',
         type: 'portfolio.project10.type',
         briefDescription: 'portfolio.project10.brief_description',
         mainDescription: 'portfolio.project10.main_description',
@@ -241,7 +241,7 @@ export  default [
     },
     {
         id: 11,
-        title: 'mp house location',
+        title: 'MP House Location',
         type: 'portfolio.project11.type',
         briefDescription: 'portfolio.project11.brief_description',
         mainDescription: 'portfolio.project11.main_description',
@@ -263,7 +263,7 @@ export  default [
     },
     {
         id: 12,
-        title: 'zool developer',
+        title: 'Zool Developer',
         type: 'portfolio.project12.type',
         briefDescription: 'portfolio.project12.brief_description',
         mainDescription: 'portfolio.project12.main_description',

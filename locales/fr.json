@@ -29,10 +29,6 @@
         "tools_alt_desc": "îcone",
     "download_resume": "Télécharger mon CV",
     "portfolio": {
-        "meta": {
-            "page_title": "Informations du projet",
-            "page_description": "Vous trouverez ici les informations de chaque projet de manière détaillé"
-        },
         "heading": {
             "main": "Portfolio",
             "navigational_title": "Projets web | Designs",

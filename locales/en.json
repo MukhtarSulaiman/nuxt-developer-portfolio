@@ -29,10 +29,6 @@
     "tools_alt_desc": "icon",
     "download_resume": "Download my resume",
     "portfolio": {
-        "meta": {
-            "page_title": "Project information",
-            "page_description": "Here you will find detailed information about each project"
-        },
         "heading": {
             "main": "Portfolio",
             "navigational_title": "Web Projects | Designs",

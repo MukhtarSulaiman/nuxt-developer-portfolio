@@ -1,17 +1,28 @@
 <script setup lang="ts">
-    import { useSetMetaData } from '~/composables/onPageMetaData';
+    import { useRoute } from 'vue-router';
     
     const { locale, t } = useI18n();
 
-    onMounted(() => {
-        useSetMetaData('portfolio.meta.page_title', 'portfolio.meta.page_description')
+    const route = useRoute();
+    const { id } = route.params;
+
+    const { data: project } = await useFetch(() => `/api/projects?id=${id}`);
+    if (!project.value) {
+        throw createError({ statusCode: 404, fatal: true})
+    }
+   
+    // Try to find a better solution!
+    watch(() => route.name, (newValue, oldValue): void => {
+        if(newValue === 'index' && oldValue !== 'index') {
+            location.reload();
+        }
     });
 
 </script>
 
 <template>
     <main :class="{'lang-ar': locale === 'ar'}">
-        <Project />
+        <Project :project="project" />
     </main>
 </template>
 

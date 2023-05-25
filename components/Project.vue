@@ -1,16 +1,17 @@
 <script setup lang="ts">
-    import { useRoute } from 'vue-router';
+    import { useSetMetaData } from '~/composables/onPageMetaData';
+    import { Project } from '../types'
     
-    const { locale } = useI18n();
+    const { locale, t } = useI18n();
 
-    const route = useRoute();
-    const { id } = route.params;
-
-    const { data: project } = await useFetch(() => `/api/projects?id=${id}`);
-    if (!project.value) {
-        throw createError({ statusCode: 404, fatal: true})
-    }
-
+    const props = defineProps<{
+        project: Project
+    }>();
+    
+    watch(props.project, () : void => {
+        useSetMetaData(props.project.title, props.project.briefDescription);
+    }, { immediate: true, deep: true});
+    
 
     const toolTitle = ref('');
 
@@ -25,13 +26,7 @@
             default :
         }
     }
-
-    // Try to find a better solution!
-    watch(() => route.name, (newValue, oldValue) => {
-        if(newValue === 'index' && oldValue !== 'index') {
-            location.reload();
-        }
-    });
+  
 
 </script>
 
