@@ -1,17 +1,15 @@
 {    
     "main_title": "Zool Developer {pipe} Mukhtar Sulaiman {pipe} Web Developer Portfolio",
     "main_description": "Frontend web developer. Specialized in JavaScript {pipe} Vue.js {pipe} React.js {pipe} and other web development tools. Based in Nantes, France and alumnus of OpenClassrooms",
+    "header": {
+        "home_title": "Home",
+        "skills_title": "Skills",
+        "portfolio_title": "Portfolio",
+        "education_title": "Education",
+        "blog_title": "Blog",
+        "contact_title": "Contact"
+    },
     "logo_img_desc": "zool developer logo",
-    "home_title": "Home",
-    "home_path": "/",
-    "skills_title": "Skills",
-    "skills_path": "#skills",
-    "portfolio_title": "Portfolio",
-    "portfolio_path": "#portfolio",
-    "education_title": "Education",
-    "education_path": "#education",
-    "contact_title": "Contact",
-    "contact_path": "#contact",
     "network_aria_label": "link to Mukhtar's {iconName} account",
 
     "main_heading": {
@@ -182,5 +180,8 @@
             "additional_info": "Contact us to fix it."
         },
         "btn": "Go to home page"
+    },
+    "blogs": {
+        "main_title": "Blogs will be available soon!"
     }
 }

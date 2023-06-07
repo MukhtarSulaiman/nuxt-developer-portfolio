@@ -1,5 +1,8 @@
 <script setup lang="ts">
     import { useRoute } from 'vue-router';
+    import { useWatchRoute } from "~/composables/onWatchRoute";
+
+    useWatchRoute('projects-id');
     
     const { locale, t } = useI18n();
 
@@ -10,13 +13,6 @@
     if (!project.value) {
         throw createError({ statusCode: 404, fatal: true})
     }
-   
-    // Try to find a better solution!
-    watch(() => route.name, (newValue, oldValue): void => {
-        if(newValue === 'index' && oldValue !== 'index') {
-            location.reload();
-        }
-    });
 
 </script>
 

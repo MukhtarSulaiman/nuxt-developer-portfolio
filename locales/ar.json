@@ -1,17 +1,15 @@
 {
     "main_title": "زول مطور {pipe} مختار سليمان {pipe} موقع مطور ويب ",
     "main_description": "مطور ويب للواجهة الأمامية و Frontend. متخصص في JavaScript {pipe} Vue.js {pipe} React.js {pipe} اقيم في مدينة نانت ، فرنسا  .وخريج معهد وأدوات تطوير الويب الأخرى OpenClassrooms",
+    "header": {   
+        "home_title": "الصفحة الرئيسية",
+        "skills_title": "المهارات",   
+        "portfolio_title": "الأعمال",    
+        "education_title": "التعليم",
+        "blog_title": "مدونة",
+        "contact_title": "تواصل معنا"
+    },
     "logo_img_desc": "شعار زول ديفالبر",
-    "home_title": "الصفحة الرئيسية",
-    "home_path": "/",
-    "skills_title": "المهارات",
-    "skills_path": "#skills",
-    "portfolio_title": "الأعمال",
-    "portfolio_path": "#portfolio",
-    "education_title": "التعليم",
-    "education_path": "#education",
-    "contact_title": "تواصل معنا",
-    "contact_path": "#contact",
     "network_aria_label": "{iconName} رابط الي حساب مختار في",
 
     "main_heading": {
@@ -182,5 +180,8 @@
             "additional_info": "تواصل معنا لإخطارنا عن هذه المشكلة."
         },
         "btn": "العودة الي الصفحة الرئيسية"
+    },
+    "blogs": {
+        "main_title": "ستكون المدونات متاحة قريبا!"
     }
 }

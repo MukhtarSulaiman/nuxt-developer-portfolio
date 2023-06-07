@@ -6,7 +6,8 @@
      const isHomePage = ref(true);
 
      watch(() => route.name, (newValue, oldValue) => {
-        if(newValue === 'projects-id' && oldValue !== 'projects-id') {
+        if(newValue === 'projects-id' && oldValue !== 'projects-id' ||
+          newValue === 'blogs' && oldValue !== 'blogs') {
           isHomePage.value = false;
         }
     }, {immediate: true});
@@ -105,11 +106,12 @@
           </button>
           <nav  :class="['navbar ', { active: navOpen }]">
                <ul>
-                    <li><NuxtLink :to="$t('home_path')" class="current-section">{{ $t('home_title') }}</NuxtLink></li>
-                    <li v-show="isHomePage"><NuxtLink :to="$t('skills_path')">{{ $t('skills_title') }}</NuxtLink></li>
-                    <li v-show="isHomePage"><NuxtLink :to="$t('portfolio_path')">{{ $t('portfolio_title') }}</NuxtLink></li>
-                    <!-- <li v-show="isHomePage"><NuxtLink :to="$t('education_path')">{{ $t('education_title') }}</NuxtLink></li> -->
-                    <li v-show="isHomePage"><NuxtLink :to="$t('contact_path')">{{ $t('contact_title') }}</NuxtLink></li>
+                    <li><NuxtLink to="/" class="current-section">{{ $t('header.home_title') }}</NuxtLink></li>
+                    <li v-show="isHomePage"><NuxtLink to="#skills">{{ $t('header.skills_title') }}</NuxtLink></li>
+                    <li v-show="isHomePage"><NuxtLink to="#portfolio">{{ $t('header.portfolio_title') }}</NuxtLink></li>
+                    <!-- <li v-show="isHomePage"><NuxtLink to="#education">{{ $t('header.education_title') }}</NuxtLink></li> -->
+                    <li><NuxtLink to="/blogs">{{ $t('header.blog_title') }}</NuxtLink></li>
+                    <li v-show="isHomePage"><NuxtLink to="#contact">{{ $t('header.contact_title') }}</NuxtLink></li>
                     <li class="navbar__color-switcher">
                          <i v-if="$colorMode.preference === 'dark'" @click="toggleMode('light')" role="button">
                               <Icon name="sun" id="sun"/>
