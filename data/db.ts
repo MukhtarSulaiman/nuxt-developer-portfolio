@@ -26,6 +26,7 @@ const hostinger = 'https://www.hostinger.com/';
 
 const mpHouseLocation = 'https://www.figma.com/file/3KG2MkqGBkEhPP2sr901fJ/MP-House-Location?node-id=0%3A1&t=coUHFA0jBYSxwroR-1';
 const zoolDeveloper = 'https://www.figma.com/file/5Ndy1AFfl9WDCWYOsNxFDE/MyPortfolio?node-id=1634%3A988&t=rKI5xE0uNlbuiphP-0';
+const atlanticProtect = 'https://www.figma.com/file/5elzniPiyjzGkvC4n3s0Uc/AtlanticProtect?type=design&node-id=0%3A1&mode=design&t=kca4Da0JpRHTfjof-1';
 // const kidekchan = 'https://www.figma.com/file/Nicp78MoNcT6FuofKglkEy/kidekchan?node-id=0%3A1&t=28jmmSPwn1ZwtrRb-1';
 
 export  default [
@@ -100,8 +101,8 @@ export  default [
         mainDescription: 'portfolio.project4.main_description',
         year: '10/2021',
         isToShowMockup: false,
-        previewImageUrl: 'camera.jpg',
-        mainImage: { url: "orinoco.png", alt: 'portfolio.project4.alt_main_image' },
+        previewImageUrl: 'e-commerce.jpg',
+        mainImage: { url: "e-comerce.jpg", alt: 'portfolio.project4.alt_main_image' },
         links: {
             demo: 'https://mukhtar-orinoco.netlify.app/',
             sourceCode: 'https://github.com/MukhtarSulaiman/orinoco_5_10092021'
