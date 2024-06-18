@@ -1,6 +1,6 @@
-# Project Name:  Zool Developer#
+# Project Name:  Nuxt Developer Portfolio #
 
-![Zool Developer logo](./public/images/projects/main/zooldeveloper.png)
+![developer portfolio logo](./public/images/projects/main/zooldeveloper.png)
 
 This project is the old version of my portfolio. Feel free to use it of you want!
 
