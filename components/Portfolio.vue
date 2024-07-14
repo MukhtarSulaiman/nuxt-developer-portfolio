@@ -35,24 +35,7 @@
 	<section id="portfolio">
 		<div class="portfolio-headings">
 			<h2>{{ $t("portfolio.heading.main") }}</h2>
-			<div class="portfolio-headings__navigational-titles">
-				<h3
-					@click="filterProjectType('dev')"
-					role="button"
-					:class="{ active: isDevProjects }"
-				>
-					{{ $t("portfolio.heading.navigational_title", 1) }}
-				</h3>
-				<h3
-					@click="filterProjectType('design')"
-					role="button"
-					:class="{ active: !isDevProjects }"
-				>
-					{{ $t("portfolio.heading.navigational_title", 2) }}
-				</h3>
-			</div>
 		</div>
-		<Designs v-show="!isDevProjects" />
 		<div v-show="isDevProjects" class="portfolio-container">
 			<div
 				v-for="project in projects.slice(-currentItems).reverse()"
