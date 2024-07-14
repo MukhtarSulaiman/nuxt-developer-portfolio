@@ -4,9 +4,10 @@
         bottom: string
     }>();
 
-      const downLoadResume = () => {
+const downLoadResume = () => {
+        // Add your resume in the public/files/ directory & don't forget to match it in windo.open() function to!
         window.open(
-            '/files/cv-mukhtar_sulaiman-fr.pdf',
+            '/files/<your-resume>.pdf',
             '_blank',
             'fullscreen=yes'
         );
